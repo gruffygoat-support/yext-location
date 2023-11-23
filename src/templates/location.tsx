@@ -165,9 +165,20 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
  */
 export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name, slug } = data?.document;
-	const footer = await Apis.getDesktopFooter();
-	const header = await Apis.getHeaderMenuNav();
-	const mobileFooter = await Apis.getMobileFooter();
+	// const footer = await Apis.getDesktopFooter();
+	// const header = await Apis.getHeaderMenuNav();
+	// const mobileFooter = await Apis.getMobileFooter();
+	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
+
+	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
+
+	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
+
+	const [footer, header, mobileFooter] = await Promise.all([
+		fetch(footerUrl).then((response) => response.json()),
+		fetch(headerUrl).then((response) => response.json()),
+		fetch(mobileFooterUrl).then((response) => response.json()),
+	]);
 
 	const faqs = [
 		{

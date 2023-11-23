@@ -67,10 +67,21 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
 export const transformProps: TransformProps<ExternalImageData> = async (
 	data
 ) => {
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	Apis.getDesktopFooter(),
+	// 	Apis.getHeaderMenuNav(),
+	// 	Apis.getMobileFooter(),
+	// ]);
+	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
+
+	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
+
+	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
+
 	const [footer, header, mobileFooter] = await Promise.all([
-		Apis.getDesktopFooter(),
-		Apis.getHeaderMenuNav(),
-		Apis.getMobileFooter(),
+		fetch(footerUrl).then((response) => response.json()),
+		fetch(headerUrl).then((response) => response.json()),
+		fetch(mobileFooterUrl).then((response) => response.json()),
 	]);
 	const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
 	const externalImage = (await fetch(url).then((res: any) =>

@@ -10,7 +10,7 @@ import {
 	TemplateRenderProps,
 	TransformProps,
 } from '@yext/pages';
-import { isProduction } from '@yext/pages/util';
+import { fetch, isProduction } from '@yext/pages/util';
 import '../index.css';
 import Favicon from '../assets/images/yext-favicon.ico';
 import Banner from '../components/Banner';
@@ -81,12 +81,22 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 
 export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name } = data.document;
-	const [footer, header, mobileFooter] = await Promise.all([
-		Apis.getDesktopFooter(),
-		Apis.getHeaderMenuNav(),
-		Apis.getMobileFooter(),
-	]);
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	Apis.getDesktopFooter(),
+	// 	Apis.getHeaderMenuNav(),
+	// 	Apis.getMobileFooter(),
+	// ]);
+	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
 
+	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
+
+	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
+
+	const [footer, header, mobileFooter] = await Promise.all([
+		fetch(footerUrl).then((response) => response.json()),
+		fetch(headerUrl).then((response) => response.json()),
+		fetch(mobileFooterUrl).then((response) => response.json()),
+	]);
 	(dm_directoryParents || []).push({ name: name, slug: '' });
 	return {
 		...data,
