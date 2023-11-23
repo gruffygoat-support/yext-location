@@ -266,12 +266,12 @@ const Location: Template<TemplateRenderProps> = ({
 										document?.geocodedCoordinate?.longitude
 									)
 								}
-								style='text-white bg-blue-400 shadow-md bg-secondary text-center w-max-content lg:w-[195px] '
+								style='text-white bg-blue-400 shadow-md bg-primary text-center w-max-content lg:w-[195px] '
 							/>
 							<Cta
 								buttonText='Start Loan Process'
 								url={document?.c_startLoanProcessURL}
-								style='text-white bg-orange shadow-md bg-primary text-center '
+								style='text-white bg-orange shadow-md bg-secondary text-center '
 							/>
 						</div>
 						{/* horizontal line */}
