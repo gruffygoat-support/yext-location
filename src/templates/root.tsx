@@ -64,32 +64,15 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
  *
  * If the page is truly static this function is not necessary.
  */
-export const transformProps: TransformProps<TemplateProps> = async (data) => {
-	// const [footer, header, mobileFooter] = await Promise.all([
-	// 	Apis.getDesktopFooter(),
-	// 	Apis.getHeaderMenuNav(),
-	// 	Apis.getMobileFooter(),
-	// ]);
-	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
+export const transformProps: TransformProps<ExternalImageData> = async (
+	data
+) => {
+	const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
+	const externalImage = (await fetch(url).then((res: any) =>
+		res.json()
+	)) as ExternalImage;
 
-	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
-
-	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
-
-	// const [footer, header, mobileFooter] = await Promise.all([
-	// 	fetch(footerUrl).then((response) => response.json()),
-	// 	fetch(headerUrl).then((response) => response.json()),
-	// 	fetch(mobileFooterUrl).then((response) => response.json()),
-	// ]);
-	const response = await fetch(footerUrl);
-	const footer = await response.json();
-
-	return {
-		...data,
-		footer: footer || [],
-		header: [],
-		mobileFooter: [],
-	};
+	return { ...data, externalImage };
 };
 
 /**
@@ -165,10 +148,7 @@ const Root: Template<ExternalImageRenderData> = ({
 	};
 	return (
 		<>
-			<PageLayout
-				header={header}
-				footer={footer}
-				mobileFooter={mobileFooter}>
+			<PageLayout>
 				<div className='grid grid-cols-1 p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div className=' py-10 ] w-lg m-auto lg:mx-[8rem]'>
 						<h1 className='text-[3rem] font-bold mb-3 leading-none'>

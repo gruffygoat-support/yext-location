@@ -78,26 +78,9 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 	};
 };
 
-export const transformProps: TransformProps<TemplateProps> = async (data) => {
+export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name, slug } = data.document;
-	// const [footer, header, mobileFooter] = await Promise.all([
-	// 	Apis.getDesktopFooter(),
-	// 	Apis.getHeaderMenuNav(),
-	// 	Apis.getMobileFooter(),
-	// ]);
-	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
 
-	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
-
-	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
-
-	// const [footer, header, mobileFooter] = await Promise.all([
-	// 	fetch(footerUrl).then((response) => response.json()),
-	// 	fetch(headerUrl).then((response) => response.json()),
-	// 	fetch(mobileFooterUrl).then((response) => response.json()),
-	// ]);
-	const response = await fetch(footerUrl);
-	const footer = await response.json();
 	(dm_directoryParents || []).push({ name: name, slug: '' });
 
 	return {
@@ -105,9 +88,6 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
 		document: {
 			...data.document,
 			dm_directoryParents: dm_directoryParents,
-			header: [],
-			footer: footer || [],
-			mobileFooter: [],
 		},
 	};
 };
@@ -127,10 +107,7 @@ const City: Template<TemplateRenderProps> = ({
 
 	return (
 		<>
-			<PageLayout
-				header={document?.header}
-				footer={document?.footer}
-				mobileFooter={document?.mobileFooter}>
+			<PageLayout>
 				<div className='centered-container'>
 					<Breadcrumbs
 						breadcrumbs={dm_directoryParents}

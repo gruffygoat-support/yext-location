@@ -163,24 +163,8 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
  * This function will be run during generation and pass in directly as props to the default
  * exported function.
  */
-export const transformProps: TransformProps<TemplateProps> = async (data) => {
+export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name, slug } = data?.document;
-	// const footer = await Apis.getDesktopFooter();
-	// const header = await Apis.getHeaderMenuNav();
-	// const mobileFooter = await Apis.getMobileFooter();
-	const footerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-menu/`;
-
-	const mobileFooterUrl = `https://regionalfinance.com/wp-json/menu-api/v2/footer-mobile-menu/`;
-
-	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
-
-	// const [footer, header, mobileFooter] = await Promise.all([
-	// 	fetch(footerUrl).then((response) => response.json()),
-	// 	fetch(headerUrl).then((response) => response.json()),
-	// 	fetch(mobileFooterUrl).then((response) => response.json()),
-	// ]);
-	const response = await fetch(footerUrl);
-	const footer = await response.json();
 
 	const faqs = [
 		{
@@ -218,9 +202,6 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
 			...data.document,
 			dm_directoryParents: dm_directoryParents,
 			faqs: faqs,
-			footer: footer || [],
-			header: [],
-			mobileFooter: [],
 		},
 	};
 };
@@ -262,11 +243,7 @@ const Location: Template<TemplateRenderProps> = ({
 	};
 	return (
 		<>
-			<PageLayout
-				content={document?.c_alertBannerText}
-				header={document?.header}
-				footer={document?.footer}
-				mobileFooter={document?.mobileFooter}>
+			<PageLayout content={document?.c_alertBannerText}>
 				<div className='grid grid-cols-1 p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div className=' py-10 mt-[40px] w-lg m-auto lg:mx-[8rem]'>
 						<BreadCrumbs

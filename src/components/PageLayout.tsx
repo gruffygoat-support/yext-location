@@ -26,6 +26,10 @@ const PageLayout = ({
 	mobileFooter,
 }: PageLayoutProps) => {
 	const [loading, Isloading] = React.useState(true);
+	const [headerNav, setHeaderNav] = React.useState([]);
+	const [footerNav, setFooterNav] = React.useState([]);
+	const [mobileFooterNav, setMobileFooterNav] = React.useState([]);
+
 	const navigation = [
 		{ name: 'Loans', href: '/', dropDown: header?.slice(1, 10) },
 		{ name: 'Locations', href: '#', dropDown: [] },
@@ -33,9 +37,31 @@ const PageLayout = ({
 		{ name: 'About us', href: '#', dropDown: header?.slice(21, 28) },
 		{ name: 'Payment Options', href: '#', dropDown: [] },
 	];
+	const fetchData = async () => {
+		const [footer, header, mobileFooter] = await Promise.all([
+			Apis.getDesktopFooter(),
+			Apis.getHeaderMenuNav(),
+			Apis.getMobileFooter(),
+		]);
+		try {
+			setHeaderNav([
+				{ name: 'Loans', href: '/', dropDown: header?.slice(1, 10) },
+				{ name: 'Locations', href: '#', dropDown: [] },
+				{ name: 'Education', href: '#', dropDown: header?.slice(12, 15) },
+				{ name: 'About us', href: '#', dropDown: header?.slice(21, 28) },
+				{ name: 'Payment Options', href: '#', dropDown: [] },
+			]);
+			setFooterNav(footer);
+			setMobileFooterNav(mobileFooter);
+		} catch (error) {
+			console.log(error);
+		} finally {
+			Isloading(false);
+		}
+	};
 
 	React.useEffect(() => {
-		Isloading(false);
+		fetchData();
 	}, []);
 
 	return (
@@ -74,7 +100,7 @@ const PageLayout = ({
 							</div>
 							<Header
 								_site={_site}
-								navigation={navigation}
+								navigation={headerNav}
 							/>
 						</SearchExperience>
 					</div>
@@ -82,8 +108,8 @@ const PageLayout = ({
 					{children}
 					<Footer
 						_site={_site}
-						footerItems={footer}
-						mobileFooterItems={mobileFooter}
+						footerItems={footerNav}
+						mobileFooterItems={mobileFooterNav}
 					/>
 				</div>
 			)}
