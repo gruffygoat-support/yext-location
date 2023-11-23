@@ -12,19 +12,19 @@ const HeaderMenu = ({ menuName, dropDown }) => {
 				{({ open }) => (
 					<>
 						<div className='flex items-center justify-center'>
-							<Menu.Button className='inline-flex w-full justify-center rounded-md  px-4 py-2 text-sm font-bold   focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'>
+							<Menu.Button className='inline-flex w-full justify-center rounded-md  px-4 py-2 text-xs font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'>
 								{menuName}
 
 								{dropDown?.length > 0 && (
 									<>
 										{open ? (
 											<ChevronUpIcon
-												className='-mr-1  ml-1 h-5 w-5 '
+												className='-mr-1  ml-1 mt-[3px] h-5 w-5 '
 												aria-hidden='true'
 											/>
 										) : (
 											<ChevronDownIcon
-												className='-mr-1 ml-1  h-5 w-5'
+												className='-mr-1 ml-1 mt-[3px] h-5 w-5'
 												aria-hidden='true'
 											/>
 										)}
@@ -43,7 +43,7 @@ const HeaderMenu = ({ menuName, dropDown }) => {
 								leaveTo='transform opacity-0 scale-95'>
 								<Menu.Items className='absolute z-50  mt-3 w-[200px] origin-top-right  rounded-md bg-white shadow-lg  '>
 									{dropDown?.map((item) => (
-										<div className='px-1  '>
+										<div className='px-1 py-1 '>
 											<Menu.Item>
 												{({ active }) => (
 													<a
