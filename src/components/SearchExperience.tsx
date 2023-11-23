@@ -7,7 +7,9 @@ import {
 } from '@yext/search-headless-react';
 
 const headlessConfig: HeadlessConfig = {
-	apiKey: import.meta.env.YEXT_PUBLIC_SEARCH_API_KEY || '',
+	apiKey:
+		import.meta.env.YEXT_PUBLIC_SEARCH_API_KEY ||
+		'593aac674b4c4039d0cc787ea675a872',
 	experienceKey: 'regional_finance_answers',
 	locale: 'en',
 };
