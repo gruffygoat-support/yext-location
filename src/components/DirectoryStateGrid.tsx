@@ -44,13 +44,8 @@ const DirectoryStateGrid = ({
 	return (
 		<>
 			<div className='space-y-10 mt-6 '>
-				{/* <div className='space-y-6'> */}
-				{/* {name && (
-						<h1 className='text-3xl font-semibold text-center'>{name}</h1>
-					)} */}
-				{/* </div> */}
 				{directoryChildren && (
-					<div className='grid grid-cols-2 text-base  gap-x-2 gap-y-[1.5rem]'>
+					<div className='grid grid-cols-3 text-base  gap-x-2 gap-y-[1.5rem]'>
 						{childrenDivs}
 					</div>
 				)}
