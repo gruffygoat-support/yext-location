@@ -79,7 +79,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 	};
 };
 
-export const transformProps: TransformProps<any> = async (data) => {
+export const transformProps: TransformProps<TemplateProps> = async (data) => {
 	const { dm_directoryParents, name } = data.document;
 	// const [footer, header, mobileFooter] = await Promise.all([
 	// 	Apis.getDesktopFooter(),

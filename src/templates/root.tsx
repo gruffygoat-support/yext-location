@@ -64,9 +64,7 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
  *
  * If the page is truly static this function is not necessary.
  */
-export const transformProps: TransformProps<ExternalImageData> = async (
-	data
-) => {
+export const transformProps: TransformProps<TemplateProps> = async (data) => {
 	// const [footer, header, mobileFooter] = await Promise.all([
 	// 	Apis.getDesktopFooter(),
 	// 	Apis.getHeaderMenuNav(),
@@ -83,14 +81,9 @@ export const transformProps: TransformProps<ExternalImageData> = async (
 		fetch(headerUrl).then((response) => response.json()),
 		fetch(mobileFooterUrl).then((response) => response.json()),
 	]);
-	const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
-	const externalImage = (await fetch(url).then((res: any) =>
-		res.json()
-	)) as ExternalImage;
 
 	return {
 		...data,
-		externalImage,
 		footer: footer || [],
 		header: header || [],
 		mobileFooter: mobileFooter || [],

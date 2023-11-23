@@ -163,7 +163,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
  * This function will be run during generation and pass in directly as props to the default
  * exported function.
  */
-export const transformProps: TransformProps<any> = async (data) => {
+export const transformProps: TransformProps<TemplateProps> = async (data) => {
 	const { dm_directoryParents, name, slug } = data?.document;
 	// const footer = await Apis.getDesktopFooter();
 	// const header = await Apis.getHeaderMenuNav();
