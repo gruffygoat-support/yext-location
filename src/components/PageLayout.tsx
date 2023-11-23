@@ -1,0 +1,94 @@
+import * as React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import { Banner } from './Location/Banner';
+import SearchExperience from './SearchExperience';
+import Search from './SearchBar';
+import Loader from './Loader';
+import Cta from './Cta';
+import Apis from '../utils/Apis';
+
+export interface PageLayoutProps {
+	children?: React.ReactNode;
+	_site?: any;
+	content?: string;
+	header?: any;
+	footer?: any;
+	mobileFooter?: any;
+}
+
+const PageLayout = ({
+	children,
+	_site,
+	content,
+	header,
+	footer,
+	mobileFooter,
+}: PageLayoutProps) => {
+	const [loading, Isloading] = React.useState(true);
+	const navigation = [
+		{ name: 'Loans', href: '/', dropDown: header?.slice(1, 10) },
+		{ name: 'Locations', href: '#', dropDown: [] },
+		{ name: 'Education', href: '#', dropDown: header?.slice(12, 15) },
+		{ name: 'About us', href: '#', dropDown: header?.slice(21, 28) },
+		{ name: 'Payment Options', href: '#', dropDown: [] },
+	];
+
+	React.useEffect(() => {
+		Isloading(false);
+	}, []);
+
+	return (
+		<>
+			{loading ? (
+				<Loader />
+			) : (
+				<div className='min-h-screen'>
+					<div className='sticky top-0 z-50'>
+						<SearchExperience>
+							<div className='lg:hidden md:hidden bg-bg h-max flex gap-[1.5rem] items-center justify-center  pt-4  '>
+								<div>
+									<Search />
+								</div>
+								<div className='mb-4'>
+									<Cta
+										buttonText='Login'
+										url='#'
+										style='text-white bg-orange shadow-md bg-primary p-4 text-center'
+									/>
+								</div>
+							</div>
+							{content && (
+								<Banner
+									variant='default'
+									content={content}
+								/>
+							)}
+							<div className='hidden lg:block'>
+								<div className='grid grid-cols-12 bg-bg '>
+									<div className='col-span-8' />
+									<div className=''>
+										<Search />
+									</div>
+								</div>
+							</div>
+							<Header
+								_site={_site}
+								navigation={navigation}
+							/>
+						</SearchExperience>
+					</div>
+
+					{children}
+					<Footer
+						_site={_site}
+						footerItems={footer}
+						mobileFooterItems={mobileFooter}
+					/>
+				</div>
+			)}
+		</>
+	);
+};
+
+export default PageLayout;
