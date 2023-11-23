@@ -20,7 +20,7 @@ const Header = ({ navigation }) => {
 			className='bg-white shadow'>
 			{({ open }) => (
 				<>
-					<div className='mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-6'>
+					<div className='mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-6'>
 						<div className='flex h-24 justify-between'>
 							<div className='flex justify-between '>
 								<div className='flex flex-shrink-0 items-center '>
