@@ -174,11 +174,13 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
 
 	const headerUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
 
-	const [footer, header, mobileFooter] = await Promise.all([
-		fetch(footerUrl).then((response) => response.json()),
-		fetch(headerUrl).then((response) => response.json()),
-		fetch(mobileFooterUrl).then((response) => response.json()),
-	]);
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	fetch(footerUrl).then((response) => response.json()),
+	// 	fetch(headerUrl).then((response) => response.json()),
+	// 	fetch(mobileFooterUrl).then((response) => response.json()),
+	// ]);
+	const response = await fetch(footerUrl);
+	const footer = await response.json();
 
 	const faqs = [
 		{
@@ -217,8 +219,8 @@ export const transformProps: TransformProps<TemplateProps> = async (data) => {
 			dm_directoryParents: dm_directoryParents,
 			faqs: faqs,
 			footer: footer || [],
-			header: header || [],
-			mobileFooter: mobileFooter || [],
+			header: [],
+			mobileFooter: [],
 		},
 	};
 };
