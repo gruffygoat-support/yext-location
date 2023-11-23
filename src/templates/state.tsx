@@ -124,7 +124,7 @@ const State: Template<TemplateRenderProps> = ({
 							className='leading-none'
 						/>
 						<h1 className='text-[3rem] text-typography-link font-bold mb-3 leading-none'>
-							{'Browse All Reigonal Finance Branches' +
+							{'Browse All Regional Finance Branches' +
 								' ' +
 								c_addressRegionDisplayName}
 						</h1>
@@ -155,7 +155,7 @@ const State: Template<TemplateRenderProps> = ({
 						</React.Suspense>
 					)}
 				</div>
-				<div className='lg:p-[4.5rem] p-4 mt-[40px] lg:mx-[5rem] '>
+				<div className=' my-[5rem] p-4 p-8  lg:mx-[8rem] '>
 					<div className='text-[2rem] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
 					</div>
