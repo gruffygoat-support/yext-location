@@ -80,14 +80,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 
 export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name, slug } = data.document;
-	const [footer, header, mobileFooter] = await Promise.all([
-		Apis.getDesktopFooter(),
-		Apis.getHeaderMenuNav(),
-		Apis.getMobileFooter(),
-	]);
-	console.log('Header---->', header);
-
-	console.log('Mobile Footer---->', mobileFooter);
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	Apis.getDesktopFooter(),
+	// 	Apis.getHeaderMenuNav(),
+	// 	Apis.getMobileFooter(),
+	// ]);
 
 	(dm_directoryParents || []).push({ name: name, slug: '' });
 
@@ -96,9 +93,9 @@ export const transformProps: TransformProps<any> = async (data) => {
 		document: {
 			...data.document,
 			dm_directoryParents: dm_directoryParents,
-			header: header,
-			footer: footer,
-			mobileFooter: mobileFooter,
+			header: [],
+			footer: [],
+			mobileFooter: [],
 		},
 	};
 };

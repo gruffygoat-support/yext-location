@@ -165,11 +165,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
  */
 export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name, slug } = data?.document;
-	const [footer, header, mobileFooter] = await Promise.all([
-		Apis.getDesktopFooter(),
-		Apis.getHeaderMenuNav(),
-		Apis.getMobileFooter(),
-	]);
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	Apis.getDesktopFooter(),
+	// 	Apis.getHeaderMenuNav(),
+	// 	Apis.getMobileFooter(),
+	// ]);
 
 	const faqs = [
 		{
@@ -207,9 +207,9 @@ export const transformProps: TransformProps<any> = async (data) => {
 			...data.document,
 			dm_directoryParents: dm_directoryParents,
 			faqs: faqs,
-			footer: footer,
-			header: header,
-			mobileFooter: mobileFooter,
+			footer: [],
+			header: [],
+			mobileFooter: [],
 		},
 	};
 };

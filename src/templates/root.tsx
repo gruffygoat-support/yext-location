@@ -67,17 +67,19 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
 export const transformProps: TransformProps<ExternalImageData> = async (
 	data
 ) => {
+	const response = await fetch('https://dummyjson.com/products/1');
+	const product = await response.json();
+	// const [footer, header, mobileFooter] = await Promise.all([
+	// 	Apis.getDesktopFooter(),
+	// 	Apis.getHeaderMenuNav(),
+	// 	Apis.getMobileFooter(),
+	// ]);
 	const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
 	const externalImage = (await fetch(url).then((res: any) =>
 		res.json()
 	)) as ExternalImage;
-	const [footer, header, mobileFooter] = await Promise.all([
-		Apis.getDesktopFooter(),
-		Apis.getHeaderMenuNav(),
-		Apis.getMobileFooter(),
-	]);
 
-	return { ...data, externalImage, footer, header, mobileFooter };
+	return { ...data, externalImage, footer: [], header: [], mobileFooter: [] };
 };
 
 /**
