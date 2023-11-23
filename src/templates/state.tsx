@@ -19,7 +19,6 @@ import PageLayout from '../components/PageLayout';
 import EditTool from '../components/EditTool';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Apis from '../utils/Apis';
-// import Map from '../components/Map';
 
 const Map = React.lazy(() => import('../components/Map'));
 
@@ -84,7 +83,7 @@ export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name } = data.document;
 	const footer = await Apis.getDesktopFooter();
 	const header = await Apis.getHeaderMenuNav();
-	const mobileFooter = await Apis.getMobileFooter();
+	// const mobileFooter = await Apis.getMobileFooter();
 
 	(dm_directoryParents || []).push({ name: name, slug: '' });
 	return {
@@ -94,7 +93,7 @@ export const transformProps: TransformProps<any> = async (data) => {
 			dm_directoryParents: dm_directoryParents,
 			footer: footer,
 			header: header,
-			mobileFooter: mobileFooter,
+			// mobileFooter: mobileFooter,
 		},
 	};
 };
@@ -124,7 +123,8 @@ const State: Template<TemplateRenderProps> = ({
 			<PageLayout
 				header={document?.header}
 				footer={document?.footer}
-				mobileFooter={document?.mobileFooter}>
+				// mobileFooter={document?.mobileFooter}
+			>
 				<div className='grid grid-cols-1 p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
 					<div className=' lg:py-10 p-4  lg:mx-[8rem] flex flex-col  justify-center '>
 						<Breadcrumbs
