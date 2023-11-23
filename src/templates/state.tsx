@@ -81,9 +81,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 
 export const transformProps: TransformProps<any> = async (data) => {
 	const { dm_directoryParents, name } = data.document;
-	const footer = await Apis.getDesktopFooter();
-	const header = await Apis.getHeaderMenuNav();
-	const mobileFooter = await Apis.getMobileFooter();
+	const [footer, header, mobileFooter] = await Promise.all([
+		Apis.getDesktopFooter(),
+		Apis.getHeaderMenuNav(),
+		Apis.getMobileFooter(),
+	]);
 
 	(dm_directoryParents || []).push({ name: name, slug: '' });
 	return {

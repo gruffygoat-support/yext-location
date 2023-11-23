@@ -71,9 +71,11 @@ export const transformProps: TransformProps<ExternalImageData> = async (
 	const externalImage = (await fetch(url).then((res: any) =>
 		res.json()
 	)) as ExternalImage;
-	const footer = await Apis.getDesktopFooter();
-	const header = await Apis.getHeaderMenuNav();
-	const mobileFooter = await Apis.getMobileFooter();
+	const [footer, header, mobileFooter] = await Promise.all([
+		Apis.getDesktopFooter(),
+		Apis.getHeaderMenuNav(),
+		Apis.getMobileFooter(),
+	]);
 
 	return { ...data, externalImage, footer, header, mobileFooter };
 };
