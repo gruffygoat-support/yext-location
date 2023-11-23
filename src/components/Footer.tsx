@@ -51,11 +51,11 @@ const Footer = (props: FooterProps) => {
 									padding: 0,
 								}}
 							/>
-							<div className='mb-6 text-gray-400 px-2 '>
+							<div className='mb-6 text-gray-400 px-2 ml-[20px] '>
 								<p className='mb-1 text-md'>Call a local branch</p>
 								<p className=''>(888)-000-000</p>
 							</div>
-							<div className='text-gray-400 px-2 '>
+							<div className='text-gray-400 px-2 ml-[20px] '>
 								<p className='mb-1'>Headquarters</p>
 								<p className='text-sm'>
 									Regional Management Corp. 979 Batesville Road, Suite B Greer,
@@ -117,7 +117,7 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 					</div>
-					<div className=''>
+					<div className='ml-[20px]'>
 						<p className='text-gray-400 font-normal text-sm'>
 							Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA,
 							MO, MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
