@@ -36,7 +36,7 @@ const Footer = (props: FooterProps) => {
 					className='sr-only'>
 					Footer
 				</h2>
-				<div className='hidden lg:block mx-auto max-w-[85rem] px-6 pb-8 lg:px-8 lg:pt-16'>
+				<div className='hidden lg:block mx-auto max-w-[95rem] px-6 pb-8 lg:px-8 lg:pt-16'>
 					<div className='grid grid-cols-12 gap-6 mb-8 text-white'>
 						<div className='col-span-4 w-[250px] '>
 							<img
