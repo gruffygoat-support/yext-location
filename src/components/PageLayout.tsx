@@ -56,7 +56,9 @@ const PageLayout = ({
 		} catch (error) {
 			console.log(error);
 		} finally {
-			Isloading(false);
+			setTimeout(() => {
+				Isloading(false);
+			}, 1000);
 		}
 	};
 

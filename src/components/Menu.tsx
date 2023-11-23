@@ -49,7 +49,7 @@ const HeaderMenu = ({ menuName, dropDown }) => {
 													<a
 														href={item.url}
 														className={
-															'group text-secondary font-bold flex w-full items-center rounded-md px-2 py-2 text-sm cursor-pointer'
+															'group text-secondary font-bold flex w-full items-center rounded-md px-2 py-2 text-xs font-bold cursor-pointer'
 														}>
 														{removeAmpersandCodeFromArray(item.title)}
 													</a>
