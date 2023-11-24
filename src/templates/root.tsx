@@ -150,7 +150,7 @@ const Root: Template<ExternalImageRenderData> = ({
 		<>
 			<PageLayout>
 				<div className='grid grid-cols-1 p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
-					<div className=' py-10 ] w-lg m-auto lg:mx-[8rem]'>
+					<div className=' py-10 xl:mt-[5rem] lg:mt[2rem] lg:w-[600px]  mx-auto max-w-[90rem] xl:px-6 pl-[0.5rem]  lg:pr-[8rem]'>
 						<h1 className='text-[3rem] font-bold mb-3 leading-none'>
 							Browse All Regional Finance Branches
 						</h1>
