@@ -24,9 +24,9 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 			<p className=' text-3xl text-center text-typography-link font-semibold gap-y-5'>
 				Trusted reviews from real customers *
 			</p>
-			<div className=' grid grid-cols-1 lg:grid-cols-4 gap-x-2  gap-y-4 my-[3rem] w-'>
+			<div className=' grid grid-cols-1 lg:grid-cols-4 gap-x-2  gap-y-4 xl:my-[3rem] place-items-center '>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg ml-[22px]'
+					className='shadow-xl shadow-gray-200 p-2 rounded-lg '
 					style={{
 						width: '288px',
 						height: '90px',
@@ -90,7 +90,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 					/>
 				</div>
 			</div>
-			<p className='text-typography-breadcrumb text-center underline underline-offset-1 cursor-pointer '>
+			<p className='text-typography-breadcrumb text-center underline underline-offset-1 cursor-pointer mt-5 '>
 				<a
 					className='leading-2 cursor-pointer'
 					href='https://regionalfinance.com/reviews/'>
