@@ -28,9 +28,19 @@ const Content = ({ document }) => {
 			<div className='flex items-center gap-5 mb-4'>
 				<FaPhoneAlt size={24} />
 
-				<div className='flex flex-col gap-y-2'>
-					<p>Fax: {formatPhoneNumber(document?.fax)}</p>
-					<p>Phone: {formatPhoneNumber(document?.mainPhone)}</p>
+				<div className='flex flex-col  gap-y-2'>
+					<p className='text-s font-normal'>
+						Phone:{' '}
+						<span className='text-typography-breadcrumb text-s font-medium underline'>
+							{formatPhoneNumber(document?.mainPhone)}
+						</span>
+					</p>
+					<p className='text-s font-normal'>
+						Fax:{' '}
+						<span className='text-typography-breadcrumb   font-medium underline'>
+							{formatPhoneNumber(document?.fax)}
+						</span>
+					</p>
 				</div>
 			</div>
 		</div>

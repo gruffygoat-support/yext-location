@@ -154,8 +154,8 @@ const Root: Template<ExternalImageRenderData> = ({
 						<h1 className='text-[3rem] font-bold mb-3 leading-none'>
 							Browse All Regional Finance Branches
 						</h1>
-						<div className='text-gray-400  mt-7 leading-6 text-justify mb-5'>
-							<p className=' text-lg font-medium '>
+						<div className='  mt-7 leading-6 text-justify mb-5'>
+							<p className=' text-typography-time text-xs font-normal '>
 								Coast to coast, Regional Finance is here to help. Our commitment
 								to our customers has inspired continuous expansion across the
 								country. With over 350 branches in 19 states so far, Regional
