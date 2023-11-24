@@ -20,13 +20,13 @@ interface ImageComponentProps {
 }
 const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 	return (
-		<div className='flex flex-col  justify-center flex-wrap  flex-1 items-center justify-center m-10'>
-			<p className=' text-3xl text-typography-link font-semibold gap-y-5'>
+		<div className='  flex-1 items-center justify-center py-10 mt-[40px] w-lg mx-auto lg:mx-[8rem]'>
+			<p className=' text-3xl text-center text-typography-link font-semibold gap-y-5'>
 				Trusted reviews from real customers *
 			</p>
-			<div className='flex gap-8 justify-center flex-wrap my-[3rem]'>
+			<div className=' grid grid-cols-1 lg:grid-cols-4 gap-x-2  gap-y-4 my-[3rem] w-'>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg'
+					className='shadow-xl shadow-gray-200 p-2 rounded-lg ml-[22px]'
 					style={{
 						width: '288px',
 						height: '90px',
@@ -90,14 +90,14 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 					/>
 				</div>
 			</div>
-			<a className='text-typography-breadcrumb underline underline-offset-1 cursor-pointer '>
+			<p className='text-typography-breadcrumb text-center underline underline-offset-1 cursor-pointer '>
 				<a
 					className='leading-2 cursor-pointer'
 					href='https://regionalfinance.com/reviews/'>
 					See more reviews{' '}
 				</a>
-			</a>
-			<p className='text-gray-400 font-normal'>
+			</p>
+			<p className='text-gray-400 text-center font-normal'>
 				*These reviews reflect customer experiences of Regional Finance as a
 				whole.
 			</p>
