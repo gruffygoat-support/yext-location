@@ -145,9 +145,15 @@ const Hours = (props: HoursProps) => {
 
 	return (
 		<>
-			<div className='text-lg font-semibold mb-2'>Branch Hours:</div>
-			<div className='text-2xl font-medium mb-2'>Open until 5:30 PM</div>
-			<div className='mb-4'>Also by appointment. </div>
+			<div className='text-xs font-bold mb-2 text-typography-link'>
+				Branch Hours:
+			</div>
+			<div className='lg:text-[24px] xl:text-[24px] text-lg font-medium mb-2 text-typography-link'>
+				Open until 5:30 PM
+			</div>
+			<div className='mb-4 text-xs font-normal  text-typography-time'>
+				Also by appointment.{' '}
+			</div>
 			<table>
 				<thead className='sr-only'>
 					<tr>
