@@ -152,7 +152,7 @@ const State: Template<TemplateRenderProps> = ({
 					)}
 				</div>
 				<div className=' my-[5rem] p-4 p-8  xl:mx-[8rem] '>
-					<div className='text-[2rem] font-bold mb-3 text-typography-link leading-none mb-6'>
+					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
 					</div>
 					<div className='grid grid-cols-1 lg:grid-cols-2  '>

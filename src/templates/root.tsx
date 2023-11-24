@@ -149,13 +149,13 @@ const Root: Template<ExternalImageRenderData> = ({
 	return (
 		<>
 			<PageLayout>
-				<div className='grid grid-cols-1 p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
-					<div className=' py-10 xl:mt-[5rem] lg:mt[2rem] lg:w-[600px]  mx-auto max-w-[90rem] xl:px-6 pl-[0.5rem]  lg:pr-[8rem]'>
-						<h1 className='text-[3rem] font-bold mb-3 leading-none'>
+				<div className='grid grid-cols-1 p-2 md:p-4 lg:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
+					<div className=' py-10 xl:mt-[5rem] lg:mt[2rem] lg:w-[600px]  mx-auto max-w-[90rem] xl:px-6   lg:pr-[8rem]'>
+						<h1 className='lg:text-[48px] text-[28px] font-bold mb-3 leading-none'>
 							Browse All Regional Finance Branches
 						</h1>
 						<div className='  mt-7 leading-6 text-justify mb-5'>
-							<p className=' text-typography-time text-xs font-normal '>
+							<p className=' text-typography-time text-xs font-normal hidden lg:block '>
 								Coast to coast, Regional Finance is here to help. Our commitment
 								to our customers has inspired continuous expansion across the
 								country. With over 350 branches in 19 states so far, Regional
@@ -163,10 +163,15 @@ const Root: Template<ExternalImageRenderData> = ({
 								personal loan services.
 							</p>
 						</div>
+						<p className=' text-typography-time text-xs font-normal block lg:hidden  '>
+							From coast to coast, Regional Finance is here to help.
+						</p>
 						<div
 							className='lg:hidden block'
 							onClick={toggleMapsVisibility}>
-							<button>View Map {mapToggle ? '-' : '+'}</button>
+							<button className='text-[18px] font-semibold text-typography-link'>
+								View Map {mapToggle ? '-' : '+'}
+							</button>
 						</div>
 					</div>
 					{mapToggle && (
@@ -180,14 +185,14 @@ const Root: Template<ExternalImageRenderData> = ({
 					)}
 				</div>
 				<div
-					className='  grid grid-rows-2 grid-cols-2 xl:gap-x-2 xl:gap-y-4 lg:grid-cols-4 lg:gap-y-7 lg:gap-x-[7.5rem]  md:grid-rows-2 
-					lg:grid-rows-5  xl:px-[100px]  lg:mx-[15rem] lg:my-[6rem] m-5 text-justify'>
+					className='  grid grid-rows-2 grid-cols-2 gap-y-4 xl:gap-x-2 xl:gap-y-4 lg:grid-cols-4 lg:gap-y-7 lg:gap-x-[7.5rem]  md:grid-rows-2 
+					lg:grid-rows-5  xl:px-[100px]  lg:mx-[15rem] lg:my-[6rem] mx-5 my-20 '>
 					{sortedData.map((state, index) => (
 						<div
 							key={index}
-							className='w-max '>
+							className='w-max max-w-2xl text-center  '>
 							<a
-								className='text-typography-link font-semibold text-[18px] '
+								className='text-typography-link font-semibold lg:text-[18px]  '
 								href={state.name.toLowerCase()}>
 								{state.c_addressRegionDisplayName}{' '}
 								<span className='text-gray-400 font-normal text-xs'>
