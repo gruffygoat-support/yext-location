@@ -20,7 +20,7 @@ const Header = ({ navigation }) => {
 			className='bg-white shadow'>
 			{({ open }) => (
 				<>
-					<div className='mx-auto max-w-[90rem] px-4 sm:px-6 xl:px-6 lg:px-[0.25rem] '>
+					<div className='mx-auto max-w-[90rem] px-4 sm:px-6 xl:px-6 lg:pl-[0.5rem]  lg:pr-[0.25rem]'>
 						<div className='flex h-24 justify-between'>
 							<div className='flex justify-between '>
 								<div className='flex flex-shrink-0 items-center '>
@@ -74,7 +74,7 @@ const Header = ({ navigation }) => {
 									))}
 								</div>
 							</div>
-							<div className='flex items-center  gap-2 lg:flex hidden'>
+							<div className='flex items-center xl:gap-x-6 gap-2 lg:flex hidden'>
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'

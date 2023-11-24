@@ -244,8 +244,8 @@ const Location: Template<TemplateRenderProps> = ({
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
-				<div className='grid grid-cols-1 p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
-					<div className=' py-10 mt-[40px] w-lg m-auto lg:mx-[8rem]'>
+				<div className='grid grid-cols-1 p-6 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
+					<div className=' py-10 mt-[40px] w-lg m-auto xl:mx-[8rem]'>
 						<BreadCrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}
