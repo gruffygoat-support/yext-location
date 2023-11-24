@@ -123,7 +123,7 @@ const State: Template<TemplateRenderProps> = ({
 							baseUrl={relativePrefixToRoot}
 							className='leading-none'
 						/>
-						<h1 className='text-[3rem] text-typography-link font-bold mb-3 leading-none'>
+						<h1 className='text-[28px] lg:text-[3rem] text-typography-link font-bold mb-3 leading-none'>
 							{'Browse All Regional Finance Branches' +
 								' ' +
 								c_addressRegionDisplayName}
