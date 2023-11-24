@@ -151,11 +151,11 @@ const Root: Template<ExternalImageRenderData> = ({
 			<PageLayout>
 				<div className='grid grid-cols-1 p-2 md:p-4 lg:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div className=' py-10 xl:mt-[5rem] lg:mt[2rem] lg:w-[600px]  mx-auto max-w-[90rem] xl:px-6   lg:pr-[8rem]'>
-						<h1 className='lg:text-[48px] text-[28px] font-bold mb-3 leading-none'>
+						<h1 className='lg:text-[48px] text-[28px] text-typography-link font-bold mb-3 leading-none'>
 							Browse All Regional Finance Branches
 						</h1>
 						<div className='  mt-7 leading-6 text-justify mb-5'>
-							<p className=' text-typography-time text-xs font-normal hidden lg:block '>
+							<p className=' text-typography-time text-xs font-normal hidden lg:block md:block '>
 								Coast to coast, Regional Finance is here to help. Our commitment
 								to our customers has inspired continuous expansion across the
 								country. With over 350 branches in 19 states so far, Regional
@@ -163,11 +163,11 @@ const Root: Template<ExternalImageRenderData> = ({
 								personal loan services.
 							</p>
 						</div>
-						<p className=' text-typography-time text-xs font-normal block lg:hidden  '>
+						<p className=' text-typography-time text-xs font-normal block lg:hidden md:hidden  '>
 							From coast to coast, Regional Finance is here to help.
 						</p>
 						<div
-							className='lg:hidden block'
+							className='lg:hidden md:hidden block'
 							onClick={toggleMapsVisibility}>
 							<button className='text-[18px] font-semibold text-typography-link'>
 								View Map {mapToggle ? '-' : '+'}
