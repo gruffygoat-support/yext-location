@@ -12,7 +12,7 @@ const HeaderMenu = ({ menuName, dropDown }) => {
 				{({ open }) => (
 					<>
 						<div className='flex items-center justify-center'>
-							<Menu.Button className='inline-flex w-full justify-center rounded-md  px-4 py-2 text-xs font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'>
+							<Menu.Button className='inline-flex w-full lg:w-max justify-center rounded-md  px-4 py-2 lg:px-0 xl:px-4 text-xs font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75'>
 								{menuName}
 
 								{dropDown?.length > 0 && (

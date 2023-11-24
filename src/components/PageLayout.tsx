@@ -82,7 +82,7 @@ const PageLayout = ({
 									<Cta
 										buttonText='Login'
 										url='#'
-										style=' bg-orange shadow-md bg-primary px-3 text-s py-2 text-center'
+										style=' bg-orange shadow-md  lg:w-max bg-primary px-3 text-s py-2 text-center'
 									/>
 								</div>
 							</div>
