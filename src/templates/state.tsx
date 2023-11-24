@@ -117,7 +117,7 @@ const State: Template<TemplateRenderProps> = ({
 		<>
 			<PageLayout>
 				<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
-					<div className=' xl:py-10 p-4  xl:mx-[8rem] flex flex-col  justify-center '>
+					<div className=' xl:py-10 xl:p-0 lg:p-0 p-4  xl:mx-[8rem] flex flex-col  justify-center '>
 						<Breadcrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}

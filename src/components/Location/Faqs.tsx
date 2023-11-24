@@ -3,7 +3,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const Faqs = ({ question, answer, toggleFaq, setToggleFaq, faqId, index }) => {
 	return (
-		<div className=' flex flex-col  bg-faqBanner w-max lg:w-[731px] w-[400px] p-6 '>
+		<div className=' flex flex-col  bg-faqBanner w-max lg:w-[731px] w-[350px] p-6 '>
 			<div
 				className='flex  justify-between text-typography-link font-semibold
 						 '>
