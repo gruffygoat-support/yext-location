@@ -17,7 +17,7 @@ const Search = (): JSX.Element => {
 	};
 
 	return (
-		<div className='lg:w-[300px] xl:w-[500px] w-[230px] lg:max-w-screen-lg max-w-2xl'>
+		<div className='lg:w-[290px] xl:w-[440px] w-[230px] lg:max-w-screen-lg max-w-2xl'>
 			<SearchBar
 				placeholder='Ask a question...'
 				onSearch={handleSearch}
