@@ -48,7 +48,7 @@ const Header = ({ navigation }) => {
 										}}
 									/>
 								</div>
-								<div className='-ml-2 mr-2 flex  md:hidden '>
+								<div className='-ml-2 mr-2 flex  md:block lg:hidden '>
 									{/* Mobile menu button */}
 									<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500  focus:ring-orange'>
 										<span className='sr-only'>Open main menu</span>
@@ -65,7 +65,7 @@ const Header = ({ navigation }) => {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='hidden lg:gap-x-3 xl:gap-x-6 gap-x-6 md:ml-6  xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
+								<div className='hidden lg:gap-x-3 xl:gap-x-6 gap-x-6 md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
 									{navigation.map((link) => (
 										<HeaderMenu
 											menuName={link.name}
@@ -89,7 +89,7 @@ const Header = ({ navigation }) => {
 						</div>
 					</div>
 
-					<Disclosure.Panel className='md:hidden'>
+					<Disclosure.Panel className='md:block lg:hidden'>
 						<div className='space-y-1 pt-2 pb-3'>
 							{navigation.map((link) => (
 								<Disclosure.Button
@@ -100,6 +100,18 @@ const Header = ({ navigation }) => {
 									{link.name}
 								</Disclosure.Button>
 							))}
+							<div className='flex gap-x-10 py-2 pl-3 pr-4'>
+								<Cta
+									buttonText='Prequalify Now'
+									url='#'
+									style='text-white bg-blue-400 shadow-md bg-secondary '
+								/>
+								<Cta
+									buttonText='Login'
+									url='#'
+									style='text-white  bg-orange shadow-md bg-primary text-center hidden md:block w-[100px]'
+								/>
+							</div>
 						</div>
 					</Disclosure.Panel>
 				</>
