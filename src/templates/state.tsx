@@ -116,8 +116,8 @@ const State: Template<TemplateRenderProps> = ({
 	return (
 		<>
 			<PageLayout>
-				<div className='grid grid-cols-1 p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
-					<div className=' lg:py-10 p-4  lg:mx-[8rem] flex flex-col  justify-center '>
+				<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
+					<div className=' xl:py-10 p-4  xl:mx-[8rem] flex flex-col  justify-center '>
 						<Breadcrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}
@@ -145,13 +145,13 @@ const State: Template<TemplateRenderProps> = ({
 					</div>
 					{document && (
 						<React.Suspense fallback={<div>Loading.....</div>}>
-							<div className='lg:block hidden m-5'>
+							<div className='lg:block md:block hidden m-5'>
 								<Map slug={name.toLowerCase()} />
 							</div>
 						</React.Suspense>
 					)}
 				</div>
-				<div className=' my-[5rem] p-4 p-8  lg:mx-[8rem] '>
+				<div className=' my-[5rem] p-4 p-8  xl:mx-[8rem] '>
 					<div className='text-[2rem] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
 					</div>

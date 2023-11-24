@@ -21,7 +21,7 @@ const Header = ({ navigation }) => {
 			{({ open }) => (
 				<>
 					<div className='mx-auto max-w-[90rem] px-4 sm:px-6 xl:px-6 lg:pl-[0.5rem]  lg:pr-[0.25rem]'>
-						<div className='flex h-24 justify-between'>
+						<div className='flex lg:h-20 h-20 justify-between'>
 							<div className='flex justify-between flex-1 lg:flex-none  '>
 								<div className='flex flex-shrink-0 items-center '>
 									<img
