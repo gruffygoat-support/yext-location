@@ -187,10 +187,10 @@ const Root: Template<ExternalImageRenderData> = ({
 							key={index}
 							className='w-max '>
 							<a
-								className='text-typography-link font-semibold '
+								className='text-typography-link font-semibold text-[18px] '
 								href={state.name.toLowerCase()}>
 								{state.c_addressRegionDisplayName}{' '}
-								<span className='text-gray-400 font-light'>
+								<span className='text-gray-400 font-normal text-xs'>
 									({state.dm_childEntityIds.length})
 								</span>
 							</a>
