@@ -74,15 +74,15 @@ const PageLayout = ({
 				<div className='min-h-screen'>
 					<div className='sticky top-0 z-50'>
 						<SearchExperience>
-							<div className='lg:hidden md:hidden bg-bg h-max flex gap-[1.5rem] items-center justify-center  pt-4  '>
+							<div className='lg:hidden md:hidden bg-bg h-max flex gap-[0.5rem] items-center  justify-between px-2  pt-4  '>
 								<div>
 									<Search />
 								</div>
-								<div className='mb-4'>
+								<div className='mb-4 text-white'>
 									<Cta
 										buttonText='Login'
 										url='#'
-										style='text-white bg-orange shadow-md bg-primary p-4 text-center'
+										style=' bg-orange shadow-md bg-primary px-3 text-s py-2 text-center'
 									/>
 								</div>
 							</div>
