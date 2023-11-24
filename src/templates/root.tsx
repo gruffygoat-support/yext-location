@@ -180,14 +180,14 @@ const Root: Template<ExternalImageRenderData> = ({
 					)}
 				</div>
 				<div
-					className='  grid grid-rows-2 grid-cols-2 lg:grid-cols-4 gap-4  md:grid-rows-2 
-					lg:grid-rows-5  lg:px-[90px]  lg:mx-[15rem] lg:my-[6rem] m-5 text-justify'>
+					className='  grid grid-rows-2 grid-cols-2 xl:gap-x-2 xl:gap-y-4 lg:grid-cols-4 lg:gap-y-7 lg:gap-x-[7.5rem]  md:grid-rows-2 
+					lg:grid-rows-5  xl:px-[100px]  lg:mx-[15rem] lg:my-[6rem] m-5 text-justify'>
 					{sortedData.map((state, index) => (
 						<div
 							key={index}
-							className='min-w-min'>
+							className='w-max '>
 							<a
-								className='text-typography-link font-semibold w-min-[100px]'
+								className='text-typography-link font-semibold '
 								href={state.name.toLowerCase()}>
 								{state.c_addressRegionDisplayName}{' '}
 								<span className='text-gray-400 font-light'>
