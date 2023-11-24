@@ -2,6 +2,7 @@ import * as React from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import { BsPersonCircle } from 'react-icons/bs';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
 import { formatPhoneNumber } from 'react-phone-number-input';
 
 const Content = ({ document }) => {
@@ -18,7 +19,10 @@ const Content = ({ document }) => {
 				</div>
 			</div>
 			<div className='flex items-center gap-5 mb-4'>
-				<IoLocationSharp size={30} />
+				<FaLocationDot
+					size={24}
+					className='-ml-[0.2rem]'
+				/>
 				<div className='my-4'>
 					<p className='text-xs font-bold text-typography-link'> Location: </p>
 
