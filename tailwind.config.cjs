@@ -18,7 +18,7 @@ module.exports = {
 		},
 		extend: {
 			screens: {
-				large: '1850px',
+				large: '1800px',
 			},
 			colors: {
 				typography: {

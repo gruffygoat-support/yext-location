@@ -95,7 +95,7 @@ const PageLayout = ({
 							<div className='hidden lg:block'>
 								<div className='grid grid-cols-12 bg-bg '>
 									<div className='col-span-8' />
-									<div className=''>
+									<div>
 										<Search />
 									</div>
 								</div>
