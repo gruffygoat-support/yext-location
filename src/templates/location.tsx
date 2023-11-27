@@ -244,19 +244,19 @@ const Location: Template<TemplateRenderProps> = ({
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
-				<div className='grid grid-cols-1 p-6 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
-					<div className=' py-10 mt-[40px] w-lg m-auto xl:mx-[8rem]'>
+				<div className='grid grid-cols-1 md:p-3 p-6 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
+					<div className=' py-10 mt-[40px] w-lg m-auto xl:mx-[8rem] lg:p-4 '>
 						<BreadCrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}
 							className='leading-none'
 						/>
 						<br />
-						<h1 className='text-[3rem] text-typography-link font-bold mb-3 leading-none'>
+						<h1 className='lg:text-[3rem] md:text-[30px] text-typography-link font-bold md:mb-1 mb-3 leading-none'>
 							{address?.city}
 						</h1>
 						<br />
-						<div className='flex items-center gap-4 mb-[2.75rem] '>
+						<div className='flex items-center gap-4 mb-[2.75rem] md:mb-6 '>
 							<Cta
 								buttonText='Get Direction'
 								url='#'
@@ -277,7 +277,7 @@ const Location: Template<TemplateRenderProps> = ({
 						{/* horizontal line */}
 						<div className='border-t w-[80%] max-w[100%]border-gray-500' />
 						{/* content of hours and branch */}
-						<div className='grid grid-cols-2 gap-4 py-5  '>
+						<div className='grid grid-cols-2 gap-4 py-5 md:w-[370px] md:gap-3   '>
 							<Content document={document} />
 							<div>
 								{hours && (
@@ -302,61 +302,34 @@ const Location: Template<TemplateRenderProps> = ({
 				{/* Image Card  */}
 				<Brands document={document} />
 				{/* Image Content section */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 bg-bg h-max '>
-					<div className='lg:h-[100%]'>
-						<img src='https://plus.unsplash.com/premium_photo-1679814366168-f6f39e7e8ae4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJhbmt8ZW58MHx8MHx8fDA%3D' />
-						{/* <img src='https://media.istockphoto.com/id/610843572/photo/smart-technology-has-changed-my-life-for-the-better.webp?b=1&s=170667a&w=0&k=20&c=znMvbAgDa7tBZQe5F7FLN6KduxjWfwoHZFB-kGRa0FE=' /> */}
+				<div className='grid grid-cols-1 lg:grid-cols-2 bg-bg h-max'>
+					<div>
+						<img
+							src='https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1aWxkaW5nJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D'
+							style={{
+								height: '100%',
+								width: '100%',
+								objectFit: 'cover',
+								overflow: 'hidden',
+							}}
+							alt='Your Alt Text'
+						/>
 					</div>
-					<div className=' py-10 px-6 mt-[40px] lg:ml-[2.5rem] lg:mr-[12rem] lg:w-[57%]'>
-						<div className=' text-xl text-typography-link lg:text-[32px] font-bold'>
+					<div className='py-10 px-6 mt-[40px] lg:ml-[2.5rem] lg:mr-[12rem] lg:w-[57%]'>
+						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>
 						<br />
 						<p className='mb-5 text-lg text-gray-400'>
 							{document.c_pagesAboutDescription}
 						</p>
-						<div className=' flex gap-2 flex-wrap mb-5 '>
-							<span
-								className='text-typography-breadcrumb   underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								Consumer Information Brochure
-							</span>
-							<span
-								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								Concerns & Complaints
-							</span>
-							<span
-								className='text-typography-breadcrumb  text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								Rates & Fees
-							</span>
-							<span
-								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								View License
-							</span>
-							<span
-								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								RegionalFinance.com
-							</span>
-						</div>
+						<div className='flex gap-2 flex-wrap mb-5'>{/* Your spans */}</div>
 						<div className='text-gray-400 text-sm text-justify'>
 							{document.c_disclosureNew}
 						</div>
 					</div>
 				</div>
+
 				{/* Faqs section */}
 				<div className='flex flex-col items-center my-9 sm:m-4'>
 					<div className='mb-5 text-2xl text-t font-bold '>
