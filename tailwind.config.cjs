@@ -17,6 +17,9 @@ module.exports = {
 			'5xl': '5.052rem',
 		},
 		extend: {
+			screens: {
+				large: '1850px',
+			},
 			colors: {
 				typography: {
 					link: '#102B51',
