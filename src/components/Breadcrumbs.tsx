@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { HomeIcon } from '@heroicons/react/20/solid';
 import { Link } from '@yext/pages/components';
 import classNames from 'classnames';
+import { AiOutlineRight } from 'react-icons/ai';
 
 export interface BreadCrumbProps {
 	name: string;
@@ -38,7 +39,12 @@ const Breadcrumb = (props: BreadCrumbProps) => {
 };
 
 const BreadCrumbs = (props: BreadCrumbsProps) => {
-	const { breadcrumbs, className, separator = '>', baseUrl } = props;
+	const {
+		breadcrumbs,
+		className,
+		separator = <AiOutlineRight size={20} />,
+		baseUrl,
+	} = props;
 
 	return (
 		<nav
@@ -48,14 +54,14 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 				<nav
 					className={classNames('Breadcrumbs  ', className)}
 					aria-label='Breadcrumb'>
-					<ol className='flex space-x-4'>
+					<ol className='flex '>
 						{breadcrumbs.map(({ name, slug }, idx) => {
 							const isLast = idx === breadcrumbs.length - 1;
 							const isFirst = idx === 0;
 
 							return (
 								<li
-									className='Breadcrumbs-item flex text-typography-breadcrumb md:text-[13px]'
+									className='Breadcrumbs-item flex items-center w-max text-s md:text-[13px] lg:text-xs text-typography-breadcrumb '
 									key={idx}>
 									{isFirst ? (
 										<Breadcrumb
@@ -64,13 +70,17 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 											{...props}
 										/>
 									) : (
-										<Breadcrumb
-											name={name}
-											slug={isLast ? '' : baseUrl + slug}
-											{...props}
-										/>
+										<div className='pr-2 lg:pr-0 md:pr-0'>
+											<Breadcrumb
+												name={name}
+												slug={isLast ? '' : baseUrl + slug}
+												{...props}
+											/>
+										</div>
 									)}
-									{!isLast && <span className='pl-4 md:pl-2'>{separator}</span>}
+									{!isLast && (
+										<span className=' lg:pl-2 pl-0'>{separator}</span>
+									)}
 								</li>
 							);
 						})}

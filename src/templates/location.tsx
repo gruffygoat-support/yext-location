@@ -244,15 +244,15 @@ const Location: Template<TemplateRenderProps> = ({
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
-				<div className='grid grid-cols-1 md:p-3 p-6 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
+				<div className='grid grid-cols-1 md:p-3 p-4 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div className=' py-10 mt-[40px] w-lg m-auto xl:mx-[8rem] lg:p-4 '>
 						<BreadCrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}
-							className='leading-none'
+							className='leading-none '
 						/>
 						<br />
-						<h1 className='lg:text-[3rem] md:text-[30px] text-typography-link font-bold md:mb-1 mb-3 leading-none'>
+						<h1 className='lg:text-[3rem]  text-[28px] text-typography-link font-bold md:mb-1 mb-3 leading-none'>
 							{address?.city}
 						</h1>
 						<br />
@@ -277,7 +277,7 @@ const Location: Template<TemplateRenderProps> = ({
 						{/* horizontal line */}
 						<div className='border-t w-[80%] max-w[100%]border-gray-500' />
 						{/* content of hours and branch */}
-						<div className='grid grid-cols-2 gap-4 py-5 md:w-[370px] md:gap-3   '>
+						<div className='grid grid-cols-2 gap-8 py-5 md:w-[370px] lg:w-[500px] md:gap-3   '>
 							<Content document={document} />
 							<div>
 								{hours && (
@@ -305,7 +305,7 @@ const Location: Template<TemplateRenderProps> = ({
 				<div className='grid grid-cols-1 lg:grid-cols-2 bg-bg h-max'>
 					<div>
 						<img
-							src='https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1aWxkaW5nJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D'
+							src='https://images.unsplash.com/photo-1682686580186-b55d2a91053c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8'
 							style={{
 								height: '100%',
 								width: '100%',
