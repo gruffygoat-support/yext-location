@@ -156,7 +156,7 @@ const State: Template<TemplateRenderProps> = ({
 						About Branches in {name}
 					</div>
 					<div className='grid grid-cols-1 lg:grid-cols-2  '>
-						<div className='text-typography-time font-normal lg:w-[493px]'>
+						<div className='text-typography-time font-normal lg:w-[493px] lg:pr-4 mb-5'>
 							<p className='text-xs'>
 								Regional Finance has branch locations offering personal loans
 								across New Mexico, from Farmington all the way down to Las
@@ -168,7 +168,7 @@ const State: Template<TemplateRenderProps> = ({
 						</div>
 
 						<div className='text-typography-time font-normal lg:w-[493px]'>
-							<p className='mb-10 text-xs '>
+							<p className='mb-10 md:mb-4 text-xs '>
 								You may have a few questions, and we're ready with answers. Call
 								or drop by the branch location nearest you.
 							</p>
