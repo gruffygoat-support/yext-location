@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { SearchBar, onSearchFunc } from '@yext/search-ui-react';
+import { IoCafe } from 'react-icons/io5';
 
 const Search = (): JSX.Element => {
 	const handleSearch: onSearchFunc = (searchEventData) => {
@@ -17,7 +18,7 @@ const Search = (): JSX.Element => {
 	};
 
 	return (
-		<div className='lg:w-[290px] xl:w-[440px] w-[230px] lg:max-w-screen-lg max-w-2xl'>
+		<div className=' flex lg:w-[290px] xl:w-[440px] w-[230px] lg:max-w-screen-lg max-w-2xl'>
 			<SearchBar
 				placeholder='Ask a question...'
 				onSearch={handleSearch}
