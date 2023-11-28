@@ -119,7 +119,7 @@ const DayRow = (props: DayRow) => {
 
 	return (
 		<tr>
-			<td className='capitalize text-left text-s font-semibold  pr-4'>
+			<td className='capitalize text-typography-time text-left text-s font-semibold  pr-4'>
 				<span>{dayName.substring(0, 3)}</span>
 			</td>
 			{!day.isClosed && (
@@ -156,9 +156,9 @@ const Hours = (props: HoursProps) => {
 					Open until 5:30 PM
 				</div>
 				<div className='mb-4 text-xs font-normal  text-typography-time'>
-					Also by appointment.{' '}
+					Also by appointment.
 				</div>
-				<table className='leading-[18px]'>
+				<table className='leading-[17.79px]'>
 					<thead className='sr-only'>
 						<tr>
 							<th>Day of the Week</th>

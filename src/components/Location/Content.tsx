@@ -10,7 +10,10 @@ const Content = ({ document }) => {
 	return (
 		<div>
 			<div className='flex  gap-5 mb-4'>
-				<BranchIcon />
+				<div className='mt-[5px]'>
+					<BranchIcon />
+				</div>
+
 				<p className='text-xs font-bold text-typography-link'>
 					Branch Manager:
 					<br />
@@ -21,7 +24,9 @@ const Content = ({ document }) => {
 			</div>
 
 			<div className='flex gap-5 mb-4'>
-				<LocationIcon />
+				<div className='mt-[6px]'>
+					<LocationIcon />
+				</div>
 				<div className='flex flex-col'>
 					<p className='text-xs font-bold text-typography-link'>
 						{' '}

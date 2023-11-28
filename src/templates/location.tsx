@@ -360,7 +360,7 @@ const Location: Template<TemplateRenderProps> = ({
 							</span>
 						</div>
 						<div className='flex gap-2 flex-wrap mb-5'>{/* Your spans */}</div>
-						<div className='text-gray-400 text-sm text-justify'>
+						<div className='text-gray-400 text-xs text-justify'>
 							{document.c_disclosureNew}
 						</div>
 					</div>
@@ -368,7 +368,7 @@ const Location: Template<TemplateRenderProps> = ({
 
 				{/* Faqs section */}
 				<div className='flex flex-col items-center my-[5rem]'>
-					<div className=' text-[28px] lg:text-[28px] mb-10 font-bold '>
+					<div className=' text-[28px] text-typography-link lg:text-[28px] mb-10 font-bold '>
 						Frequently asked questions
 					</div>
 					{faqs.map((faq, index) => (
