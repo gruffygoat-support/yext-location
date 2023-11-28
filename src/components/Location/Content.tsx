@@ -5,6 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { formatPhoneNumber } from 'react-phone-number-input';
 import { BranchIcon, LocationIcon, PhoneIcon } from './Svgs';
+import Clock from '../assets/images/clock.ico';
 
 const Content = ({ document }) => {
 	return (

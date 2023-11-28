@@ -266,12 +266,12 @@ const Location: Template<TemplateRenderProps> = ({
 										document?.geocodedCoordinate?.longitude
 									)
 								}
-								style='text-white text-xs shadow-md bg-primary text-center w-max-content lg:w-[195px] '
+								style='text-white text-xs shadow-sm rounded-[5px] bg-primary text-center w-max-content lg:w-[183px] '
 							/>
 							<Cta
 								buttonText='Start Loan Process'
 								url={document?.c_startLoanProcessURL}
-								style='text-white  text-xs shadow-md bg-secondary text-center '
+								style='text-white  text-xs shadow-sm bg-secondary text-center  rounded-[5px] lg:w-[183px]'
 							/>
 						</div>
 						{/* horizontal line */}
@@ -314,7 +314,7 @@ const Location: Template<TemplateRenderProps> = ({
 							alt='Your Alt Text'
 						/>
 					</div>
-					<div className='py-10 px-6 mt-[40px] lg:ml-[2.5rem] lg:mr-[12rem] lg:w-[62%]'>
+					<div className='py-10 px-6 mt-[40px] lg:ml-[4rem] lg:mr-[12rem] lg:w-[62%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>
