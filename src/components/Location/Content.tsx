@@ -5,8 +5,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { formatPhoneNumber } from 'react-phone-number-input';
 import { BranchIcon, LocationIcon, PhoneIcon } from './Svgs';
-import Clock from '../assets/images/clock.ico';
-
+import { FiPhone } from 'react-icons/fi';
 const Content = ({ document }) => {
 	return (
 		<div>
@@ -42,7 +41,10 @@ const Content = ({ document }) => {
 				</div>
 			</div>
 			<div className='flex items-center gap-5 mb-4'>
-				<PhoneIcon />
+				<FiPhone
+					fill='#EBF5FF'
+					size={24}
+				/>
 
 				<div className='flex flex-col'>
 					<p className='text-s font-normal w-max flex'>
