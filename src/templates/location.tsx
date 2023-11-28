@@ -314,7 +314,7 @@ const Location: Template<TemplateRenderProps> = ({
 							alt='Your Alt Text'
 						/>
 					</div>
-					<div className='py-10 px-6 mt-[40px] lg:ml-[4rem] lg:mr-[12rem] lg:w-[60%]'>
+					<div className='py-10 px-6 mt-[40px] lg:ml-[4rem] lg:mr-[12rem] lg:w-[60%] large:w-[56%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>
