@@ -27,6 +27,7 @@ module.exports = {
 					time: '#3D3D3D',
 					lightGray: '#A3A3A3',
 					white: '#fff',
+					line: '#757575',
 				},
 
 				bg: '#F7F9FB',

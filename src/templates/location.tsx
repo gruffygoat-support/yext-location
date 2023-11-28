@@ -275,7 +275,7 @@ const Location: Template<TemplateRenderProps> = ({
 							/>
 						</div>
 						{/* horizontal line */}
-						<div className='border-t w-[392px] max-w[100%] border-' />
+						<div className='border-t-[0.5px] w-[392px] max-w[100%] border-typography-line' />
 						{/* content of hours and branch */}
 						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[500px] md:gap-3   '>
 							<Content document={document} />
