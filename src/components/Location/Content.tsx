@@ -55,7 +55,7 @@ const Content = ({ document }) => {
 					</p>
 					<p className='text-s font-normal flex'>
 						Fax:
-						<div className='pl-[2rem]'>
+						<div className='pl-[2.1rem]'>
 							<span className='text-typography-breadcrumb  border-b border-typography-breadcrumb  font-medium'>
 								{formatPhoneNumber(document?.fax)}
 							</span>
