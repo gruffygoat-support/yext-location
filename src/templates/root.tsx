@@ -18,11 +18,6 @@ import PageLayout from '../components/PageLayout';
 import { ExternalImage } from '../types/ExternalImage';
 import Favicon from '../assets/images/yext-favicon.ico';
 import MapChart from '../components/MapChart';
-import SearchExperience from '../components/SearchExperience';
-import { SearchBar } from '@yext/search-ui-react';
-import Search from '../components/SearchBar';
-import Cta from '../components/Cta';
-import Apis from '../utils/Apis';
 
 export const config: TemplateConfig = {
 	stream: {
@@ -67,12 +62,12 @@ type ExternalImageData = TemplateProps & { externalImage: ExternalImage };
 export const transformProps: TransformProps<ExternalImageData> = async (
 	data
 ) => {
-	const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
-	const externalImage = (await fetch(url).then((res: any) =>
-		res.json()
-	)) as ExternalImage;
+	// const url = YEXT_PUBLIC_EXTERNAL_IMAGE_API_BASE_URL + '/2';
+	// const externalImage = (await fetch(url).then((res: any) =>
+	// 	res.json()
+	// )) as ExternalImage;
 
-	return { ...data, externalImage };
+	return { ...data };
 };
 
 /**
@@ -102,7 +97,7 @@ export const getHeadConfig: GetHeadConfig<
 	TemplateRenderProps
 > = (): HeadConfig => {
 	return {
-		title: 'Reigonal Finance ',
+		title: 'Regional Finance',
 		charset: 'UTF-8',
 		viewport: 'width=device-width, initial-scale=1',
 		tags: [
@@ -110,7 +105,7 @@ export const getHeadConfig: GetHeadConfig<
 				type: 'meta',
 				attributes: {
 					name: 'description',
-					content: 'Reigonal Finance',
+					content: 'Regional Finance',
 				},
 			},
 			{
@@ -177,9 +172,10 @@ const Root: Template<ExternalImageRenderData> = ({
 					{mapToggle && (
 						<div className=' lg:block '>
 							<MapChart
-								states={dm_directoryChildren.map(
-									(state) => state.c_addressRegionDisplayName
-								)}
+								states={dm_directoryChildren.map((state) => ({
+									name: state.c_addressRegionDisplayName,
+									url: state.slug,
+								}))}
 							/>
 						</div>
 					)}
@@ -192,7 +188,7 @@ const Root: Template<ExternalImageRenderData> = ({
 							key={index}
 							className='w-max max-w-2xl text-center  '>
 							<a
-								className='text-typography-link font-semibold lg:text-[18px]  '
+								className='text-typography-link font-semibold text-[18px]  '
 								href={state.name.toLowerCase()}>
 								{state.c_addressRegionDisplayName}{' '}
 								<span className='text-gray-400 font-normal text-xs'>
