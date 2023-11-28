@@ -121,8 +121,8 @@ export const PhoneIcon = () => {
 export const ClockIcon = () => {
 	return (
 		<svg
-			width='23'
-			height='23'
+			width='24'
+			height='24'
 			viewBox='0 0 23 23'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'>

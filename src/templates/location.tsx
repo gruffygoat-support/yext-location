@@ -302,18 +302,16 @@ const Location: Template<TemplateRenderProps> = ({
 				<Brands document={document} />
 				{/* Image Content section */}
 				<div className='grid grid-cols-1 lg:grid-cols-2 bg-bg h-max'>
-					<div>
-						<img
-							src='https://images.unsplash.com/photo-1682686580186-b55d2a91053c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8'
-							style={{
-								height: '100%',
-								width: '710px',
-								objectFit: 'cover',
-								overflow: 'hidden',
-							}}
-							alt='Your Alt Text'
-						/>
-					</div>
+					<img
+						src='https://images.unsplash.com/photo-1682686580186-b55d2a91053c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8'
+						style={{
+							height: '609px',
+							width: '710px',
+							objectFit: 'cover',
+							overflow: 'hidden',
+						}}
+						alt='Your Alt Text'
+					/>
 					<div className='py-10 px-6 mt-[40px] lg:px-0 lg:mr-[12rem] lg:w-[57%] large:w-[51%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
