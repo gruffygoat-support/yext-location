@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import { FiPlus, FiMinus } from 'react-icons/fi';
 
 const Faqs = ({ question, answer, toggleFaq, setToggleFaq }) => {
 	return (
@@ -12,7 +13,7 @@ const Faqs = ({ question, answer, toggleFaq, setToggleFaq }) => {
 			<div className='flex justify-between text-typography-link font-semibold'>
 				{question}
 				{toggleFaq ? (
-					<FaMinus
+					<FiMinus
 						className='text-primary font-normal   cursor-pointer'
 						size={24}
 						onClick={(e) => {
@@ -21,7 +22,7 @@ const Faqs = ({ question, answer, toggleFaq, setToggleFaq }) => {
 						}}
 					/>
 				) : (
-					<FaPlus
+					<FiPlus
 						className=' text-primary font-normal  cursor-pointer'
 						size={24}
 						onClick={(e) => {

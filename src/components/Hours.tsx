@@ -1,5 +1,5 @@
-import { ClockIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
+import { ClockIcon } from './Location/Svgs';
 
 export interface HoursProps {
 	title?: string;
@@ -146,7 +146,10 @@ const Hours = (props: HoursProps) => {
 
 	return (
 		<div className='flex gap-x-[1rem]'>
-			<ClockIcon className='self-start w-[24px] mt-[4px] ' />
+			<div className='mt-[5px]'>
+				<ClockIcon />
+			</div>
+
 			<div className='flex flex-col gap-x-2'>
 				<div className='text-xs flex gap-x-2 font-bold mb-2 text-typography-link'>
 					<p>Branch Hours:</p>
