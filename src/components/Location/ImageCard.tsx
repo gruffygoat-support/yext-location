@@ -24,7 +24,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 			<p className=' text-3xl text-center text-typography-link font-semibold gap-y-5'>
 				Trusted reviews from real customers *
 			</p>
-			<div className=' grid grid-cols-1 lg:grid-cols-4 gap-x-2  gap-y-4 xl:my-[3rem] place-items-center '>
+			<div className=' grid grid-cols-1 lg:grid-cols-2 xl:gap-x-24 xl:grid-cols-4 2xl:grid-cols-4 lg:grid-x-4  large:gap-x-0 md:grid-cols-2 md:grid-x-10   gap-y-10 xl:my-[3rem] place-items-center '>
 				<div
 					className=' opacity-3 p-2 rounded-lg '
 					style={{
