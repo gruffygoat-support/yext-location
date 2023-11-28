@@ -40,7 +40,7 @@ const Content = ({ document }) => {
 					</p>
 				</div>
 			</div>
-			<div className='flex gap-5 mb-4'>
+			<div className='flex items-center gap-5 mb-4'>
 				<PhoneIcon />
 
 				<div className='flex flex-col'>
