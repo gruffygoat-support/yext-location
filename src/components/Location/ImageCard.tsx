@@ -26,7 +26,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 			</p>
 			<div className=' grid grid-cols-1 lg:grid-cols-4 gap-x-2  gap-y-4 xl:my-[3rem] place-items-center '>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg '
+					className=' opacity-3 p-2 rounded-lg '
 					style={{
 						width: '288px',
 						height: '90px',
@@ -34,6 +34,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						alignItems: 'center',
 						justifyContent: 'center',
 						padding: 10,
+						boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
 					}}>
 					<img
 						src={document.c_cTATrustPilot.cTAPhoto.url}
@@ -42,7 +43,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 					/>
 				</div>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg'
+					className=' p-2 rounded-lg '
 					style={{
 						width: '288px',
 						height: '90px',
@@ -50,6 +51,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						alignItems: 'center',
 						justifyContent: 'center',
 						padding: 10,
+						boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
 					}}>
 					<img
 						src={document.c_cTACreditKarma.cTAPhoto.url}
@@ -58,7 +60,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 					/>
 				</div>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg'
+					className=' p-2 rounded-lg '
 					style={{
 						width: '288px',
 						height: '90px',
@@ -66,6 +68,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						alignItems: 'center',
 						justifyContent: 'center',
 						padding: 10,
+						boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
 					}}>
 					<img
 						src={document.c_cTALendingTree.cTAPhoto.url}
@@ -74,7 +77,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 					/>
 				</div>
 				<div
-					className='shadow-xl shadow-gray-200 p-2 rounded-lg'
+					className=' p-2 rounded-lg '
 					style={{
 						width: '288px',
 						height: '90px',
@@ -82,6 +85,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						alignItems: 'center',
 						justifyContent: 'center',
 						padding: 10,
+						boxShadow: '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
 					}}>
 					<img
 						src={document.c_cTABestCompany.cTAPhoto.url}

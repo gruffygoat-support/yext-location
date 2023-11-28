@@ -266,18 +266,18 @@ const Location: Template<TemplateRenderProps> = ({
 										document?.geocodedCoordinate?.longitude
 									)
 								}
-								style='text-white bg-blue-400 shadow-md bg-primary text-center w-max-content lg:w-[195px] '
+								style='text-white text-xs shadow-md bg-primary text-center w-max-content lg:w-[195px] '
 							/>
 							<Cta
 								buttonText='Start Loan Process'
 								url={document?.c_startLoanProcessURL}
-								style='text-white bg-orange shadow-md bg-secondary text-center '
+								style='text-white  text-xs shadow-md bg-secondary text-center '
 							/>
 						</div>
 						{/* horizontal line */}
-						<div className='border-t w-[80%] max-w[100%]border-gray-500' />
+						<div className='border-t w-[392px] max-w[100%] border-' />
 						{/* content of hours and branch */}
-						<div className='grid grid-cols-2 gap-8 py-5 md:w-[370px] lg:w-[500px] md:gap-3   '>
+						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[500px] md:gap-3   '>
 							<Content document={document} />
 							<div>
 								{hours && (
@@ -293,7 +293,6 @@ const Location: Template<TemplateRenderProps> = ({
 					<div>
 						<img
 							src='https://images.unsplash.com/photo-1639389016237-85a1a16f76d0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJyYW5jaCUyMHJlaWdvbmFsJTIwZmluYW5jZXxlbnwwfHwwfHx8MA%3D%3D'
-							width={570}
 							height={610}
 						/>
 					</div>
@@ -315,7 +314,7 @@ const Location: Template<TemplateRenderProps> = ({
 							alt='Your Alt Text'
 						/>
 					</div>
-					<div className='py-10 px-6 mt-[40px] lg:ml-[2.5rem] lg:mr-[12rem] lg:w-[57%]'>
+					<div className='py-10 px-6 mt-[40px] lg:ml-[2.5rem] lg:mr-[12rem] lg:w-[62%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>
@@ -323,6 +322,43 @@ const Location: Template<TemplateRenderProps> = ({
 						<p className='mb-5 text-lg text-gray-400'>
 							{document.c_pagesAboutDescription}
 						</p>
+						<div className=' flex gap-2 flex-wrap mb-5 '>
+							<span
+								className='text-typography-breadcrumb   underline underline-offset-1 cursor-pointer '
+								style={{
+									fontSize: 14,
+								}}>
+								Consumer Information Brochure
+							</span>
+							<span
+								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
+								style={{
+									fontSize: 14,
+								}}>
+								Concerns & Complaints
+							</span>
+							<span
+								className='text-typography-breadcrumb  text-md underline underline-offset-1 cursor-pointer '
+								style={{
+									fontSize: 14,
+								}}>
+								Rates & Fees
+							</span>
+							<span
+								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
+								style={{
+									fontSize: 14,
+								}}>
+								View License
+							</span>
+							<span
+								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
+								style={{
+									fontSize: 14,
+								}}>
+								RegionalFinance.com
+							</span>
+						</div>
 						<div className='flex gap-2 flex-wrap mb-5'>{/* Your spans */}</div>
 						<div className='text-gray-400 text-sm text-justify'>
 							{document.c_disclosureNew}
@@ -331,19 +367,20 @@ const Location: Template<TemplateRenderProps> = ({
 				</div>
 
 				{/* Faqs section */}
-				<div className='flex flex-col items-center my-9 sm:m-4'>
-					<div className='mb-5 text-2xl text-t font-bold '>
+				<div className='flex flex-col items-center my-[5rem]'>
+					<div className=' text-[28px] lg:text-[28px] mb-10 font-bold '>
 						Frequently asked questions
 					</div>
 					{faqs.map((faq, index) => (
-						<div key={index}>
+						<div
+							key={index}
+							className='mb-4'>
 							<Faqs
 								question={faq?.question}
 								answer={faq?.answer}
 								toggleFaq={openFaq === faq.id}
 								setToggleFaq={() => handleToggle(faq.id)}
 							/>
-							<br />
 						</div>
 					))}
 					<br />

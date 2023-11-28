@@ -1,3 +1,4 @@
+import { ClockIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 
 export interface HoursProps {
@@ -118,7 +119,7 @@ const DayRow = (props: DayRow) => {
 
 	return (
 		<tr>
-			<td className='capitalize text-left text-s font-semibold pl-1 pr-4'>
+			<td className='capitalize text-left text-s font-semibold  pr-4'>
 				<span>{dayName.substring(0, 3)}</span>
 			</td>
 			{!day.isClosed && (
@@ -144,26 +145,30 @@ const Hours = (props: HoursProps) => {
 	const { hours } = props;
 
 	return (
-		<>
-			<div className='text-xs font-bold mb-2 text-typography-link'>
-				Branch Hours:
+		<div className='flex gap-x-[1rem]'>
+			<ClockIcon className='self-start w-[24px] ' />
+			<div className='flex flex-col gap-x-2'>
+				<div className='text-xs flex gap-x-2 font-bold mb-2 text-typography-link'>
+					<p>Branch Hours:</p>
+				</div>
+
+				<div className='lg:text-[24px] xl:text-[24px] text-lg font-medium mb-2 w-max text-typography-link'>
+					Open until 5:30 PM
+				</div>
+				<div className='mb-4 text-xs font-normal  text-typography-time'>
+					Also by appointment.{' '}
+				</div>
+				<table className='leading-[18px]'>
+					<thead className='sr-only'>
+						<tr>
+							<th>Day of the Week</th>
+							<th>Hours</th>
+						</tr>
+					</thead>
+					{renderHours(hours)}
+				</table>
 			</div>
-			<div className='lg:text-[24px] xl:text-[24px] text-lg font-medium mb-2 text-typography-link'>
-				Open until 5:30 PM
-			</div>
-			<div className='mb-4 text-xs font-normal  text-typography-time'>
-				Also by appointment.{' '}
-			</div>
-			<table>
-				<thead className='sr-only'>
-					<tr>
-						<th>Day of the Week</th>
-						<th>Hours</th>
-					</tr>
-				</thead>
-				{renderHours(hours)}
-			</table>
-		</>
+		</div>
 	);
 };
 

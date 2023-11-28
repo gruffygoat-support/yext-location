@@ -8,7 +8,7 @@
 }
 
 .centered-container {
-	@apply mx-auto px-5 md:px-14 max-w-screen-xl;
+	@apply mx-auto px-5 md:px-14 max-w-screen-xl py-[5rem];
 }
 
 .section {

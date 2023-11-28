@@ -150,7 +150,7 @@ const Root: Template<ExternalImageRenderData> = ({
 							Browse All Regional Finance Branches
 						</h1>
 						<div className='  mt-7 leading-6 text-justify mb-5'>
-							<p className=' text-typography-time text-xs font-normal hidden lg:block md:block '>
+							<p className=' text-typography-time text-xs font-normal opacity-[80%] hidden lg:block md:block '>
 								Coast to coast, Regional Finance is here to help. Our commitment
 								to our customers has inspired continuous expansion across the
 								country. With over 350 branches in 19 states so far, Regional

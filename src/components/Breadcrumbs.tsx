@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ReactNode } from 'react';
-import { HomeIcon } from '@heroicons/react/20/solid';
 import { Link } from '@yext/pages/components';
 import classNames from 'classnames';
 import { AiOutlineRight } from 'react-icons/ai';
@@ -35,7 +34,7 @@ const Breadcrumb = (props: BreadCrumbProps) => {
 		);
 	}
 
-	return <span className='Breadcrumbs-label'>{name}</span>;
+	return <span className=' text-xs font-nomal'>{name}</span>;
 };
 
 const BreadCrumbs = (props: BreadCrumbsProps) => {
@@ -45,6 +44,10 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 		separator = <AiOutlineRight size={20} />,
 		baseUrl,
 	} = props;
+	const removeHyphen = (slug) => {
+		let outputString = slug.replace(/-/g, ' ');
+		return outputString;
+	};
 
 	return (
 		<nav
@@ -72,7 +75,7 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 									) : (
 										<div className='pr-2 lg:pr-0 md:pr-0'>
 											<Breadcrumb
-												name={name}
+												name={removeHyphen(name)}
 												slug={isLast ? '' : baseUrl + slug}
 												{...props}
 											/>

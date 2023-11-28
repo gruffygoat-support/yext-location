@@ -33,12 +33,12 @@ const DirectoryCityGrid = ({
 		childrenDivs = sortedChildren.map((child: any) => (
 			<div
 				key={child.slug}
-				className='border rounded-lg drop-shadow-md bg-gray-100 space-y-6 p-3 h-60'>
+				className='border rounded-lg drop-shadow-md bg-gray-100 space-y-6 p-4 h-70 pt-10 w-[500]'>
 				<h2>
 					<a
 						className='font-bold text-2xl text-blue-700 hover:underline'
 						href={relativePrefixToRoot + child.slug}>
-						{child.name}
+						{child.name.split('-')[0]}
 					</a>
 				</h2>
 				<div className='m-1 border'></div>

@@ -113,7 +113,6 @@ const City: Template<TemplateRenderProps> = ({
 						breadcrumbs={dm_directoryParents}
 						baseUrl={relativePrefixToRoot}
 					/>
-					<h1>{name}</h1>
 					<DirectoryCityGrid
 						name={name}
 						description={description}

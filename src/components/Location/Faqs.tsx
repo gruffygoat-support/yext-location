@@ -1,31 +1,40 @@
 import * as React from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-const Faqs = ({ question, answer, toggleFaq, setToggleFaq, faqId, index }) => {
+const Faqs = ({ question, answer, toggleFaq, setToggleFaq }) => {
 	return (
-		<div className=' flex flex-col  bg-faqBanner w-max lg:w-[731px] w-[350px] p-6 '>
-			<div
-				className='flex  justify-between text-typography-link font-semibold
-						 '>
+		<div
+			className='flex flex-col bg-faqBanner w-max lg:w-[731px] w-[350px] p-6 cursor-pointer'
+			onClick={(e) => {
+				e.stopPropagation(); // Prevents the click event from reaching the parent div
+				setToggleFaq();
+			}}>
+			<div className='flex justify-between text-typography-link font-semibold'>
 				{question}
 				{toggleFaq ? (
 					<FaMinus
-						className='transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 cursor-pointer'
+						className='text-primary font-normal   cursor-pointer'
 						size={24}
-						onClick={setToggleFaq}
+						onClick={(e) => {
+							e.stopPropagation(); // Prevents the click event from reaching the parent div
+							setToggleFaq();
+						}}
 					/>
 				) : (
 					<FaPlus
-						className='transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 cursor-pointer'
+						className=' text-primary font-normal  cursor-pointer'
 						size={24}
-						onClick={setToggleFaq}
+						onClick={(e) => {
+							e.stopPropagation(); // Prevents the click event from reaching the parent div
+							setToggleFaq();
+						}}
 					/>
 				)}
 			</div>
 			{toggleFaq && (
 				<>
-					<div className={`transition duration-150 ease-in-out mt-5 `}>
-						<div className='border-t border-gray-500 mb-4' />
+					<div className=' mt-5'>
+						<div className='border-t border-gray-500 mb-4 transition ease-in-out delay-1000' />
 						{answer}
 					</div>
 				</>
