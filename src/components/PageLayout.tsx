@@ -54,7 +54,7 @@ const PageLayout = ({
 			setFooterNav(footer);
 			setMobileFooterNav(mobileFooter);
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 		} finally {
 			setTimeout(() => {
 				Isloading(false);
@@ -63,7 +63,7 @@ const PageLayout = ({
 	};
 
 	React.useEffect(() => {
-		fetchData();
+		// fetchData();
 	}, []);
 
 	return (
@@ -102,7 +102,7 @@ const PageLayout = ({
 							</div>
 							<Header
 								_site={_site}
-								navigation={headerNav}
+								navigation={[]}
 							/>
 						</SearchExperience>
 					</div>
@@ -110,8 +110,8 @@ const PageLayout = ({
 					{children}
 					<Footer
 						_site={_site}
-						footerItems={footerNav}
-						mobileFooterItems={mobileFooterNav}
+						footerItems={[]}
+						mobileFooterItems={[]}
 					/>
 				</div>
 			)}
