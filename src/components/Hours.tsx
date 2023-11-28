@@ -146,7 +146,7 @@ const Hours = (props: HoursProps) => {
 
 	return (
 		<div className='flex gap-x-[1rem]'>
-			<div className='mt-[5px]'>
+			<div className=' mt-[5px]'>
 				<ClockIcon />
 			</div>
 

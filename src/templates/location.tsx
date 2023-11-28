@@ -277,7 +277,7 @@ const Location: Template<TemplateRenderProps> = ({
 						{/* horizontal line */}
 						<div className='border-t-[0.5px] w-[392px] max-w[100%] border-typography-line' />
 						{/* content of hours and branch */}
-						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[500px] md:gap-3   '>
+						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[500px] md:gap-3 lg:gap-x-0   '>
 							<Content document={document} />
 							<div>
 								{hours && (
@@ -314,7 +314,7 @@ const Location: Template<TemplateRenderProps> = ({
 							alt='Your Alt Text'
 						/>
 					</div>
-					<div className='py-10 px-6 mt-[40px] lg:ml-[4rem] lg:mr-[12rem] lg:w-[62%]'>
+					<div className='py-10 px-6 mt-[40px] lg:ml-[4rem] lg:mr-[12rem] lg:w-[60%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>

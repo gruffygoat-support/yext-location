@@ -43,11 +43,13 @@ const Content = ({ document }) => {
 			<div className='flex items-center gap-5 mb-4'>
 				<FiPhone
 					fill='#EBF5FF'
+					stroke='#2E4369'
+					strokeWidth={1.5}
 					size={24}
 				/>
 
 				<div className='flex flex-col'>
-					<p className='text-s font-normal w-max flex'>
+					<p className='text-s text-typography-time font-normal w-max flex'>
 						Phone:
 						<div className='pl-4'>
 							<span className='text-typography-breadcrumb text-s font-medium  border-b border-typography-breadcrumb mb-2'>
@@ -55,7 +57,7 @@ const Content = ({ document }) => {
 							</span>
 						</div>
 					</p>
-					<p className='text-s font-normal flex'>
+					<p className='text-s  text-typography-time font-normal flex'>
 						Fax:
 						<div className='pl-[2.1rem]'>
 							<span className='text-typography-breadcrumb  border-b border-typography-breadcrumb  font-medium'>
