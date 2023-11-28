@@ -277,7 +277,7 @@ const Location: Template<TemplateRenderProps> = ({
 						{/* horizontal line */}
 						<div className='border-t-[0.5px] w-[392px] max-w[100%] border-typography-line' />
 						{/* content of hours and branch */}
-						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[500px] md:gap-3 lg:gap-x-0   '>
+						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[450px] md:gap-3 lg:gap-x-0   '>
 							<Content document={document} />
 							<div>
 								{hours && (
