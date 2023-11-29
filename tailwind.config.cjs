@@ -18,7 +18,8 @@ module.exports = {
 		},
 		extend: {
 			screens: {
-				large: '1600px',
+				large: { min: '1600px', max: '1800px' },
+				extraLarge: { min: '1801px', max: '2000px' },
 			},
 			colors: {
 				typography: {
