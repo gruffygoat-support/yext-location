@@ -11,7 +11,7 @@ const Faqs: React.FC<FaqProps> = ({ question, answer }) => {
 	return (
 		<Disclosure>
 			{({ open }) => (
-				<div className='flex flex-col bg-faqBanner w-max lg:w-[731px] w-[350px] md:w-[500px] p-6 cursor-pointer'>
+				<div className='flex flex-col bg-faqBanner w-max lg:w-[731px] sm:w-[350px] md:[500px] p-6 cursor-pointer'>
 					<Disclosure.Button className='flex justify-between text-typography-link font-semibold'>
 						<span>{question}</span>
 						{open ? (
@@ -28,8 +28,8 @@ const Faqs: React.FC<FaqProps> = ({ question, answer }) => {
 					</Disclosure.Button>
 					<Transition
 						enter='transition-all ease-in duration-[900ms]'
-						enterFrom='opacity-0 max-h-0'
-						enterTo='opacity-100 max-h-[500px]'
+						enterFrom='transition-all opacity-0 max-h-0'
+						enterTo='transition-all opacity-100 max-h-[500px]'
 						leave='transition-all ease-out duration-[800ms]'
 						leaveFrom='opacity-100 max-h-[500px]'
 						leaveTo='opacity-0 max-h-0'>
