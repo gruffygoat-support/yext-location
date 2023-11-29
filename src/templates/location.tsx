@@ -236,11 +236,6 @@ const Location: Template<TemplateRenderProps> = ({
 		window.open(mapsUrl, '_blank');
 	};
 
-	const [openFaq, setOpenFaq] = React.useState(null);
-
-	const handleToggle = (faqId) => {
-		setOpenFaq((prevOpenFaq) => (prevOpenFaq === faqId ? null : faqId));
-	};
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
@@ -275,7 +270,7 @@ const Location: Template<TemplateRenderProps> = ({
 							/>
 						</div>
 						{/* horizontal line */}
-						<div className='border-t-[0.5px] w-[392px] max-w[100%] border-typography-line' />
+						<div className='border-t-[0.5px] w-[290px] lg:w-[392px] max-w[100%] border-typography-line' />
 						{/* content of hours and branch */}
 						<div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  py-5 md:w-[370px] lg:w-[450px] md:gap-3 lg:gap-x-0   '>
 							<Content document={document} />
@@ -376,8 +371,6 @@ const Location: Template<TemplateRenderProps> = ({
 							<Faqs
 								question={faq?.question}
 								answer={faq?.answer}
-								toggleFaq={openFaq === faq.id}
-								setToggleFaq={() => handleToggle(faq.id)}
 							/>
 						</div>
 					))}

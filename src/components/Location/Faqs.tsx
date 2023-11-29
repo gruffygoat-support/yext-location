@@ -11,7 +11,7 @@ const Faqs: React.FC<FaqProps> = ({ question, answer }) => {
 	return (
 		<Disclosure>
 			{({ open }) => (
-				<div className='flex flex-col bg-faqBanner w-max lg:w-[731px] w-[350px] p-6 cursor-pointer'>
+				<div className='flex flex-col bg-faqBanner w-max lg:w-[731px] w-[350px] md:w-[500px] p-6 cursor-pointer'>
 					<Disclosure.Button className='flex justify-between text-typography-link font-semibold'>
 						<span>{question}</span>
 						{open ? (
