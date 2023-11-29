@@ -30,20 +30,13 @@ const PageLayout = ({
 	const [footerNav, setFooterNav] = React.useState([]);
 	const [mobileFooterNav, setMobileFooterNav] = React.useState([]);
 
-	const navigation = [
-		{ name: 'Loans', href: '/', dropDown: header?.slice(1, 10) },
-		{ name: 'Locations', href: '#', dropDown: [] },
-		{ name: 'Education', href: '#', dropDown: header?.slice(12, 15) },
-		{ name: 'About us', href: '#', dropDown: header?.slice(21, 28) },
-		{ name: 'Payment Options', href: '#', dropDown: [] },
-	];
 	const fetchData = async () => {
-		const [footer, header, mobileFooter] = await Promise.all([
-			Apis.getDesktopFooter(),
-			Apis.getHeaderMenuNav(),
-			Apis.getMobileFooter(),
-		]);
 		try {
+			const [footer, header, mobileFooter] = await Promise.all([
+				Apis.getDesktopFooter(),
+				Apis.getHeaderMenuNav(),
+				Apis.getMobileFooter(),
+			]);
 			setHeaderNav([
 				{ name: 'Loans', href: '/', dropDown: header?.slice(1, 10) },
 				{ name: 'Locations', href: '#', dropDown: [] },
