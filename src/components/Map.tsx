@@ -4,6 +4,7 @@ import Pin from './Pin';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Apis from '../utils/Apis';
 import { Coordinate, MapProps } from '../types/MapProps';
+import { getDirection } from '../utils/helper';
 
 const Map: React.FC<MapProps> = ({ slug }) => {
 	const [cords, setCords] = React.useState<Coordinate[]>([]);
@@ -86,7 +87,7 @@ const Map: React.FC<MapProps> = ({ slug }) => {
 					interactive={false}
 					attributionControl={false}
 					mapStyle='mapbox://styles/mapbox/streets-v12'>
-					{pins}
+					<div className='cursor-pointer'>{pins}</div>
 				</MapBox>
 			)}
 		</>

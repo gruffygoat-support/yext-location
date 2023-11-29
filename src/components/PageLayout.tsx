@@ -46,13 +46,16 @@ const PageLayout = ({
 			]);
 			setFooterNav(footer);
 			setMobileFooterNav(mobileFooter);
+
+			Isloading(false);
 		} catch (error) {
 			console.log(error);
-		} finally {
-			setTimeout(() => {
-				Isloading(false);
-			}, 1000);
 		}
+		// } finally {
+		// 	setTimeout(() => {
+		// 		Isloading(false);
+		// 	}, 1000);
+		// }
 	};
 
 	React.useEffect(() => {

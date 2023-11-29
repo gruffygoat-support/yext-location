@@ -144,7 +144,7 @@ const State: Template<TemplateRenderProps> = ({
 						)}
 					</div>
 					{document && (
-						<React.Suspense fallback={<div>Loading.....</div>}>
+						<React.Suspense fallback={<></>}>
 							<div className='lg:block md:block hidden m-5'>
 								<Map slug={name.toLowerCase()} />
 							</div>

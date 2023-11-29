@@ -34,6 +34,7 @@ import Brands from '../components/Location/ImageCard';
 import Content from '../components/Location/Content';
 import Faqs from '../components/Location/Faqs';
 import Apis from '../utils/Apis';
+import { getDirection } from '../utils/helper';
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -224,17 +225,6 @@ const Location: Template<TemplateRenderProps> = ({
 
 		faqs,
 	} = document;
-	const getDirection = (lat, long) => {
-		// Replace the latitude and longitude with your desired coordinates
-		const latitude = lat;
-		const longitude = long;
-
-		// Construct the Google Maps URL
-		const mapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
-
-		// Open the URL in a new tab or window
-		window.open(mapsUrl, '_blank');
-	};
 
 	return (
 		<>
@@ -299,15 +289,15 @@ const Location: Template<TemplateRenderProps> = ({
 				<div className='grid grid-cols-1 lg:grid-cols-2 bg-bg h-max'>
 					<img
 						src='https://images.unsplash.com/photo-1682686580186-b55d2a91053c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHx8'
+						className='large:w-[830px] w-[760px]'
 						style={{
 							height: '100%',
-							width: '760px',
 							objectFit: 'cover',
 							overflow: 'hidden',
 						}}
 						alt='Your Alt Text'
 					/>
-					<div className='py-10 px-6 mt-[40px]  lg:px-6 2xl:px-0 xl:px-[4rem] xl:w-[76%]  xl:mr-[6rem]  lg:mr-[12rem] lg:w-[57%] large:w-[52%]'>
+					<div className='py-10 px-6 mt-[40px]  lg:pl-[4rem] lg:px-0 2xl:px-0 xl:px-[4rem] xl:w-[76%] lg:mr-0  xl:mr-[6rem]  lg:w-[80%] large:w-[50%]'>
 						<div className='text-xl text-typography-link lg:text-[32px] font-bold'>
 							Regional Finance: your personal loan partner
 						</div>
