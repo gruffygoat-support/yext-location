@@ -116,7 +116,7 @@ const City: Template<TemplateRenderProps> = ({
 					large:ml-[9.5rem]  large:mr-[9rem]
 					xl:p-[2rem] xl:py-10 
 					large:pl-0  
-					extraLarge:ml-[16.5rem]  extraLarge:pl-0
+					extraLarge:ml-[4rem] extraLarge:mr-[8rem]
 					
 					'>
 						<Breadcrumbs
@@ -159,7 +159,7 @@ const City: Template<TemplateRenderProps> = ({
 				xl:p-[4rem]
 				2xl:mx-[15rem] 
 				large:mx-[9rem] large:p-[2.5rem]
-				extraLarge:ml-[14.8rem] extraLarge:mr-[8erm]
+				extraLarge:ml-[8.5rem] extraLarge:mr-[8erm] extraLarge:p-[2rem]
 				'>
 					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
