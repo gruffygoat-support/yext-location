@@ -159,7 +159,7 @@ const City: Template<TemplateRenderProps> = ({
 				xl:p-[4rem]
 				2xl:mx-[15rem] 
 				large:mx-[9rem] large:p-[2.5rem]
-				extraLarge:ml-[15.8rem] extraLarge:mr-[8erm]
+				extraLarge:ml-[14.8rem] extraLarge:mr-[8erm]
 				'>
 					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
