@@ -145,11 +145,20 @@ const City: Template<TemplateRenderProps> = ({
 						)}
 					</div>
 
-					<React.Suspense fallback={<></>}>
-						<div className='lg:block md:block hidden m-5'>
-							<Map coordinates={document?.dm_directoryChildren} />
-						</div>
-					</React.Suspense>
+					{document && (
+						<React.Suspense
+							fallback={
+								<div
+									role='status'
+									className='max-w-lg animate-pulse'>
+									<div className='h-[600px] bg-gray-200  dark:bg-gray-700 w-[600px] mb-4'></div>
+								</div>
+							}>
+							<div className='lg:block md:block hidden m-5'>
+								<Map coordinates={document?.dm_directoryChildren} />
+							</div>
+						</React.Suspense>
+					)}
 				</div>
 				<div
 					className=' my-[5rem]  p-8  
@@ -179,7 +188,7 @@ const City: Template<TemplateRenderProps> = ({
 						<div
 							className='text-typography-time font-normal 
 						lg:w-[493px] lg:ml-[1.6rem]
-						extraLarge:ml-[4.8rem]
+						extraLarge:ml-[5rem]
 						'>
 							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
 								You may have a few questions, and we're ready with answers. Call
