@@ -17,17 +17,7 @@ export default class Apis {
 		});
 		return data.response.entities.map((entity: any) => entity.cityCoordinate);
 	}
-	static async getAllStates(): Promise<any> {
-		const apiUrl = `https://cdn.yextapis.com/v2/accounts/me/content/states?v=20161012&limit=50`;
-		const { data } = await axios.get(apiUrl, {
-			headers: {
-				'Content-Type': 'application/json',
-				'Api-Key': 'ef8da365f161cd1eae34f56b93f13441',
-			},
-		});
 
-		return data.response.docs.filter((city: any) => city.name !== 'Idaho');
-	}
 	static async getHeaderMenuNav(): Promise<any> {
 		const apiUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;
 		const response = await fetch(apiUrl);

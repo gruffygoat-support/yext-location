@@ -31,36 +31,24 @@ const DirectoryCityGrid = ({
 	if (directoryChildren) {
 		const sortedChildren = directoryChildren?.sort(sortByCity) || [];
 		childrenDivs = sortedChildren.map((child: any) => (
-			<div
-				key={child.slug}
-				className='border rounded-lg drop-shadow-md bg-gray-100 space-y-6 p-4 h-70 pt-10 w-[500]'>
-				<h2>
-					<a
-						className='font-bold text-2xl text-blue-700 hover:underline'
-						href={relativePrefixToRoot + child.slug}>
-						{child.name.split('-')[0]}
-					</a>
-				</h2>
-				<div className='m-1 border'></div>
-				<Address address={child.address}></Address>
-				<div className='space-x-3'>
-					<span>&#128222;</span>
-					<span>{formatPhoneNumber(child.mainPhone)}</span>
-				</div>
+			<div key={child.slug}>
+				<a
+					key='uRL'
+					href={relativePrefixToRoot + child.slug}
+					className='font-semibold text-[18px] md:text-s  w-max lg:text-[18px] text-typography-link hover:underline  '>
+					{child.name + ' ' + child.c_geomodifier ?? child?.name}{' '}
+				</a>
+				<span className='text-typography-lightGray text-xs font-normal'>
+					({child.dm_childEntityIds?.length || 1})
+				</span>
 			</div>
 		));
 	}
 	return (
 		<>
-			<div className='section space-y-14 px-10'>
-				<div className='space-y-6'>
-					{name && (
-						<h1 className='text-3xl font-semibold text-center'>{name}</h1>
-					)}
-					{description && <p className='text-2xl text-center'>{description}</p>}
-				</div>
+			<div className='space-y-10 mt-6 '>
 				{directoryChildren && (
-					<div className='grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+					<div className='grid  grid-cols-1 gap-8 w-max  max-w-[25rem] md:gap-x-2 lg:grid-cols-2  lg:gap-4 xl:gap-x-3 gap-y-[1.5rem]'>
 						{childrenDivs}
 					</div>
 				)}

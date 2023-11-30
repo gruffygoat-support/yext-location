@@ -105,14 +105,6 @@ const State: Template<TemplateRenderProps> = ({
 		dm_directoryParents,
 		dm_directoryChildren,
 	} = document;
-	const [Loading, setLoading] = React.useState(true);
-
-	React.useEffect(() => {
-		setTimeout(() => {
-			setLoading(false);
-		}, 2000);
-	}, []);
-
 	return (
 		<>
 			<PageLayout>

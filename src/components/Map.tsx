@@ -4,16 +4,19 @@ import Pin from './Pin';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Apis from '../utils/Apis';
 import { Coordinate, MapProps } from '../types/MapProps';
-import { getDirection } from '../utils/helper';
 
-const Map: React.FC<MapProps> = ({ slug }) => {
-	const [cords, setCords] = React.useState<Coordinate[]>([]);
-	const [Loading, setLoading] = React.useState<boolean>(true);
+const Map: React.FC<MapProps> = ({ slug, coordinates }) => {
+	const cordinates = coordinates?.map((cords) => ({
+		latitude: cords.cityCoordinate.latitude,
+		longitude: cords.cityCoordinate.longitude,
+	}));
+	const [cords, setCords] = React.useState<Coordinate[]>(cordinates || []);
+	const [Loading, setLoading] = React.useState<boolean>(slug ? true : false);
 
 	const [viewport, setViewport] = React.useState<Coordinate>({
 		longitude: cords[0]?.longitude || 0.0,
 		latitude: cords[0]?.latitude || 0.0,
-		zoom: 5,
+		zoom: 2,
 	});
 	const filteredCoordinates = async () => {
 		const response = await Apis.getCoordinates(slug);
@@ -21,7 +24,9 @@ const Map: React.FC<MapProps> = ({ slug }) => {
 		setLoading(false);
 	};
 	React.useEffect(() => {
-		filteredCoordinates();
+		if (slug) {
+			filteredCoordinates();
+		}
 	}, []);
 	const getBoundingBox = () => {
 		if (cords.length === 0) {
@@ -32,7 +37,6 @@ const Map: React.FC<MapProps> = ({ slug }) => {
 		let maxLng = cords[0].longitude;
 		let minLat = cords[0].latitude;
 		let maxLat = cords[0].latitude;
-
 		for (const cord of cords) {
 			minLng = Math.min(minLng as number, cord.longitude as number);
 			maxLng = Math.max(maxLng as number, cord.longitude as number);
