@@ -73,7 +73,7 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 											{...props}
 										/>
 									) : (
-										<div className='pr-2 lg:pr-0 md:pr-0'>
+										<div className='pr-2 lg:pr-0 md:pr-0 font-normal'>
 											<Breadcrumb
 												name={removeHyphen(name)}
 												slug={isLast ? '' : baseUrl + slug}

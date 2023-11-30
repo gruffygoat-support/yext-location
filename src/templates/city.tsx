@@ -109,9 +109,11 @@ const City: Template<TemplateRenderProps> = ({
 			<PageLayout>
 				<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
 					<div
-						className=' p-4 md:p-4  flex flex-col justify-center 
-					2xl:p-0 2xl:ml-[2rem] 2xl:mr-[8rem] 2xl:pl-[4.5rem]  
-					large:mx-[9rem] 
+						className=' p-4  p-[2.5rem]  flex flex-col justify-center 
+					md:p-[2.9rem]
+					lg:p-[2.9rem]
+					2xl:ml-[2rem] 2xl:mr-[8rem] 2xl:pl-[4.5rem]  2xl:p-[1rem] 
+					large:ml-[9.5rem]  large:mr-[9rem]
 					xl:p-[2rem] xl:py-10 
 					large:pl-0  
 					extraLarge:ml-[16.5rem]  extraLarge:pl-0
@@ -150,10 +152,14 @@ const City: Template<TemplateRenderProps> = ({
 					</React.Suspense>
 				</div>
 				<div
-					className=' my-[5rem] p-4 p-8  
-				xl:p-[3rem]
-				2xl:mx-[15rem]
-				large:mx-[9rem]
+					className=' my-[5rem]  p-8  
+
+				md:p-[2.9rem]
+				lg:p-[3rem]
+				xl:p-[4rem]
+				2xl:mx-[15rem] 
+				large:mx-[9rem] large:p-[2.5rem]
+				extraLarge:ml-[15.8rem] extraLarge:mr-[8erm]
 				'>
 					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
@@ -170,7 +176,11 @@ const City: Template<TemplateRenderProps> = ({
 							</p>
 						</div>
 
-						<div className='text-typography-time font-normal lg:w-[493px]'>
+						<div
+							className='text-typography-time font-normal 
+						lg:w-[493px] lg:ml-[1.6rem]
+						extraLarge:ml-[1.2rem]
+						'>
 							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
 								You may have a few questions, and we're ready with answers. Call
 								or drop by the branch location nearest you.
