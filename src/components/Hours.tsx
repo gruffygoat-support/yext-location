@@ -155,7 +155,7 @@ const Hours = (props: HoursProps) => {
 					<p>Branch Hours:</p>
 				</div>
 
-				<div className='lg:text-[24px] xl:text-[24px] text-lg font-medium mb-2 w-max text-typography-link'>
+				<div className='lg:text-[22px] xl:text-[24px] text-lg font-medium mb-2 w-max text-typography-link'>
 					Open until 5:30 PM
 				</div>
 				<div className='mb-4 text-xs font-normal  text-typography-time'>

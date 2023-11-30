@@ -232,10 +232,10 @@ const Location: Template<TemplateRenderProps> = ({
 				<div className='grid grid-cols-1 md:p-3 p-4 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div
 						className=' py-10 mt-[40px] w-lg m-auto
-					xl:ml-[2rem] xl:mr-[8rem] 
-					lg:pl-[1rem]
-					large:mx-[8rem]
-					extraLarge:ml-[16rem] extraLarge:mr-[8rem]'>
+					xl:ml-[1.5rem] xl:mr-[8rem] 
+					lg:pl-[2.8rem]
+					large:mx-[9rem] large:pl-[1.2rem]
+					extraLarge:ml-[7.9rem] extraLarge:mr-[8rem] '>
 						<BreadCrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}

@@ -145,7 +145,15 @@ const Root: Template<ExternalImageRenderData> = ({
 		<>
 			<PageLayout>
 				<div className='grid grid-cols-1 p-2 md:p-4 lg:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2  '>
-					<div className=' py-10 xl:mt-[5rem] lg:mt[2rem] lg:w-[600px]  xl:w-[664px] xl:pl-2 mx-auto max-w-[90rem] xl:px-6 large:px-0 large:pr-0 large:pl-[83px] extraLarge:pl-[142px] extraLarge:mt-[5rem]   lg:pr-[8rem]'>
+					<div
+						className=' 
+					py-10 mx-auto max-w-[90rem] 
+					lg:mt[2rem]  lg:pr-[8rem] lg:w-[600px] lg:pl-[1.4rem]
+					xl:w-[664px] xl:mt-[5rem] xl:pl-[2.5rem]
+					2xl:pl-[1.6rem] 2xl:pl-0
+					large:px-0 large:pr-0 large:pl-[83px]
+					extraLarge:mt-[5rem] extraLarge:pl-[0.5rem]
+					 '>
 						<h1 className='lg:text-[48px] text-[28px] text-typography-link font-bold mb-3 leading-none'>
 							Browse All Regional Finance Branches
 						</h1>
