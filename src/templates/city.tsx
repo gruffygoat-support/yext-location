@@ -179,7 +179,7 @@ const City: Template<TemplateRenderProps> = ({
 						<div
 							className='text-typography-time font-normal 
 						lg:w-[493px] lg:ml-[1.6rem]
-						extraLarge:ml-[1.2rem]
+						extraLarge:ml-[4.8rem]
 						'>
 							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
 								You may have a few questions, and we're ready with answers. Call
