@@ -20,7 +20,11 @@ interface ImageComponentProps {
 }
 const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 	return (
-		<div className='  flex-1 items-center justify-center py-10 mt-[40px] w-lg mx-auto lg:mx-[8rem]'>
+		<div
+			className='  flex-1 items-center justify-center py-10 mt-[40px] w-lg mx-auto 
+		lg:mx-[8rem]
+		extraLarge:ml-[18rem] extraLarge:mr-[8rem]
+		'>
 			<p className=' text-3xl text-center text-typography-link font-semibold gap-y-5'>
 				Trusted reviews from real customers *
 			</p>
