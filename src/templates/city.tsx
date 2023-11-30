@@ -13,13 +13,10 @@ import {
 import { isProduction } from '@yext/pages/util';
 import '../index.css';
 import Favicon from '../assets/images/yext-favicon.ico';
-import Banner from '../components/Banner';
 import DirectoryCityGrid from '../components/DirectoryCityGrid';
 import PageLayout from '../components/PageLayout';
-import EditTool from '../components/EditTool';
 import Breadcrumbs from '../components/Breadcrumbs';
-import Apis from '../utils/Apis';
-import Map from '../components/Map';
+const Map = React.lazy(() => import('../components/Map'));
 
 export const config: TemplateConfig = {
 	stream: {
@@ -145,13 +142,12 @@ const City: Template<TemplateRenderProps> = ({
 							</div>
 						)}
 					</div>
-					{document && (
-						<React.Suspense fallback={<></>}>
-							<div className='lg:block md:block hidden m-5'>
-								<Map coordinates={document?.dm_directoryChildren} />
-							</div>
-						</React.Suspense>
-					)}
+
+					<React.Suspense fallback={<></>}>
+						<div className='lg:block md:block hidden m-5'>
+							<Map coordinates={document?.dm_directoryChildren} />
+						</div>
+					</React.Suspense>
 				</div>
 				<div
 					className=' my-[5rem] p-4 p-8  
