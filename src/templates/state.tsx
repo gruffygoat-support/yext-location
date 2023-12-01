@@ -178,7 +178,9 @@ const State: Template<TemplateRenderProps> = ({
 						<div
 							className='text-typography-time font-normal 
 						lg:w-[493px] lg:ml-[1.6rem]
-						extraLarge:ml-[5rem]
+						2xl:ml-0
+						large:ml-[1.6rem]
+						extraLarge:-ml-[2.8rem]
 						'>
 							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
 								You may have a few questions, and we're ready with answers. Call
