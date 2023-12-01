@@ -190,7 +190,7 @@ const Root: Template<ExternalImageRenderData> = ({
 				</div>
 				<div
 					className='  grid grid-rows-2 grid-cols-2 gap-y-4 xl:gap-x-2 xl:gap-y-4 lg:grid-cols-4 lg:gap-y-7 lg:gap-x-[7.5rem]  md:grid-rows-2 
-					lg:grid-rows-5  xl:px-[100px]  lg:mx-[15rem] lg:my-[6rem] mx-5 my-20 '>
+					lg:grid-rows-5  xl:pl-[100px] large:pr-0 extraLarge:pr-0 lg:mx-[15rem] lg:my-[6rem] mx-5 my-20 '>
 					{sortedData.map((state, index) => (
 						<div
 							key={index}
