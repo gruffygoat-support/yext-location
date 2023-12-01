@@ -115,7 +115,7 @@ const State: Template<TemplateRenderProps> = ({
 					xl:ml-[2rem] 2xl:mr[8rem]
 					2xl:ml-[2rem] 2xl:mr[8rem]
 					large:pl-[7.5rem]
-					extraLarge:pl-[0.4rem]
+					extraLarge:pl-[6.4rem]
 					 '>
 						<Breadcrumbs
 							breadcrumbs={dm_directoryParents}
