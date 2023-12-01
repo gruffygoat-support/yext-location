@@ -109,7 +109,14 @@ const State: Template<TemplateRenderProps> = ({
 		<>
 			<PageLayout>
 				<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
-					<div className=' xl:py-10 xl:p-0 lg:p-4 p-4 md:p-4  xl:mx-[8rem] flex flex-col  justify-center '>
+					<div
+						className=' xl:py-10 xl:p-0 p-4 md:p-4 flex flex-col  justify-center
+					lg:p-4 lg:pl-[2.8rem]  
+					xl:ml-[2rem] 2xl:mr[8rem]
+					2xl:ml-[2rem] 2xl:mr[8rem]
+					large:pl-[7.5rem]
+					extraLarge:pl-[0.4rem]
+					 '>
 						<Breadcrumbs
 							breadcrumbs={dm_directoryParents}
 							baseUrl={relativePrefixToRoot}
@@ -143,7 +150,16 @@ const State: Template<TemplateRenderProps> = ({
 						</React.Suspense>
 					)}
 				</div>
-				<div className=' my-[5rem] p-4 p-8  xl:mx-[8rem] '>
+				<div
+					className=' my-[5rem]  p-8  
+
+				md:p-[2.9rem]
+				lg:p-[3rem]
+				xl:p-[4rem]
+				2xl:mx-[15rem] 
+				large:mx-[9rem] large:p-[2.5rem]
+				extraLarge:ml-[8.5rem] extraLarge:mr-[8erm] extraLarge:p-[2rem]
+				'>
 					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
 						About Branches in {name}
 					</div>
@@ -159,7 +175,11 @@ const State: Template<TemplateRenderProps> = ({
 							</p>
 						</div>
 
-						<div className='text-typography-time font-normal lg:w-[493px]'>
+						<div
+							className='text-typography-time font-normal 
+						lg:w-[493px] lg:ml-[1.6rem]
+						extraLarge:ml-[5rem]
+						'>
 							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
 								You may have a few questions, and we're ready with answers. Call
 								or drop by the branch location nearest you.
