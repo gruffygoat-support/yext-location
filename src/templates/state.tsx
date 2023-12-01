@@ -113,7 +113,7 @@ const State: Template<TemplateRenderProps> = ({
 						className=' xl:py-10 xl:p-0 p-4 md:p-4 flex flex-col  justify-center
 					lg:p-4 lg:pl-[2.8rem]  
 					xl:ml-[2rem] 2xl:mr[8rem]
-					2xl:ml-[2rem] 2xl:mr[8rem]
+					2xl:ml-[5rem] 2xl:mr[8rem] 2xl:p-0
 					large:pl-[7.5rem]
 					extraLarge:pl-[6.4rem]
 					 '>
@@ -156,7 +156,7 @@ const State: Template<TemplateRenderProps> = ({
 				md:p-[2.9rem]
 				lg:p-[3rem]
 				xl:p-[4rem]
-				2xl:mx-[15rem] 
+				2xl:ml-[3rem] 
 				large:mx-[9rem] large:p-[2.5rem]
 				extraLarge:ml-[8.5rem] extraLarge:mr-[8erm] extraLarge:p-[2rem]
 				'>
