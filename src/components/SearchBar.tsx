@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import { SearchBar, onSearchFunc } from '@yext/search-ui-react';
-import { IoCafe } from 'react-icons/io5';
-
+import '../index.css';
 const Search = (): JSX.Element => {
 	const handleSearch: onSearchFunc = (searchEventData) => {
 		const { query } = searchEventData;
@@ -18,13 +17,14 @@ const Search = (): JSX.Element => {
 	};
 
 	return (
-		<div className='  lg:w-[290px] xl:w-[440px] w-[230px]  max-w-[90rem]'>
+		<div className='lg:w-[290px] xl:w-[440px] small:w-[285px] w-[330px] max-w-[90rem] target-class'>
 			<SearchBar
 				placeholder='Ask a question...'
 				onSearch={handleSearch}
 				customCssClasses={{
-					searchBarContainer: 'rounded-lg mb-4 lg:my-3',
+					searchBarContainer: 'rounded-lg mb-4 lg:my-3', // Add lg:rounded-full for larger border radius
 					searchButtonContainer: 'hidden',
+					inputElement: 'border-none',
 				}}
 			/>
 		</div>

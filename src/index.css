@@ -22,3 +22,6 @@
 .secondary-cta {
 	@apply bg-sky-700 hover:bg-sky-800;
 }
+.target-class div div {
+	border-radius: 10px;
+}

@@ -20,7 +20,7 @@ const currentTime = new Date();
 const year = currentTime.getFullYear();
 
 const Footer = (props: FooterProps) => {
-	const loansSubmenu = props?.footerItems?.slice(1, 8);
+	const loansSubmenu = props?.footerItems?.slice(1, 9);
 	const locationsubMenu = props?.footerItems?.slice(10, 29);
 	const educationSubMenu = props?.footerItems?.slice(31, 34);
 	const aboutUs = props?.footerItems?.slice(36, 42);
@@ -29,7 +29,7 @@ const Footer = (props: FooterProps) => {
 	return (
 		<>
 			<footer
-				className='bg-secondary hidden lg:block'
+				className='bg-secondary hidden lg:block text-typography-footer'
 				aria-labelledby='footer-heading'>
 				<h2
 					id='footer-heading'
@@ -38,7 +38,7 @@ const Footer = (props: FooterProps) => {
 				</h2>
 				<div className='hidden lg:block mx-auto max-w-[95rem] px-6 pb-8 lg:px-8 lg:pt-16'>
 					<div className='grid grid-cols-12 gap-6 mb-8 text-white'>
-						<div className='col-span-4 w-[250px] '>
+						<div className='col-span-4 w-[250px] lg:mb-[50px] '>
 							<img
 								src='https://regionalfinance.com/wp-content/uploads/2023/11/logo-white.svg'
 								style={{
@@ -51,25 +51,37 @@ const Footer = (props: FooterProps) => {
 									padding: 0,
 								}}
 							/>
-							<div className='mb-6 text-gray-400 px-2 ml-[20px] '>
-								<p className='mb-1 text-md'>Call a local branch</p>
-								<p className=''>(888)-000-000</p>
+							<div className='mb-6 text-typography-footer  ml-[48px] '>
+								<p className='mb-1 text-s font-semibold tracking-wide'>
+									Call a local branch
+								</p>
+								<a
+									className='text-s font-normal'
+									href='tel:+8886363535'>
+									(888) 636-3535
+								</a>
 							</div>
-							<div className='text-gray-400 px-2 ml-[20px] '>
-								<p className='mb-1'>Headquarters</p>
-								<p className='text-sm'>
-									Regional Management Corp. 979 Batesville Road, Suite B Greer,
-									SC 29651 (864) 448-7000
+							<div className='text-typography-footer  ml-[48px] '>
+								<p className='mb-1 text-s font-semibold tracking-wide'>
+									Headquarters
+								</p>
+								<p className='text-s font-normal'>
+									Regional Management Corp. <br />
+									979 Batesville Road, Suite B
+									<br />
+									Greer, SC 29651
+									<br />
+									(864) 448-7000
 								</p>
 							</div>
 						</div>
 
 						<div className='col-span-2'>
-							Loans
+							LOANS
 							{loansSubmenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-2 w-max text-gray-400 hover:underline cursor-pointer'>
+									className=' text-sm py-2 w-max text-typography-footer hover:underline cursor-pointer'>
 									<a
 										className=''
 										href={menu.url}>
@@ -79,12 +91,12 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2'>
-							Locations
+							LOCATIONS
 							<div className='grid grid-cols-2 w-max gap-x-4 '>
 								{locationsubMenu.map((menu, index) => (
 									<div
 										key={index}
-										className=' text-sm py-2 text-gray-400 hover:underline cursor-pointer '>
+										className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
 										<a
 											className=''
 											href={menu.url}>
@@ -95,21 +107,21 @@ const Footer = (props: FooterProps) => {
 							</div>
 						</div>
 						<div className='col-span-2'>
-							Eduction
+							EDUCATION
 							{educationSubMenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-2 text-gray-400 hover:underline cursor-pointer '>
+									className=' text-sm my-1 text-typography-footer hover:underline cursor-pointer '>
 									<a href={menu.url}>{menu.title}</a>
 								</div>
 							))}
 						</div>
 						<div className='col-span-2'>
-							About Us
+							ABOUT US
 							{aboutUs.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-2 text-gray-400 hover:underline cursor-pointer '>
+									className=' text-sm my-1 text-typography-footer hover:underline cursor-pointer '>
 									<a href={menu.url}>
 										{removeAmpersandCodeFromArray(menu.title)}
 									</a>
@@ -117,8 +129,8 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 					</div>
-					<div className='ml-[20px]'>
-						<p className='text-gray-400 font-normal text-sm'>
+					<div className='ml-[48px] '>
+						<p className='text-typography-footer font-normal text-sm'>
 							Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA,
 							MO, MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
 							<br />
@@ -132,29 +144,34 @@ const Footer = (props: FooterProps) => {
 							<br /> California Residents: Loans made or arranged pursuant to a
 							California Financing Law license.
 						</p>
-					</div>
-					<div className='mt-8 '>
-						<p className='text-sm leading-5 text-gray-400 cursor-pointer'>
-							Copyright © 2023 Regional Management Corp. All Rights Reserved
-						</p>
-					</div>
-					<div className='flex  mt-8 mb-8 gap-6 '>
-						<a className='text-sm leading-5 text-gray-400 underline cursor-pointer'>
-							Privacy & Cookie Policies
-						</a>
-						<a className='text-sm leading-5 text-gray-400 underline cursor-pointer'>
-							Licenses Disclosures
-						</a>
-						<a className='text-sm leading-5 text-gray-400 underline cursor-pointer'>
-							Investors
-						</a>
-						<a className='text-sm leading-5 text-gray-400 underline cursor-pointer'>
-							Notice to California Residents
-						</a>
-						<a className='text-sm leading-5 text-gray-400 grow text-end'>
-							<span>Built By</span>{' '}
-							<a className='underline cursor-pointer'> Infinity Marketing</a>
-						</a>
+						<div className='mt-8 '>
+							<p className='text-sm leading-5 text-typography-footer cursor-pointer'>
+								Copyright © 2023 Regional Management Corp. All Rights Reserved
+							</p>
+						</div>
+						<div className='flex  mt-8 mb-8 gap-6 '>
+							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								Privacy & Cookie Policies
+							</a>
+							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								Licenses Disclosures
+							</a>
+							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								Investors
+							</a>
+							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								Notice to California Residents
+							</a>
+							<a className='text-sm leading-5 text-typography-footer grow text-end'>
+								<span>Built By</span>{' '}
+								<a
+									className='underline cursor-pointer'
+									href='https://infinitymkt.com'>
+									{' '}
+									Infinity Marketing
+								</a>
+							</a>
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -173,46 +190,49 @@ const Footer = (props: FooterProps) => {
 					}}
 				/>
 				<div className='grid grid-cols-2 gap-1'>
-					<div className='mb-6 text-gray-400 px-2 '>
+					<div className='mb-6 text-typography-footer px-2 '>
 						<p className='mb-1 text-md'>Call a local branch</p>
 						<p className='mb-2'>(888)-000-000</p>
 						{mobileFooterItems?.map((menu, index) => (
 							<div
 								key={index}
-								className=' text-sm font-semibold py-2 text-white hover:underline cursor-pointer '>
+								className=' text-sm font-semibold py-2 text-white hover:underline cursor-pointer uppercase '>
 								<a
-									className=''
+									className='uppercase'
 									href={menu.url}>
 									{menu.title}
 								</a>
 							</div>
 						))}
 					</div>
-					<div className='text-gray-400 px-1 '>
+					<div className='text-typography-footer px-1 '>
 						<p className='mb-1'>Headquarters</p>
 						<p className='text-sm'>
-							Regional Management Corp. 979 Batesville Road, Suite B Greer, SC
-							29651 <br />
+							Regional Management Corp.
+							<br />
+							979 Batesville Road, Suite B
+							<br />
+							Greer, SC 29651 <br />
 							(864) 448-7000
 						</p>
 						<div className='flex flex-col ml-3 mt-6 '>
-							<a className='text-sm text-gray-400 py-2 underline cursor-pointer'>
+							<a className='text-sm text-typography-footer py-2 underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>
-							<a className='text-sm text-gray-400 py-2  underline cursor-pointer'>
+							<a className='text-sm text-typography-footer py-2  underline cursor-pointer'>
 								Licenses Disclosures
 							</a>
-							<a className='text-sm  text-gray-400 py-2  underline cursor-pointer'>
+							<a className='text-sm  text-typography-footer py-2  underline cursor-pointer'>
 								Investors
 							</a>
-							<a className='text-sm text-gray-400 py-2  underline cursor-pointer'>
+							<a className='text-sm text-typography-footer py-2  underline cursor-pointer'>
 								Notice to California Residents
 							</a>
 						</div>
 					</div>
 				</div>
 				<div className='p-2'>
-					<p className='text-gray-400 font-normal text-sm'>
+					<p className='text-typography-footer font-normal text-sm'>
 						Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA, MO,
 						MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
 						<br />
@@ -227,7 +247,7 @@ const Footer = (props: FooterProps) => {
 						California Financing Law license.
 					</p>
 					<div className='my-4 '>
-						<p className='text-sm leading-5 text-gray-400 cursor-pointer'>
+						<p className='text-sm leading-5 text-typography-footer cursor-pointer'>
 							Copyright © 2023 Regional Management Corp. All Rights Reserved
 						</p>
 					</div>

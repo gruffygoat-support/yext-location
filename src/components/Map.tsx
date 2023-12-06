@@ -90,7 +90,7 @@ const Map: React.FC<MapProps> = ({ slug, coordinates }) => {
 					{...viewport}
 					interactive={false}
 					attributionControl={false}
-					mapStyle='mapbox://styles/mapbox/streets-v12'>
+					mapStyle='mapbox://styles/mapbox/streets-v11'>
 					<div className='cursor-pointer'>{pins}</div>
 				</MapBox>
 			)}

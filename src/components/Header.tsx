@@ -10,7 +10,7 @@ const navigation = [
 	{ name: 'Locations', href: '#' },
 	{ name: 'Education', href: '#' },
 	{ name: 'About us', href: '#' },
-	{ name: 'Payment Options', href: '#' },
+	{ name: 'Payment', href: '#' },
 ];
 
 const Header = ({ navigation }) => {
@@ -65,7 +65,7 @@ const Header = ({ navigation }) => {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='hidden lg:gap-x-3 xl:gap-x-6 gap-x-6 md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
+								<div className='hidden lg:gap-x-3 xl:gap-x-0 gap-x-6 md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
 									{navigation.map((link) => (
 										<HeaderMenu
 											menuName={link.name}
@@ -78,12 +78,12 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white bg-blue-400 shadow-md bg-secondary '
+									style='text-white px-[2.5rem] py-4 shadow-md bg-secondary rounded-md '
 								/>
 								<Cta
-									buttonText='Login'
+									buttonText='Log In'
 									url='#'
-									style='text-white  bg-orange shadow-md bg-primary text-center w-[100px]'
+									style='text-white px-[3.5rem] py-4    bg-primary text-center w-[100px] rounded-md '
 								/>
 							</div>
 						</div>
@@ -92,24 +92,21 @@ const Header = ({ navigation }) => {
 					<Disclosure.Panel className='md:block lg:hidden'>
 						<div className='space-y-1 pt-2 pb-3'>
 							{navigation.map((link) => (
-								<Disclosure.Button
-									key={link.href}
-									as='a'
-									href={link.href}
-									className='block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-bold text-typography-link hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6'>
-									{link.name}
-								</Disclosure.Button>
+								<HeaderMenu
+									menuName={link.name}
+									dropDown={link?.dropDown}
+								/>
 							))}
 							<div className='flex gap-x-10 py-2 pl-3 pr-4'>
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white bg-blue-400 shadow-md bg-secondary '
+									style='text-white  shadow-md bg-secondary rounded-md '
 								/>
 								<Cta
-									buttonText='Login'
+									buttonText='Log In'
 									url='#'
-									style='text-white  bg-orange shadow-md bg-primary text-center hidden md:block w-[100px]'
+									style='text-white   shadow-md bg-primary text-center  hidden md:block w-[100px] rounded-md'
 								/>
 							</div>
 						</div>
