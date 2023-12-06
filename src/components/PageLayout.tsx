@@ -37,7 +37,6 @@ const PageLayout = ({
 				Apis.getHeaderMenuNav(),
 				Apis.getMobileFooter(),
 			]);
-			console.log(header);
 			setHeaderNav([
 				{ name: header[0]?.title, href: '/', dropDown: header?.slice(1, 10) },
 				{ name: header[10]?.title, href: '#', dropDown: [] },
