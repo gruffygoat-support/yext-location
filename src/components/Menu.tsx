@@ -100,7 +100,7 @@ const HeaderMenu = ({ menuName, dropDown }) => {
 						<div className='flex items-center justify-center'>
 							<Menu.Button
 								ref={buttonRef}
-								className={`inline-flex w-full lg:w-max justify-center rounded-md text-typography-link px-4 py-2 lg:px-0 xl:px-4 text-xs font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75
+								className={`inline-flex w-full lg:w-max justify-center rounded-md text-typography-link px-4 py-2 lg:px-0 xl:px-4 text-xs font-bold hover:scale-[1.02] duration-250 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75
 								`}
 								onClick={handleClick}>
 								{menuName}

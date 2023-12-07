@@ -21,11 +21,20 @@ const year = currentTime.getFullYear();
 
 const Footer = (props: FooterProps) => {
 	const loansSubmenu = props?.footerItems?.slice(1, 9);
-	const locationsubMenu = props?.footerItems?.slice(10, 29);
+	let locationsubMenu = props?.footerItems?.slice(10, 29);
 	const educationSubMenu = props?.footerItems?.slice(31, 34);
 	const aboutUs = props?.footerItems?.slice(36, 42);
 	const { mobileFooterItems } = props;
-
+	const [branchLocation] = locationsubMenu;
+	locationsubMenu = [...locationsubMenu.slice(1)].sort((a, b) =>
+		a.title.localeCompare(b.title)
+	);
+	const numberOfRows = Math.ceil(locationsubMenu.length / 2);
+	const groupedCities = [];
+	for (let i = 0; i < locationsubMenu.length; i += 2) {
+		groupedCities.push(locationsubMenu.slice(i, i + 2));
+	}
+	console.log(numberOfRows, groupedCities);
 	return (
 		<>
 			<footer
@@ -92,7 +101,10 @@ const Footer = (props: FooterProps) => {
 						</div>
 						<div className='col-span-2'>
 							LOCATIONS
-							<div className='grid grid-cols-2 w-max gap-x-4 '>
+							<div className='grid  grid-cols-2 grid-flow-col w-max gap-x-4 '>
+								<div className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+									<a href={branchLocation.url}>{branchLocation.title}</a>
+								</div>
 								{locationsubMenu.map((menu, index) => (
 									<div
 										key={index}
@@ -192,11 +204,11 @@ const Footer = (props: FooterProps) => {
 				<div className='grid grid-cols-2 gap-1'>
 					<div className='mb-6 text-typography-footer px-2 '>
 						<p className='mb-1 text-md'>Call a local branch</p>
-						<p className='mb-2'>(888)-000-000</p>
+						<p className='mb-[1.25rem]'>(888)-000-000</p>
 						{mobileFooterItems?.map((menu, index) => (
 							<div
 								key={index}
-								className=' text-sm font-semibold py-2 text-white hover:underline cursor-pointer uppercase '>
+								className=' text-sm font-semibold py-1 text-white hover:underline cursor-pointer uppercase '>
 								<a
 									className='uppercase'
 									href={menu.url}>
@@ -215,7 +227,7 @@ const Footer = (props: FooterProps) => {
 							Greer, SC 29651 <br />
 							(864) 448-7000
 						</p>
-						<div className='flex flex-col ml-3 mt-6 '>
+						<div className='flex flex-col ml-3 mt-4 '>
 							<a className='text-sm text-typography-footer py-2 underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>
