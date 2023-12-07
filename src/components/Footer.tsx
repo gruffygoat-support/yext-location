@@ -101,7 +101,7 @@ const Footer = (props: FooterProps) => {
 						</div>
 						<div className='col-span-2'>
 							LOCATIONS
-							<div className='grid  grid-cols-2 grid-flow-col w-max gap-x-4 '>
+							<div className='grid  grid-cols-2 w-max gap-x-4 '>
 								<div className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
 									<a href={branchLocation.url}>{branchLocation.title}</a>
 								</div>
