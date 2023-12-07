@@ -50,12 +50,12 @@ const FourOhFour: Template<TemplateRenderProps> = () => {
 				<div>
 					<div className='bg-[#e3eaf3] h-[80vh] flex flex-col '>
 						<div className='max-w-[90rem] m-auto '>
-							<div className='flex flex-col justify-center items-center mb-6'>
+							<div className='flex flex-col justify-center items-center mb-6 text-center'>
 								<div className='mb-8'>
 									<BrokenIcon />
 								</div>
 
-								<p className='text-[48px] font-normal text-typography-link mb-8'>
+								<p className=' text-[28px] lg:text-[48px] font-normal text-typography-link mb-8 '>
 									Oops! We're sorry.
 								</p>
 								<p className='text-[16px] font-normal text-[#757575] mb-2'>
