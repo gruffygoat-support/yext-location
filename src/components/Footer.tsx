@@ -38,7 +38,7 @@ const Footer = (props: FooterProps) => {
 	return (
 		<>
 			<footer
-				className='bg-secondary hidden lg:block text-typography-footer'
+				className='bg-secondary hidden xl:block text-typography-footer'
 				aria-labelledby='footer-heading'>
 				<h2
 					id='footer-heading'
@@ -187,7 +187,7 @@ const Footer = (props: FooterProps) => {
 					</div>
 				</div>
 			</footer>
-			<div className='bg-secondary lg:hidden block p-2 pt-6'>
+			<div className='bg-secondary xl:hidden lg:px-[3rem] lg:py-[4rem] block p-2 pt-6'>
 				<img
 					src='https://regionalfinance.com/wp-content/uploads/2023/11/logo-white.svg'
 					style={{
@@ -202,7 +202,7 @@ const Footer = (props: FooterProps) => {
 					}}
 				/>
 				<div className='grid grid-cols-2 gap-1'>
-					<div className='mb-6 text-typography-footer px-2 '>
+					<div className='mb-[1.75rem] text-typography-footer px-2 lg:px-[47px] '>
 						<p className='mb-1 text-md'>Call a local branch</p>
 						<a
 							className='mb-[1.25rem]'
@@ -248,7 +248,7 @@ const Footer = (props: FooterProps) => {
 						</div>
 					</div>
 				</div>
-				<div className='p-2'>
+				<div className='p-2 lg:px-[47px]'>
 					<p className='text-typography-footer font-normal text-sm'>
 						Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA, MO,
 						MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
