@@ -82,11 +82,11 @@ const Footer = (props: FooterProps) => {
 						</div>
 
 						<div className='col-span-2'>
-							LOANS
+							<p className='text-s'>LOANS</p>
 							{loansSubmenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-2 w-max text-typography-footer hover:underline cursor-pointer'>
+									className=' text-sm py-[6px] w-max text-typography-footer hover:underline cursor-pointer'>
 									<a
 										className=''
 										href={menu.url}>
@@ -96,17 +96,17 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2 '>
-							LOCATIONS
+							<p className='text-s'>LOCATIONS</p>
 							<div className='flex w-max justify-center align-center gap-x-4'>
 								{/* First set of sliced items */}
 								<div className='flex flex-col justify-center '>
-									<div className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+									<div className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
 										<a href={branchLocation.url}>{branchLocation.title}</a>
 									</div>
 									{locationsubMenu.slice(0, 9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
@@ -116,7 +116,7 @@ const Footer = (props: FooterProps) => {
 									{locationsubMenu.slice(9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
@@ -124,7 +124,7 @@ const Footer = (props: FooterProps) => {
 							</div>
 						</div>
 						<div className='col-span-2'>
-							EDUCATION
+							<p className='text-s'>EDUCATION</p>
 							{educationSubMenu.map((menu, index) => (
 								<div
 									key={index}
@@ -134,7 +134,7 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2'>
-							ABOUT US
+							<p className='text-s'>ABOUT US</p>
 							{aboutUs.map((menu, index) => (
 								<div
 									key={index}
