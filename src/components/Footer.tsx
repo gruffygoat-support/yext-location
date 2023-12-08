@@ -56,7 +56,7 @@ const Footer = (props: FooterProps) => {
 									padding: 0,
 								}}
 							/>
-							<div className='mb-6 text-typography-footer  ml-[48px] '>
+							<div className='mb-6 text-typography-footer  ml-[45.99px] '>
 								<p className='mb-1 text-s font-semibold tracking-wide'>
 									Call a local branch
 								</p>
