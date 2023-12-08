@@ -86,7 +86,7 @@ const Footer = (props: FooterProps) => {
 							{loansSubmenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-[6px] w-max text-typography-footer hover:underline cursor-pointer'>
+									className=' text-sm py-[6px] leading-[21px] w-max text-typography-footer hover:underline cursor-pointer'>
 									<a
 										className=''
 										href={menu.url}>
@@ -106,7 +106,7 @@ const Footer = (props: FooterProps) => {
 									{locationsubMenu.slice(0, 9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] leading-[21px] text-typography-footer hover:underline cursor-pointer '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
@@ -116,7 +116,7 @@ const Footer = (props: FooterProps) => {
 									{locationsubMenu.slice(9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] leading-[21px] text-typography-footer hover:underline cursor-pointer '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
