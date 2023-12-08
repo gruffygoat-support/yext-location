@@ -58,7 +58,7 @@ const FourOhFour: Template<TemplateRenderProps> = () => {
 								<p className=' text-[28px] lg:text-[48px] font-normal text-typography-link mb-8 '>
 									Oops! We're sorry.
 								</p>
-								<p className='text-[16px] font-normal text-[#757575] mb-2'>
+								<p className='text-[16px] font-normal text-[#757575] mb-1'>
 									Error: 404
 								</p>
 								<p className='text-[15px] font-normal text-[#757575] leading-[24.16px]'>
@@ -72,7 +72,7 @@ const FourOhFour: Template<TemplateRenderProps> = () => {
 								<Cta
 									buttonText='Return home'
 									url='index.html'
-									style='text-white px-[3.5rem] py-4 shadow-md bg-primary lg:font-normal lg:text-xs rounded-md '
+									style='text-white px-[3.5rem] py-4 shadow-md bg-primary lg:font-normal lg:text-[16px] rounded-md '
 								/>
 							</div>
 						</div>
