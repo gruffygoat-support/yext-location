@@ -65,7 +65,7 @@ const Header = ({ navigation }) => {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='hidden  xl:gap-x-0  md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
+								<div className='hidden  xl:gap-x-0  md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex '>
 									{navigation.map((link) => (
 										<HeaderMenu
 											menuName={link.name}
