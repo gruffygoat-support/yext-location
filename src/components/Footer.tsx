@@ -23,7 +23,7 @@ const Footer = (props: FooterProps) => {
 	const loansSubmenu = props?.footerItems?.slice(1, 9);
 	let locationsubMenu = props?.footerItems?.slice(10, 29);
 	const educationSubMenu = props?.footerItems?.slice(31, 34);
-	const aboutUs = props?.footerItems?.slice(36, 42);
+	const aboutUs = props?.footerItems?.slice(35, 42);
 	const { mobileFooterItems } = props;
 	const [branchLocation] = locationsubMenu;
 	locationsubMenu = [...locationsubMenu.slice(1)].sort((a, b) =>
@@ -80,7 +80,7 @@ const Footer = (props: FooterProps) => {
 									<br />
 									Greer, SC 29651
 									<br />
-									(864) 448-7000
+									<a href='tel:+8644487000'>(864) 448-7000</a>
 								</p>
 							</div>
 						</div>
@@ -204,7 +204,12 @@ const Footer = (props: FooterProps) => {
 				<div className='grid grid-cols-2 gap-1'>
 					<div className='mb-6 text-typography-footer px-2 '>
 						<p className='mb-1 text-md'>Call a local branch</p>
-						<p className='mb-[1.25rem]'>(888)-000-000</p>
+						<a
+							className='mb-[1.25rem]'
+							href='tel:+8886363535'>
+							(888) 636-3535
+						</a>
+
 						{mobileFooterItems?.map((menu, index) => (
 							<div
 								key={index}
@@ -225,7 +230,7 @@ const Footer = (props: FooterProps) => {
 							979 Batesville Road, Suite B
 							<br />
 							Greer, SC 29651 <br />
-							(864) 448-7000
+							<a href='tel:+8644487000'>(864) 448-7000</a>
 						</p>
 						<div className='flex flex-col ml-3 mt-4 '>
 							<a className='text-sm text-typography-footer py-2 underline cursor-pointer'>
