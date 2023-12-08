@@ -65,7 +65,7 @@ const Header = ({ navigation }) => {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='hidden lg:gap-x-3 xl:gap-x-0 gap-x-6 md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
+								<div className='hidden  xl:gap-x-0  md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex md:space-x-4'>
 									{navigation.map((link) => (
 										<HeaderMenu
 											menuName={link.name}
@@ -78,12 +78,12 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white px-[2.5rem] py-4 shadow-md bg-secondary rounded-md '
+									style='text-white px-[16px] py-[13px] xl:px-[2.5rem] xl:py-4 shadow-md bg-secondary rounded-md '
 								/>
 								<Cta
 									buttonText='Log In'
 									url='#'
-									style='text-white px-[3.5rem] py-4    bg-primary text-center w-[100px] rounded-md '
+									style='text-white xl:px-[3.5rem] xl:py-4 px-[16px] py-[13px]    bg-primary text-center w-[100px] rounded-md '
 								/>
 							</div>
 						</div>
