@@ -11,19 +11,13 @@ const Faqs: React.FC<FaqProps> = ({ question, answer }) => {
 	return (
 		<Disclosure>
 			{({ open }) => (
-				<div className='flex flex-col bg-faqBanner  lg:w-[731px] w-[350px] md:w-[500px] p-6 cursor-pointer'>
-					<Disclosure.Button className='flex justify-between text-typography-link font-semibold'>
-						<span>{question}</span>
+				<div className='flex flex-col bg-faqBanner  lg:w-[731px] w-[80vw] md:w-[500px] p-6 cursor-pointer'>
+					<Disclosure.Button className='flex justify-between text-center text-typography-link font-semibold'>
+						<span className='small:text-[12px]'>{question}</span>
 						{open ? (
-							<FiMinus
-								className='text-primary font-normal cursor-pointer'
-								size={24}
-							/>
+							<FiMinus className='text-primary font-normal cursor-pointer h-[24px] w-[24px]' />
 						) : (
-							<FiPlus
-								className='text-primary font-normal cursor-pointer'
-								size={24}
-							/>
+							<FiPlus className='text-primary self-center font-normal cursor-pointer h-[24px] w-[24px]' />
 						)}
 					</Disclosure.Button>
 					<Transition

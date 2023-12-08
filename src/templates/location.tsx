@@ -358,7 +358,7 @@ const Location: Template<TemplateRenderProps> = ({
 
 				{/* Faqs section */}
 				<div className='flex flex-col items-center my-[5rem]'>
-					<div className=' text-[32px] text-typography-link lg:text-[28px] mb-10 font-bold '>
+					<div className=' text-[32px] text-typography-link  text-center lg:text-[28px] mb-10 font-bold '>
 						Frequently asked questions
 					</div>
 					{faqs.map((faq, index) => (

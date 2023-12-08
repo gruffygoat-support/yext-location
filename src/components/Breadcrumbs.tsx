@@ -34,7 +34,7 @@ const Breadcrumb = (props: BreadCrumbProps) => {
 		);
 	}
 
-	return <span className=' text-xs font-nomal'>{name}</span>;
+	return <span className=' text-xs font-nomal small:text-[12px]'>{name}</span>;
 };
 
 const BreadCrumbs = (props: BreadCrumbsProps) => {
@@ -73,7 +73,7 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 											{...props}
 										/>
 									) : (
-										<div className='pr-2 lg:pr-0 md:pr-0 font-normal small:text-[12px] small:pr-0'>
+										<div className='pr-2 lg:pr-0 md:pr-0 font-normal  small:pr-0'>
 											<Breadcrumb
 												name={removeHyphen(name)}
 												slug={isLast ? '' : baseUrl + slug}
