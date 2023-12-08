@@ -64,7 +64,7 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 
 							return (
 								<li
-									className='Breadcrumbs-item flex items-center w-max text-s md:text-[13px] lg:text-xs text-typography-breadcrumb '
+									className='Breadcrumbs-item flex items-center w-max text-s small:text-[12px] md:text-[13px] lg:text-xs text-typography-breadcrumb '
 									key={idx}>
 									{isFirst ? (
 										<Breadcrumb
@@ -73,7 +73,7 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 											{...props}
 										/>
 									) : (
-										<div className='pr-2 lg:pr-0 md:pr-0 font-normal'>
+										<div className='pr-2 lg:pr-0 md:pr-0 font-normal small:text-[12px] small:pr-0'>
 											<Breadcrumb
 												name={removeHyphen(name)}
 												slug={isLast ? '' : baseUrl + slug}
