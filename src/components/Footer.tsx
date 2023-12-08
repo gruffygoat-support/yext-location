@@ -146,7 +146,7 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 					</div>
-					<div className='ml-[48px] '>
+					<div className='ml-[46px] '>
 						<p className='text-typography-footer font-normal text-sm'>
 							Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA,
 							MO, MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
