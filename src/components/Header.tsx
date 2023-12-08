@@ -78,12 +78,12 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white px-[16px] py-[13px] xl:px-[2.5rem] xl:py-4 shadow-md bg-secondary rounded-md '
+									style='text-white px-[16px] py-[13px] xl:px-[16px] xl:py-[13px] xl:w-[200px] text-center shadow-md bg-secondary rounded-md '
 								/>
 								<Cta
 									buttonText='Log In'
 									url='#'
-									style='text-white xl:px-[3.5rem] xl:py-4 px-[16px] py-[13px]    bg-primary text-center w-[100px] rounded-md '
+									style='text-white xl:px-[16px] xl:py-[13px] xl:w-[200px] px-[16px] py-[13px]    bg-primary text-center w-[100px] rounded-md '
 								/>
 							</div>
 						</div>
@@ -101,7 +101,7 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white  shadow-md bg-secondary rounded-md '
+									style='text-white  shadow-md bg-secondary rounded-md text-center'
 								/>
 								<Cta
 									buttonText='Log In'
