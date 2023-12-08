@@ -41,7 +41,9 @@ const BreadCrumbs = (props: BreadCrumbsProps) => {
 	const {
 		breadcrumbs,
 		className,
-		separator = <AiOutlineRight size={20} />,
+		separator = (
+			<AiOutlineRight className='w-[20px] h-[20px] small:w-[15px] small:w-[15px] ' />
+		),
 		baseUrl,
 	} = props;
 	const removeHyphen = (slug) => {

@@ -229,7 +229,7 @@ const Location: Template<TemplateRenderProps> = ({
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
-				<div className='grid grid-cols-1 md:p-3 p-4 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
+				<div className='grid grid-cols-1 md:p-3 p-4 small:p-2 lg:pl-0 xl:p-6 gap-2 md:grid-cols-2 bg-bg h-max  lg:grid-cols-2 '>
 					<div
 						className=' py-10 mt-[40px] w-lg m-auto
 					xl:ml-[1.5rem] xl:mr-[8rem] 
