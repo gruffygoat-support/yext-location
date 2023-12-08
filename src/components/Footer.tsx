@@ -21,20 +21,16 @@ const year = currentTime.getFullYear();
 
 const Footer = (props: FooterProps) => {
 	const loansSubmenu = props?.footerItems?.slice(1, 9);
-	let locationsubMenu = props?.footerItems?.slice(10, 29);
+	let locationsubMenu = props?.footerItems?.slice(10, 30);
 	const educationSubMenu = props?.footerItems?.slice(31, 34);
 	const aboutUs = props?.footerItems?.slice(35, 42);
 	const { mobileFooterItems } = props;
+
 	const [branchLocation] = locationsubMenu;
 	locationsubMenu = [...locationsubMenu.slice(1)].sort((a, b) =>
 		a.title.localeCompare(b.title)
 	);
-	const numberOfRows = Math.ceil(locationsubMenu.length / 2);
-	const groupedCities = [];
-	for (let i = 0; i < locationsubMenu.length; i += 2) {
-		groupedCities.push(locationsubMenu.slice(i, i + 2));
-	}
-	console.log(numberOfRows, groupedCities);
+
 	return (
 		<>
 			<footer
@@ -99,23 +95,32 @@ const Footer = (props: FooterProps) => {
 								</div>
 							))}
 						</div>
-						<div className='col-span-2'>
+						<div className='col-span-2 '>
 							LOCATIONS
-							<div className='grid  grid-cols-2 w-max gap-x-4 '>
-								<div className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
-									<a href={branchLocation.url}>{branchLocation.title}</a>
-								</div>
-								{locationsubMenu.map((menu, index) => (
-									<div
-										key={index}
-										className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
-										<a
-											className=''
-											href={menu.url}>
-											{menu.title}
-										</a>
+							<div className='flex w-max justify-center align-center gap-x-4'>
+								{/* First set of sliced items */}
+								<div className='flex flex-col justify-center '>
+									<div className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+										<a href={branchLocation.url}>{branchLocation.title}</a>
 									</div>
-								))}
+									{locationsubMenu.slice(0, 9).map((menu, index) => (
+										<div
+											key={index}
+											className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+											<a href={menu.url}>{menu.title}</a>
+										</div>
+									))}
+								</div>
+								{/* Second set of sliced items */}
+								<div className='flex flex-col  '>
+									{locationsubMenu.slice(9).map((menu, index) => (
+										<div
+											key={index}
+											className=' text-sm py-2 text-typography-footer hover:underline cursor-pointer '>
+											<a href={menu.url}>{menu.title}</a>
+										</div>
+									))}
+								</div>
 							</div>
 						</div>
 						<div className='col-span-2'>
