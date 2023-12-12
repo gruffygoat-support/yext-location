@@ -15,7 +15,7 @@ const Cta = ({ buttonText, url, style, action }: CtaProps) => {
 				href={url}
 				onClick={action}
 				className={twMerge(
-					'py-2 px-2  text-xs md:text-xs md:font-semibold lg:text-s lg:font-semibold font-normal  lg:w-max rounded-lg hover:scale-[1.02] duration-250',
+					'py-2 px-2  text-xs md:text-xs md:font-semibold lg:text-s lg:font-semibold font-normal  lg:w-max rounded-lg ',
 					style
 				)}
 				target=''

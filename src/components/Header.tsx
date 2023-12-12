@@ -4,6 +4,7 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Apis from '../utils/Apis';
 import HeaderMenu from './Menu';
+import MobileMenu from './MobileMenu';
 
 const navigation = [
 	{ name: 'Loans', href: '/' },
@@ -78,35 +79,37 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white px-[16px] py-[13px] xl:px-[16px] xl:py-[13px] xl:w-[200px] text-center shadow-md bg-secondary rounded-md '
+									style='text-white px-[16px] py-[13px] xl:px-[16px] xl:py-[13px] xl:w-[200px] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
 								/>
 								<Cta
 									buttonText='Log In'
 									url='#'
-									style='text-white xl:px-[16px] xl:py-[13px] xl:w-[200px] px-[16px] py-[13px]    bg-primary text-center w-[100px] rounded-md '
+									style='text-white xl:px-[16px] xl:py-[13px] xl:w-[200px] px-[16px] py-[13px] tracking-[0.5px] 
+									bg-primary text-center w-[100px] rounded-md hover:bg-secondary hover:text-primary '
 								/>
 							</div>
 						</div>
 					</div>
 
 					<Disclosure.Panel className='md:block lg:hidden'>
-						<div className='space-y-1 pt-2 pb-3'>
+						<div className='px-[2rem] '>
 							{navigation.map((link) => (
-								<HeaderMenu
+								<MobileMenu
 									menuName={link.name}
 									dropDown={link?.dropDown}
 								/>
 							))}
-							<div className='flex gap-x-10 py-2 pl-3 pr-4'>
+							<div className='flex flex-col gap-y-10 mt-8  '>
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white  shadow-md bg-secondary rounded-md text-center'
+									style='text-white px-[16px] py-[13px] w-[90%] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
 								/>
 								<Cta
 									buttonText='Log In'
 									url='#'
-									style='text-white   shadow-md bg-primary text-center  hidden md:block w-[100px] rounded-md'
+									style='text-white w-[90%] px-[16px] py-[13px] tracking-[0.5px] 
+									bg-primary text-center  rounded-md hover:bg-secondary hover:text-primary '
 								/>
 							</div>
 						</div>

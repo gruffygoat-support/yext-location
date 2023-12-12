@@ -61,7 +61,7 @@ const Footer = (props: FooterProps) => {
 									Call a local branch
 								</p>
 								<a
-									className='text-s font-normal'
+									className='text-s font-normal hover:text-primary'
 									href='tel:+8886363535'>
 									(888) 636-3535
 								</a>
@@ -76,17 +76,21 @@ const Footer = (props: FooterProps) => {
 									<br />
 									Greer, SC 29651
 									<br />
-									<a href='tel:+8644487000'>(864) 448-7000</a>
+									<a
+										href='tel:+8644487000'
+										className='hover:text-primary'>
+										(864) 448-7000
+									</a>
 								</p>
 							</div>
 						</div>
 
 						<div className='col-span-2'>
-							<p className='text-s'>LOANS</p>
+							<p className='text-s font-semibold'>LOANS</p>
 							{loansSubmenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm py-[6px] leading-[21px] w-max text-typography-footer hover:underline cursor-pointer'>
+									className=' text-sm py-[6px] leading-[21px] w-max text-typography-footer  cursor-pointer hover:text-primary'>
 									<a
 										className=''
 										href={menu.url}>
@@ -96,17 +100,17 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2 '>
-							<p className='text-s'>LOCATIONS</p>
+							<p className='text-s font-semibold'>LOCATIONS</p>
 							<div className='flex w-max justify-center align-center gap-x-4'>
 								{/* First set of sliced items */}
 								<div className='flex flex-col justify-center '>
-									<div className=' text-sm py-[6px] text-typography-footer hover:underline cursor-pointer '>
+									<div className=' text-sm py-[6px] text-typography-footer  cursor-pointer '>
 										<a href={branchLocation.url}>{branchLocation.title}</a>
 									</div>
 									{locationsubMenu.slice(0, 9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-[6px] leading-[21px] text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] leading-[21px] text-typography-footer  cursor-pointer hover:text-primary '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
@@ -116,7 +120,7 @@ const Footer = (props: FooterProps) => {
 									{locationsubMenu.slice(9).map((menu, index) => (
 										<div
 											key={index}
-											className=' text-sm py-[6px] leading-[21px] text-typography-footer hover:underline cursor-pointer '>
+											className=' text-sm py-[6px] leading-[21px] text-typography-footer  cursor-pointer hover:text-primary '>
 											<a href={menu.url}>{menu.title}</a>
 										</div>
 									))}
@@ -124,21 +128,21 @@ const Footer = (props: FooterProps) => {
 							</div>
 						</div>
 						<div className='col-span-2'>
-							<p className='text-s'>EDUCATION</p>
+							<p className='text-s font-semibold'>EDUCATION</p>
 							{educationSubMenu.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm my-1 text-typography-footer hover:underline cursor-pointer '>
+									className=' text-sm my-1 text-typography-footer  cursor-pointer hover:text-primary'>
 									<a href={menu.url}>{menu.title}</a>
 								</div>
 							))}
 						</div>
 						<div className='col-span-2'>
-							<p className='text-s'>ABOUT US</p>
+							<p className='text-s font-semibold'>ABOUT US</p>
 							{aboutUs.map((menu, index) => (
 								<div
 									key={index}
-									className=' text-sm my-1 text-typography-footer hover:underline cursor-pointer '>
+									className=' text-sm my-1 text-typography-footer  cursor-pointer hover:text-primary'>
 									<a href={menu.url}>
 										{removeAmpersandCodeFromArray(menu.title)}
 									</a>
@@ -167,23 +171,36 @@ const Footer = (props: FooterProps) => {
 							</p>
 						</div>
 						<div className='flex  mt-8 mb-8 gap-6 '>
-							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/privacy-policy/'
+								target='_blank'
+								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>
-							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/licensesdisclosures/'
+								target='_blank'
+								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
 								Licenses Disclosures
 							</a>
-							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+							<a
+								href='https://www.regionalmanagement.com/overview/default.aspx'
+								target='_blank'
+								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
 								Investors
 							</a>
-							<a className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/regional-management-corp-consumer-privacy-policy/#collection'
+								target='_blank'
+								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
 								Notice to California Residents
 							</a>
 							<a className='text-sm leading-5 text-typography-footer grow text-end'>
 								<span>Built By</span>{' '}
 								<a
 									className='underline cursor-pointer'
-									href='https://infinitymkt.com'>
+									href='https://infinitymkt.com'
+									target='_blank'>
 									{' '}
 									Infinity Marketing
 								</a>
@@ -218,7 +235,7 @@ const Footer = (props: FooterProps) => {
 						{mobileFooterItems?.map((menu, index) => (
 							<div
 								key={index}
-								className=' text-sm font-semibold py-1 text-white hover:underline cursor-pointer uppercase '>
+								className=' text-sm font-semibold py-1 text-white  cursor-pointer uppercase '>
 								<a
 									className='uppercase'
 									href={menu.url}>
