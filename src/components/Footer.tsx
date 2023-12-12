@@ -209,6 +209,7 @@ const Footer = (props: FooterProps) => {
 					</div>
 				</div>
 			</footer>
+			{/* Mobile Footer */}
 			<div className='bg-secondary xl:hidden lg:px-[3rem] lg:py-[4rem] block p-2 pt-6'>
 				<img
 					src='https://regionalfinance.com/wp-content/uploads/2023/11/logo-white.svg'
@@ -225,12 +226,14 @@ const Footer = (props: FooterProps) => {
 				/>
 				<div className='grid grid-cols-2 gap-1'>
 					<div className='mb-[1.75rem] text-typography-footer px-2 lg:px-[47px] '>
-						<p className='mb-1 text-md'>Call a local branch</p>
-						<a
-							className='mb-[1.25rem]'
-							href='tel:+8886363535'>
-							(888) 636-3535
-						</a>
+						<div className='mb-10'>
+							<p className='mb-1 text-md'>Call a local branch</p>
+							<a
+								className='mb-[1.25rem]'
+								href='tel:+8886363535'>
+								(888) 636-3535
+							</a>
+						</div>
 
 						{mobileFooterItems?.map((menu, index) => (
 							<div
@@ -254,7 +257,7 @@ const Footer = (props: FooterProps) => {
 							Greer, SC 29651 <br />
 							<a href='tel:+8644487000'>(864) 448-7000</a>
 						</p>
-						<div className='flex flex-col ml-3 mt-4 '>
+						<div className='flex flex-col ml-3 mt-6 '>
 							<a className='text-sm text-typography-footer py-2 underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>

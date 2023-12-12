@@ -99,19 +99,19 @@ const Header = ({ navigation }) => {
 									dropDown={link?.dropDown}
 								/>
 							))}
-							<div className='flex flex-col gap-y-10 mt-8  '>
-								<Cta
-									buttonText='Prequalify Now'
-									url='#'
-									style='text-white px-[16px] py-[13px] w-[90%] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
-								/>
-								<Cta
-									buttonText='Log In'
-									url='#'
-									style='text-white w-[90%] px-[16px] py-[13px] tracking-[0.5px] 
+						</div>
+						<div className='flex flex-col gap-y-[1.5rem] mt-8  '>
+							<Cta
+								buttonText='Prequalify Now'
+								url='#'
+								style='text-white px-[16px] py-[13px] w-[90%] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
+							/>
+							<Cta
+								buttonText='Log In'
+								url='#'
+								style='text-white w-[90%] px-[16px] py-[13px] tracking-[0.5px] 
 									bg-primary text-center  rounded-md hover:bg-secondary hover:text-primary '
-								/>
-							</div>
+							/>
 						</div>
 					</Disclosure.Panel>
 				</>
