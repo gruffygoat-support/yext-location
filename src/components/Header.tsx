@@ -23,7 +23,7 @@ const Header = ({ navigation }) => {
 				<>
 					<div className='  px-[16px] '>
 						<div className='flex lg:h-20 h-20 justify-between'>
-							<div className='flex justify-between flex-1 lg:flex-none  '>
+							<div className='flex justify-between flex-1 xl:flex-none  '>
 								<div className='flex flex-shrink-0 items-center '>
 									<img
 										className='block lg:hidden'
@@ -49,7 +49,7 @@ const Header = ({ navigation }) => {
 										}}
 									/>
 								</div>
-								<div className='-ml-2 mr-2 flex  md:block lg:hidden '>
+								<div className='-ml-2 mr-2 flex  md:block xl:hidden '>
 									{/* Mobile menu button */}
 									<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500  focus:ring-orange'>
 										<span className='sr-only'>Open main menu</span>
@@ -66,7 +66,7 @@ const Header = ({ navigation }) => {
 										)}
 									</Disclosure.Button>
 								</div>
-								<div className='hidden  xl:gap-x-0  md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex large:space-x-4'>
+								<div className='hidden lg:hidden xl:flex xl:gap-x-0 large:gap-x-[26px] large:ml-[5rem]  md:ml-6 md:hidden lg:flex xl:ml-8 lg:ml-4 md:flex large:space-x-4'>
 									{navigation.map((link) => (
 										<HeaderMenu
 											menuName={link.name}
@@ -75,7 +75,7 @@ const Header = ({ navigation }) => {
 									))}
 								</div>
 							</div>
-							<div className='flex items-center xl:gap-x-6 gap-2 lg:flex hidden'>
+							<div className='flex items-center xl:gap-x-6 gap-2 lg:flex lg:hidden md:hidden xl:flex hidden'>
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
@@ -91,7 +91,7 @@ const Header = ({ navigation }) => {
 						</div>
 					</div>
 
-					<Disclosure.Panel className='md:block lg:hidden'>
+					<Disclosure.Panel className='lg:block xl:hidden'>
 						<div className='px-[2rem] '>
 							{navigation.map((link) => (
 								<MobileMenu
