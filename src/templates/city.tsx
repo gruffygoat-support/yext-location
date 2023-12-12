@@ -40,7 +40,6 @@ export const config: TemplateConfig = {
 			'dm_directoryChildren.address',
 			'dm_directoryChildren.mainPhone',
 			'dm_directoryChildren.slug',
-			'dm_directoryChildren.c_geomodifier',
 			'dm_directoryChildren.cityCoordinate',
 		],
 		localization: {
