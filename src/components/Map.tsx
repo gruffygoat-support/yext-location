@@ -10,7 +10,7 @@ const Map: React.FC<MapProps> = ({ slug, coordinates }) => {
 		latitude: cords.cityCoordinate.latitude,
 		longitude: cords.cityCoordinate.longitude,
 	}));
-	console.log(coordinates);
+
 	const [cords, setCords] = React.useState<Coordinate[]>(cordinates || []);
 	const [Loading, setLoading] = React.useState<boolean>(slug ? true : false);
 
