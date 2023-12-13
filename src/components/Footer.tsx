@@ -195,10 +195,10 @@ const Footer = (props: FooterProps) => {
 								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Notice to California Residents
 							</a>
-							<a className='text-sm leading-5 text-[#A2A2A2] grow text-end'>
+							<a className='text-sm leading-5 text-[#c4c4c4] grow text-end'>
 								<span>Built By</span>{' '}
 								<a
-									className='underline cursor-pointer text-[#A2A2A2]'
+									className='underline cursor-pointer text-[#c4c4c4]'
 									href='https://infinitymkt.com'
 									target='_blank'>
 									{' '}
