@@ -24,6 +24,7 @@ const Search = (): JSX.Element => {
 				customCssClasses={{
 					searchBarContainer: 'rounded-lg mb-4 lg:my-3  ', // Add lg:rounded-full for larger border radius
 					searchButtonContainer: 'hidden',
+
 					inputElement: 'border-none text-xs text-[#212121]',
 				}}
 			/>

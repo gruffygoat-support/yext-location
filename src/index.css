@@ -44,3 +44,6 @@
 		'Helvetica Neue', sans-serif;
 	opacity: 0.9;
 }
+.target-class svg {
+	display: none;
+}
