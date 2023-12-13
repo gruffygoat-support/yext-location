@@ -166,7 +166,7 @@ const Footer = (props: FooterProps) => {
 							California Financing Law license.
 						</p>
 						<div className='mt-8 '>
-							<p className='text-sm leading-5 text-typography-footer cursor-pointer'>
+							<p className='text-sm leading-5 text-[#A2A2A2] cursor-pointer'>
 								Copyright © 2023 Regional Management Corp. All Rights Reserved
 							</p>
 						</div>
@@ -174,25 +174,25 @@ const Footer = (props: FooterProps) => {
 							<a
 								href='https://regionalfinance.com/privacy-policy/'
 								target='_blank'
-								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>
 							<a
 								href='https://regionalfinance.com/licensesdisclosures/'
 								target='_blank'
-								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Licenses Disclosures
 							</a>
 							<a
 								href='https://www.regionalmanagement.com/overview/default.aspx'
 								target='_blank'
-								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Investors
 							</a>
 							<a
 								href='https://regionalfinance.com/regional-management-corp-consumer-privacy-policy/#collection'
 								target='_blank'
-								className='text-sm leading-5 text-typography-footer underline cursor-pointer'>
+								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Notice to California Residents
 							</a>
 							<a className='text-sm leading-5 text-typography-footer grow text-end'>
