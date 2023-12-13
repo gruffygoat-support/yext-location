@@ -151,7 +151,7 @@ const Footer = (props: FooterProps) => {
 						</div>
 					</div>
 					<div className='ml-[46px] '>
-						<p className='text-typography-footer font-normal text-sm'>
+						<p className='text-[#A2A2A2] font-normal text-sm'>
 							Regional Finance is licensed in AL, AZ, CA, GA, ID, IL, IN, LA,
 							MO, MS, NC, NM, OK, SC, TN, TX, UT, VA, and WI.
 							<br />
@@ -195,7 +195,7 @@ const Footer = (props: FooterProps) => {
 								className='text-sm leading-5 text-[#A2A2A2] underline cursor-pointer'>
 								Notice to California Residents
 							</a>
-							<a className='text-sm leading-5 text-typography-footer grow text-end'>
+							<a className='text-sm leading-5 text-[#A2A2A2] grow text-end'>
 								<span>Built By</span>{' '}
 								<a
 									className='underline cursor-pointer text-[#A2A2A2]'
