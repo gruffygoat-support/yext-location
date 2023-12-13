@@ -80,7 +80,7 @@ const PageLayout = ({
 									<Cta
 										buttonText='Log In'
 										url='#'
-										style=' lg:w-[200px] lg:py-[13px] bg-orange shadow-md md:p-[1rem]  rounded-[5px]  bg-primary px-[1rem] text-s py-[1rem] text-center'
+										style=' lg:w-[200px] lg:py-[13px] text-xs font-semibold bg-orange shadow-md md:p-[0.8rem]  rounded-[5px]  bg-primary px-[0.8rem] text-s py-[0.9rem] text-center'
 									/>
 								</div>
 							</div>
@@ -93,7 +93,7 @@ const PageLayout = ({
 							<div className='lg:hidden hidden xl:block'>
 								<div className='grid grid-cols-12 bg-[#e3eaf3]'>
 									<div className='col-span-8 extraLarge:col-span-9 large:col-span-8' />
-									<div className='large:ml-[6.5rem]'>
+									<div className='large:ml-[7.5rem] extraLarge:ml-[2.5rem] ml-[40px] xl:ml-[15px]'>
 										<Search />
 									</div>
 								</div>
