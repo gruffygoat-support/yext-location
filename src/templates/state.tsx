@@ -164,7 +164,7 @@ const State: Template<TemplateRenderProps> = ({
 						About Branches in {name}
 					</div>
 					<div className='grid grid-cols-1 lg:grid-cols-2  '>
-						<div className='text-typography-time font-normal opacity-[80%] lg:w-[493px] lg:pr-4 mb-5'>
+						<div className='text-typography-time font-normal opacity-[80%] lg:w-[480px] lg:pr-[0.5rem] mb-5'>
 							<p className='text-xs'>
 								Regional Finance has branch locations offering personal loans
 								across {c_addressRegionDisplayName}, from Farmington all the way
@@ -178,7 +178,7 @@ const State: Template<TemplateRenderProps> = ({
 
 						<div
 							className='text-typography-time font-normal 
-						lg:w-[493px] lg:ml-[1.6rem]
+						lg:w-[493px] lg:ml-[1rem]
 						2xl:ml-0
 						large:ml-[1.6rem]
 						extraLarge:-ml-[2.8rem]
