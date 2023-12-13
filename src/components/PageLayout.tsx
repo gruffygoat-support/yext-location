@@ -78,9 +78,9 @@ const PageLayout = ({
 								</div>
 								<div className='mb-4 lg:mb-0 text-white'>
 									<Cta
-										buttonText='Login'
+										buttonText='Log In'
 										url='#'
-										style=' lg:w-[220px] lg:py-[13px] bg-orange shadow-md md:p-[1rem]  rounded-[5px]  bg-primary px-3 text-s py-2 text-center'
+										style=' lg:w-[220px] lg:py-[13px] bg-orange shadow-md md:p-[1rem]  rounded-[5px]  bg-primary px-[1rem] text-s py-[1rem] text-center'
 									/>
 								</div>
 							</div>
