@@ -10,7 +10,7 @@ export interface CtaProps {
 
 const Cta = ({ buttonText, url, style, action }: CtaProps) => {
 	return (
-		<div className='flex items-center justify-center lg:justify-start'>
+		<div className='flex items-center justify-center lg:justify-start md:justify-start'>
 			<a
 				href={url}
 				onClick={action}

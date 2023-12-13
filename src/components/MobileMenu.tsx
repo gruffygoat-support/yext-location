@@ -199,7 +199,7 @@ const MobileMenu = ({ menuName, dropDown }) => {
 				))}
 			</div>
 			<div
-				className='font-bold w-[80vw]   text-typography-link'
+				className='font-bold w-[88vw]   text-typography-link'
 				style={{
 					borderBottom: '1px solid',
 					borderBottomColor: '#102b51',
