@@ -72,7 +72,7 @@ const PageLayout = ({
 				<div className='min-h-screen'>
 					<div className='sticky top-0 z-50'>
 						<SearchExperience>
-							<div className='lg:flex xl:hidden  md:hidden  h-max flex gap-[0.5rem] items-center bg-[#e3eaf3] justify-between px-2  pt-4  '>
+							<div className='lg:flex xl:hidden  md:flex  h-max flex gap-[0.5rem] items-center bg-[#e3eaf3] justify-between px-2  pt-4  '>
 								<div>
 									<Search />
 								</div>
@@ -80,7 +80,7 @@ const PageLayout = ({
 									<Cta
 										buttonText='Login'
 										url='#'
-										style=' lg:w-[220px] lg:py-[14px] bg-orange shadow-md  rounded-[5px]  bg-primary px-3 text-s py-2 text-center'
+										style=' lg:w-[220px] lg:py-[13px] bg-orange shadow-md md:p-[1rem]  rounded-[5px]  bg-primary px-3 text-s py-2 text-center'
 									/>
 								</div>
 							</div>
