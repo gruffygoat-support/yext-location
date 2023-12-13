@@ -60,6 +60,12 @@
 		margin-left: 38px;
 	}
 }
+@media screen and (min-width: 1396px) {
+	/* Styles for screens with a width of 1440px or wider */
+	.search {
+		margin-left: 25px;
+	}
+}
 @media screen and (min-width: 1536px) {
 	/* Styles for screens with a width of 1440px or wider */
 	.search {
@@ -76,5 +82,17 @@
 	/* Styles for screens with a width of 1440px or wider */
 	.btn {
 		width: 120px;
+	}
+}
+@media screen and (min-width: 375px) {
+	/* Styles for screens with a width of 1440px or wider */
+	.search-btn {
+		width: 280px;
+	}
+}
+@media screen and (min-width: 425px) {
+	/* Styles for screens with a width of 1440px or wider */
+	.search-btn {
+		width: 330px;
 	}
 }

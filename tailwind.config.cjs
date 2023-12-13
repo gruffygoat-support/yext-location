@@ -20,7 +20,7 @@ module.exports = {
 			screens: {
 				large: { min: '1600px', max: '1800px' },
 				extraLarge: { min: '1801px', max: '2000px' },
-				small: { min: '0px', max: '375px' },
+				small: { min: '0px', max: '320px' },
 			},
 			colors: {
 				typography: {
