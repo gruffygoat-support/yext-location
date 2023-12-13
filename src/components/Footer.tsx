@@ -104,7 +104,7 @@ const Footer = (props: FooterProps) => {
 							<div className='flex w-max justify-center align-center gap-x-4'>
 								{/* First set of sliced items */}
 								<div className='flex flex-col justify-center '>
-									<div className=' text-sm py-[6px] text-typography-footer  cursor-pointer '>
+									<div className=' text-sm py-[6px] leading-[21px] text-typography-footer  cursor-pointer '>
 										<a href={branchLocation.url}>{branchLocation.title}</a>
 									</div>
 									{locationsubMenu.slice(0, 9).map((menu, index) => (
