@@ -86,7 +86,7 @@ const Footer = (props: FooterProps) => {
 						</div>
 
 						<div className='col-span-2'>
-							<p className='text-s font-semibold'>LOANS</p>
+							<p className='text-s font-semibold leading-[21px]'>LOANS</p>
 							{loansSubmenu.map((menu, index) => (
 								<div
 									key={index}
@@ -100,7 +100,7 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2 '>
-							<p className='text-s font-semibold'>LOCATIONS</p>
+							<p className='text-s font-semibold leading-[21px]'>LOCATIONS</p>
 							<div className='flex w-max justify-center align-center gap-x-4'>
 								{/* First set of sliced items */}
 								<div className='flex flex-col justify-center '>
@@ -128,7 +128,7 @@ const Footer = (props: FooterProps) => {
 							</div>
 						</div>
 						<div className='col-span-2'>
-							<p className='text-s font-semibold'>EDUCATION</p>
+							<p className='text-s font-semibold leading-[21px]'>EDUCATION</p>
 							{educationSubMenu.map((menu, index) => (
 								<div
 									key={index}
@@ -138,7 +138,7 @@ const Footer = (props: FooterProps) => {
 							))}
 						</div>
 						<div className='col-span-2'>
-							<p className='text-s font-semibold'>ABOUT US</p>
+							<p className='text-s font-semibold leading-[21px]'>ABOUT US</p>
 							{aboutUs.map((menu, index) => (
 								<div
 									key={index}

@@ -55,21 +55,21 @@
 	margin-left: -10px; /* or whatever styling you want for hover */
 }
 @media screen and (min-width: 1440px) {
-	/* Styles for screens with a width of 1440px or wider */
 	.search {
 		margin-left: 38px;
 	}
 }
-@media screen and (min-width: 1396px) {
-	/* Styles for screens with a width of 1440px or wider */
+
+@media screen and (min-width: 1396px) and (max-width: 1440px) {
 	.search {
 		margin-left: 25px;
 	}
 }
-@media screen and (min-width: 1536px) {
-	/* Styles for screens with a width of 1440px or wider */
+
+/* Styles for screens with a width of 1440px or wider */
+@media screen and (min-width: 1440px) {
 	.search {
-		margin-left: 70px;
+		margin-left: 38px;
 	}
 }
 @media screen and (min-width: 768px) {
