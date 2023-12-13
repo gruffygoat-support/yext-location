@@ -22,10 +22,12 @@ const Search = (): JSX.Element => {
 				placeholder='Ask a question...'
 				onSearch={handleSearch}
 				customCssClasses={{
-					searchBarContainer: 'rounded-lg mb-4 lg:my-3  ', // Add lg:rounded-full for larger border radius
+					searchBarContainer: 'rounded-lg mb-4 lg:my-3  ',
 					searchButtonContainer: 'hidden',
-
-					inputElement: 'border-none text-xs text-[#212121]',
+					entityPreviewsDivider: 'bg-red-100',
+					inputElement: 'border-none text-xs text-[#212121] inline',
+					focusedOption: 'bg-red-100',
+					// highlighted: 'bg-red-100',
 				}}
 			/>
 		</div>

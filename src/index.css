@@ -27,6 +27,7 @@
 	border-radius: calc(0.4 * 1rem);
 	border-color: #dcdcdc;
 }
+
 .target-class div div input {
 	font-size: 16px;
 	font-weight: 400;
@@ -46,4 +47,10 @@
 }
 .target-class svg {
 	display: none;
+}
+.target-class div div div div:hover {
+	border-radius: 0px; /* or whatever styling you want for hover */
+}
+.target-class div div div div {
+	margin-left: -10px; /* or whatever styling you want for hover */
 }
