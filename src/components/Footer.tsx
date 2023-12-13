@@ -198,7 +198,7 @@ const Footer = (props: FooterProps) => {
 							<a className='text-sm leading-5 text-typography-footer grow text-end'>
 								<span>Built By</span>{' '}
 								<a
-									className='underline cursor-pointer'
+									className='underline cursor-pointer text-[#A2A2A2]'
 									href='https://infinitymkt.com'
 									target='_blank'>
 									{' '}
