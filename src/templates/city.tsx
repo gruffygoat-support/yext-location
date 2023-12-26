@@ -176,12 +176,11 @@ const City: Template<TemplateRenderProps> = ({
 						<div className='text-typography-time font-normal opacity-[80%] lg:w-[493px] lg:pr-4 mb-5'>
 							<p className='text-xs'>
 								Regional Finance has branch locations offering personal loans
-								across {document?.c_addressRegionDisplayName}, from Farmington
-								all the way down to Las Cruces. As a trusted lender providing
-								personal loans across the nation for over 30 years, our team
-								knows how to lend a helping hand when you need a fast auto
-								repair loan, appliance loan, travel loan, or debt consolidation
-								loan in {document?.c_addressRegionDisplayName}.
+								across {document?.c_addressRegionDisplayName}. As a trusted
+								lender providing personal loans across the nation for over 30
+								years, our team knows how to lend a helping hand when you need a
+								fast auto repair loan, appliance loan, travel loan, or debt
+								consolidation loan in {document?.c_addressRegionDisplayName}.
 							</p>
 						</div>
 

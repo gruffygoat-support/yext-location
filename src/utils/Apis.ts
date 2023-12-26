@@ -17,6 +17,21 @@ export default class Apis {
 		});
 		return data.response.entities.map((entity: any) => entity.cityCoordinate);
 	}
+	static async getStatesInfo(slug: MapProps, offset = 0): Promise<any> {
+		const url = `https://cdn.yextapis.com/v2/accounts/1499906/entities?v=20161012&entityType=location&limit=50&offset=${offset}`;
+
+		const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
+		const { data } = await axios.get(url, {
+			headers: {
+				'Content-Type': 'application/json',
+				'Api-Key': 'ef8da365f161cd1eae34f56b93f13441',
+			},
+			params: {
+				filter: isoRegionCodeFilter,
+			},
+		});
+		return data.response;
+	}
 
 	static async getHeaderMenuNav(): Promise<any> {
 		const apiUrl = `https://regionalfinance.com/wp-json/menu-api/v2/header-menu/`;

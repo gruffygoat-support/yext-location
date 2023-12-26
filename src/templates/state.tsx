@@ -19,6 +19,7 @@ import PageLayout from '../components/PageLayout';
 import EditTool from '../components/EditTool';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Apis from '../utils/Apis';
+import Loader from '../components/Loader';
 // import Map from '../components/Map';
 
 const Map = React.lazy(() => import('../components/Map'));
@@ -105,53 +106,103 @@ const State: Template<TemplateRenderProps> = ({
 		dm_directoryParents,
 		dm_directoryChildren,
 	} = document;
+	const [children, setChildren] = React.useState([]);
+	const [data, setData] = React.useState([]);
+
+	const [loading, setLoading] = React.useState(true);
+
+	const getStatesInfo = async () => {
+		try {
+			const response = await Apis.getStatesInfo(name.toLowerCase());
+
+			setData(response.entities);
+
+			if (response.pageToken) {
+				const response1 = await Apis.getStatesInfo(name.toLowerCase(), 50);
+				console.log('Response---->1', response1);
+
+				setData((prevData) => [...prevData, ...response1.entities]);
+			}
+		} catch (error) {
+			console.error('Error fetching data:', error);
+		}
+	};
+
+	const transformData = () => {
+		const newArray = dm_directoryChildren.map((obj) => {
+			const matchingName = data.find((res) => res.c_branchName === obj.name);
+
+			return {
+				...obj,
+				designation: matchingName ? matchingName.slug : '',
+			};
+		});
+
+		setChildren(newArray);
+		setLoading(false);
+	};
+
+	React.useEffect(() => {
+		if (name) {
+			getStatesInfo();
+		}
+	}, [name]);
+
+	React.useEffect(() => {
+		transformData();
+	}, [data]);
+
 	return (
 		<>
 			<PageLayout>
-				<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
-					<div
-						className=' xl:py-10 xl:p-0 p-4 md:p-4 flex flex-col  justify-center
+				{loading ? (
+					<Loader />
+				) : (
+					<>
+						<div className='grid grid-cols-1 xl:p-8 gap-2 md:grid-cols-2 bg-bg h-max lg:grid-cols-2 '>
+							<div
+								className=' xl:py-10 xl:p-0 p-4 md:p-4 flex flex-col  justify-center
 					lg:p-4 lg:pl-[2.8rem]  
 					xl:ml-[2rem] 2xl:mr[8rem]
 					2xl:ml-[5rem] 2xl:mr[8rem] 2xl:p-0
 					large:pl-[4.5rem]
 					extraLarge:pl-[3.5rem]
 					 '>
-						<Breadcrumbs
-							breadcrumbs={dm_directoryParents}
-							baseUrl={relativePrefixToRoot}
-							className='leading-none'
-						/>
-						<h1 className='text-[28px] lg:text-[3rem] text-typography-link font-bold mb-3 leading-none'>
-							{'Browse All Regional Finance Branches' +
-								' ' +
-								c_addressRegionDisplayName}
-						</h1>
-						{name && (
-							<div>
-								<DirectoryStateGrid
-									name={
-										c_addressRegionDisplayName
-											? c_addressRegionDisplayName
-											: name
-									}
-									description={description}
-									directoryChildren={dm_directoryChildren}
-									relativePrefixToRoot={relativePrefixToRoot}
+								<Breadcrumbs
+									breadcrumbs={dm_directoryParents}
+									baseUrl={relativePrefixToRoot}
+									className='leading-none'
 								/>
+								<h1 className='text-[28px] lg:text-[3rem] text-typography-link font-bold mb-3 leading-none'>
+									{'Browse All Regional Finance Branches' +
+										' ' +
+										c_addressRegionDisplayName}
+								</h1>
+								{name && (
+									<div>
+										<DirectoryStateGrid
+											name={
+												c_addressRegionDisplayName
+													? c_addressRegionDisplayName
+													: name
+											}
+											description={description}
+											directoryChildren={children}
+											relativePrefixToRoot={relativePrefixToRoot}
+										/>
+									</div>
+								)}
 							</div>
-						)}
-					</div>
-					{document && (
-						<React.Suspense fallback={<></>}>
-							<div className='lg:block md:block hidden m-5'>
-								<Map slug={name.toLowerCase()} />
-							</div>
-						</React.Suspense>
-					)}
-				</div>
-				<div
-					className=' my-[5rem]  p-8  
+							{document && (
+								<React.Suspense fallback={<></>}>
+									<div className='lg:block md:block hidden m-5'>
+										<Map slug={name.toLowerCase()} />
+									</div>
+								</React.Suspense>
+							)}
+						</div>
+						<div
+							className=' my-[5rem]  p-8  
 
 				md:p-[2.9rem]
 				lg:p-[3rem]
@@ -160,40 +211,41 @@ const State: Template<TemplateRenderProps> = ({
 				large:mx-[9rem] large:p-[2.5rem]
 				extraLarge:ml-[8.5rem] extraLarge:mr-[8erm] extraLarge:p-[2rem]
 				'>
-					<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
-						About Branches in {name}
-					</div>
-					<div className='grid grid-cols-1 lg:grid-cols-2  '>
-						<div className='text-typography-time font-normal opacity-[80%] lg:w-[480px] lg:pr-[0.5rem] mb-5'>
-							<p className='text-xs'>
-								Regional Finance has branch locations offering personal loans
-								across {c_addressRegionDisplayName}, from Farmington all the way
-								down to Las Cruces. As a trusted lender providing personal loans
-								across the nation for over 30 years, our team knows how to lend
-								a helping hand when you need a fast auto repair loan, appliance
-								loan, travel loan, or debt consolidation loan in{' '}
-								{c_addressRegionDisplayName}.
-							</p>
-						</div>
+							<div className='lg:text-[32px] text-[22px] font-bold mb-3 text-typography-link leading-none mb-6'>
+								About Branches in {name}
+							</div>
+							<div className='grid grid-cols-1 lg:grid-cols-2  '>
+								<div className='text-typography-time font-normal opacity-[80%] lg:w-[480px] lg:pr-[0.5rem] mb-5'>
+									<p className='text-xs'>
+										Regional Finance has branch locations offering personal
+										loans across {c_addressRegionDisplayName}. As a trusted
+										lender providing personal loans across the nation for over
+										30 years, our team knows how to lend a helping hand when you
+										need a fast auto repair loan, appliance loan, travel loan,
+										or debt consolidation loan in {c_addressRegionDisplayName}.
+									</p>
+								</div>
 
-						<div
-							className='text-typography-time font-normal 
+								<div
+									className='text-typography-time font-normal 
 						lg:w-[493px] lg:ml-[1rem]
 						2xl:ml-0
 						large:ml-[1.6rem]
 						extraLarge:-ml-[2.8rem]
 						'>
-							<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
-								You may have a few questions, and we're ready with answers. Call
-								or drop by the branch location nearest you.
-							</p>
-							<p className='text-lg opacity-[80%]'>
-								¿Hablas Español? Tenemos representantes de habla hispana que
-								pueden ayudarlo. Llámenos para más información.
-							</p>
+									<p className='mb-10 md:mb-4 text-xs opacity-[80%] '>
+										You may have a few questions, and we're ready with answers.
+										Call or drop by the branch location nearest you.
+									</p>
+									<p className='text-lg opacity-[80%]'>
+										¿Hablas Español? Tenemos representantes de habla hispana que
+										pueden ayudarlo. Llámenos para más información.
+									</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
+					</>
+				)}
 			</PageLayout>
 		</>
 	);

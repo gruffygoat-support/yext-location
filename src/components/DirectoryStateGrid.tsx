@@ -33,7 +33,11 @@ const DirectoryStateGrid = ({
 				className='w-max'>
 				<a
 					key='uRL'
-					href={relativePrefixToRoot + child.slug}
+					href={
+						child.dm_childEntityIds?.length > 1
+							? relativePrefixToRoot + child.slug
+							: child.designation
+					}
 					className='font-semibold text-[18px] small:text-[14px] md:text-s  lg:text-[18px] text-typography-link hover:underline  '>
 					{child.name}{' '}
 				</a>

@@ -79,13 +79,13 @@ const Header = ({ navigation }) => {
 								<Cta
 									buttonText='Prequalify Now'
 									url='#'
-									style='text-white text-[16px] px-[16px] py-[13px] xl:px-[16px] xl:py-[13px] xl:w-[200px] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
+									style='text-white font-normal text-[16px] px-[16px] py-[13px] xl:px-[16px] xl:py-[13px] xl:w-[200px] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
 								/>
 								<Cta
 									buttonText='Log In'
 									url='#'
 									style='text-white text-[16px] xl:px-[16px] xl:py-[13px] xl:w-[200px] px-[16px] py-[13px] tracking-[0.5px] 
-									bg-primary text-center w-[100px] rounded-md hover:bg-secondary hover:text-primary '
+									bg-primary text-center font-normal w-[100px] rounded-md hover:bg-secondary hover:text-primary '
 								/>
 							</div>
 						</div>
@@ -104,12 +104,12 @@ const Header = ({ navigation }) => {
 							<Cta
 								buttonText='Prequalify Now'
 								url='#'
-								style='text-white px-[16px] py-[13px] lg:py[32px] lg:w-[20%] w-[80%] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
+								style='  text-white px-[16px] py-[13px] lg:py[32px] lg:w-[20%] w-[80%] tracking-[0.5px]  text-center shadow-md bg-secondary rounded-md  hover:text-primary  '
 							/>
 							<Cta
 								buttonText='Log In'
 								url='#'
-								style='text-white w-[80%] px-[16px] py-[13px] lg:py[32px] tracking-[0.5px] 
+								style='  text-white w-[80%] px-[16px] py-[13px] lg:py[32px] tracking-[0.5px] 
 									bg-primary text-center lg:w-[20%] rounded-md hover:bg-secondary hover:text-primary '
 							/>
 						</div>
