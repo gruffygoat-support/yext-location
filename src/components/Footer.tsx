@@ -258,16 +258,28 @@ const Footer = (props: FooterProps) => {
 							<a href='tel:+8644487000'>(864) 448-7000</a>
 						</p>
 						<div className='flex flex-col ml-3 mt-6 '>
-							<a className='text-sm text-typography-footer py-2 underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/privacy-policy/'
+								target='_blank'
+								className='text-sm text-typography-footer py-2 underline cursor-pointer'>
 								Privacy & Cookie Policies
 							</a>
-							<a className='text-sm text-typography-footer py-2  underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/licensesdisclosures/'
+								target='_blank'
+								className='text-sm text-typography-footer py-2  underline cursor-pointer'>
 								Licenses Disclosures
 							</a>
-							<a className='text-sm  text-typography-footer py-2  underline cursor-pointer'>
+							<a
+								href='https://www.regionalmanagement.com/overview/default.aspx'
+								target='_blank'
+								className='text-sm  text-typography-footer py-2  underline cursor-pointer'>
 								Investors
 							</a>
-							<a className='text-sm text-typography-footer py-2  underline cursor-pointer'>
+							<a
+								href='https://regionalfinance.com/regional-management-corp-consumer-privacy-policy/#collection'
+								target='_blank'
+								className='text-sm text-typography-footer py-2  underline cursor-pointer'>
 								Notice to California Residents
 							</a>
 						</div>
