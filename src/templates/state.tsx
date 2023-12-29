@@ -106,6 +106,7 @@ const State: Template<TemplateRenderProps> = ({
 		dm_directoryParents,
 		dm_directoryChildren,
 	} = document;
+	console.log(document);
 	const [children, setChildren] = React.useState([]);
 	const [data, setData] = React.useState([]);
 
@@ -119,7 +120,6 @@ const State: Template<TemplateRenderProps> = ({
 
 			if (response.pageToken) {
 				const response1 = await Apis.getStatesInfo(name.toLowerCase(), 50);
-				console.log('Response---->1', response1);
 
 				setData((prevData) => [...prevData, ...response1.entities]);
 			}
@@ -130,7 +130,7 @@ const State: Template<TemplateRenderProps> = ({
 
 	const transformData = () => {
 		const newArray = dm_directoryChildren.map((obj) => {
-			const matchingName = data.find((res) => res.c_branchName === obj.name);
+			const matchingName = data.find((res) => res.address.city === obj.name);
 
 			return {
 				...obj,
@@ -151,7 +151,6 @@ const State: Template<TemplateRenderProps> = ({
 	React.useEffect(() => {
 		transformData();
 	}, [data]);
-
 	return (
 		<>
 			<PageLayout>
@@ -169,14 +168,22 @@ const State: Template<TemplateRenderProps> = ({
 					extraLarge:pl-[3.5rem]
 					 '>
 								<Breadcrumbs
-									breadcrumbs={dm_directoryParents}
+									breadcrumbs={
+										c_addressRegionDisplayName == 'Idaho'
+											? dm_directoryParents.slice(1)
+											: dm_directoryParents
+									}
 									baseUrl={relativePrefixToRoot}
 									className='leading-none'
 								/>
 								<h1 className='text-[28px] lg:text-[3rem] text-typography-link font-bold mb-3 leading-none'>
-									{'Browse All Regional Finance Branches' +
-										' ' +
-										c_addressRegionDisplayName}
+									{c_addressRegionDisplayName == 'Idaho'
+										? 'Browse All Regional Finance Branches and Service Areas in' +
+										  ' ' +
+										  c_addressRegionDisplayName
+										: 'Browse All Regional Finance Branches' +
+										  ' ' +
+										  c_addressRegionDisplayName}
 								</h1>
 								{name && (
 									<div>
@@ -187,10 +194,48 @@ const State: Template<TemplateRenderProps> = ({
 													: name
 											}
 											description={description}
-											directoryChildren={children}
+											directoryChildren={
+												c_addressRegionDisplayName == 'Idaho'
+													? children.slice(0, 1)
+													: children
+											}
 											relativePrefixToRoot={relativePrefixToRoot}
 										/>
 									</div>
+								)}
+								{c_addressRegionDisplayName == 'Idaho' && (
+									<>
+										<h1 className='text-[18px] lg:text-[32px] text-typography-link font-bold mt-8 mb-3 leading-none'>
+											Service Areas
+										</h1>
+										{/* <DirectoryStateGrid
+											name={
+												c_addressRegionDisplayName
+													? c_addressRegionDisplayName
+													: name
+											}
+											description={description}
+											directoryChildren={children.slice(1)}
+											relativePrefixToRoot={relativePrefixToRoot}
+										/> */}
+										<div className='grid  grid-cols-2 w-max max-w-lg mt-8   lg:grid-cols-2 xl:grid-cols-3 md:gap-x-2  md:grid-cols-3 gap-6  small:gap-x-[1.5rem] small:gap-y-[1rem]   xl:gap-x-[9rem] leading-[21.78px]'>
+											{children.slice(1).map((child) => (
+												<div
+													key={child.slug}
+													className='w-max'>
+													<a
+														key='uRL'
+														href={relativePrefixToRoot + child.slug}
+														className='font-semibold text-[18px] small:text-[14px] md:text-s  lg:text-[18px] text-typography-link hover:underline  '>
+														{child.name}{' '}
+													</a>
+													<span className='text-typography-lightGray text-xs font-normal'>
+														({child.dm_childEntityIds?.length || 1})
+													</span>
+												</div>
+											))}
+										</div>
+									</>
 								)}
 							</div>
 							{document && (

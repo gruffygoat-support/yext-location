@@ -57,14 +57,16 @@ const Content = ({ document }) => {
 							</span>
 						</div>
 					</p>
-					<p className='text-s  text-typography-time font-normal flex'>
-						Fax:
-						<div className='pl-[2.1rem]'>
-							<span className='text-typography-breadcrumb  border-b border-typography-breadcrumb  font-medium'>
-								{formatPhoneNumber(document?.fax)}
-							</span>
-						</div>
-					</p>
+					{document?.fax && (
+						<p className='text-s  text-typography-time font-normal flex'>
+							Fax:
+							<div className='pl-[2.1rem]'>
+								<span className='text-typography-breadcrumb  border-b border-typography-breadcrumb  font-medium'>
+									{formatPhoneNumber(document?.fax)}
+								</span>
+							</div>
+						</p>
+					)}
 				</div>
 			</div>
 		</div>

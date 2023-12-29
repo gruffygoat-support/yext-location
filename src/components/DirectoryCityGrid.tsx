@@ -35,8 +35,8 @@ const DirectoryCityGrid = ({
 				<a
 					key='uRL'
 					href={relativePrefixToRoot + child.slug}
-					className='font-semibold text-[18px] md:text-s  w-max lg:text-[18px] text-typography-link hover:underline  '>
-					{child.name + ' ' + child.c_geomodifier ?? child?.name}{' '}
+					className='font-semibold text-[18px]  md:text-s lg:text-[18px] text-typography-link hover:underline  '>
+					{child.name}
 				</a>
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 1})
