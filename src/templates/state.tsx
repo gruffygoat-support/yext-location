@@ -130,7 +130,6 @@ const State: Template<TemplateRenderProps> = ({
 	const transformData = () => {
 		const newArray = dm_directoryChildren.map((obj) => {
 			const matchingName = data.find((res) => res.address.city === obj.name);
-
 			return {
 				...obj,
 				designation: matchingName ? matchingName.slug : '',
@@ -169,7 +168,7 @@ const State: Template<TemplateRenderProps> = ({
 								<Breadcrumbs
 									breadcrumbs={
 										c_addressRegionDisplayName == 'Idaho'
-											? dm_directoryParents.slice(1)
+											? dm_directoryParents
 											: dm_directoryParents
 									}
 									baseUrl={relativePrefixToRoot}
@@ -224,7 +223,7 @@ const State: Template<TemplateRenderProps> = ({
 													className='w-max'>
 													<a
 														key='uRL'
-														href={relativePrefixToRoot + child.slug}
+														href={relativePrefixToRoot + child.designation}
 														className='font-semibold text-[18px] small:text-[14px] md:text-s  lg:text-[18px] text-typography-link hover:underline  '>
 														{child.name}{' '}
 													</a>

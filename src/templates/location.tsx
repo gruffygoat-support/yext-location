@@ -225,7 +225,6 @@ const Location: Template<TemplateRenderProps> = ({
 
 		faqs,
 	} = document;
-
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>
