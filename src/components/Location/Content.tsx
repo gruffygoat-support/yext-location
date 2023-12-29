@@ -34,11 +34,12 @@ const Content = ({ document }) => {
 						{' '}
 						Location:
 						<br />
-						<p className=' text-s font-normal'>
+						<span className=' text-s font-normal '>
 							{document?.address?.line1}
-							<br /> {document?.address?.localizedRegionName}
+							{', '}
+							{document?.address?.localizedRegionName}
 							{','} {document?.address?.region} {document?.address?.postalCode}
-						</p>
+						</span>
 					</p>
 				</div>
 			</div>

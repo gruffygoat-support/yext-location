@@ -106,7 +106,6 @@ const State: Template<TemplateRenderProps> = ({
 		dm_directoryParents,
 		dm_directoryChildren,
 	} = document;
-	console.log(document);
 	const [children, setChildren] = React.useState([]);
 	const [data, setData] = React.useState([]);
 
