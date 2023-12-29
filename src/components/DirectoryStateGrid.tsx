@@ -39,7 +39,7 @@ const DirectoryStateGrid = ({
 							: child.designation
 					}
 					className='font-semibold text-[18px] small:text-[14px] md:text-s  lg:text-[18px] text-typography-link hover:underline  '>
-					{child.name}{' '}
+					<span>{child.name}</span>{' '}
 				</a>
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 0})
