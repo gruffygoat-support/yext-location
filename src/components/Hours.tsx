@@ -143,35 +143,42 @@ const DayRow = (props: DayRow) => {
 
 const Hours = (props: HoursProps) => {
 	const { hours } = props;
+	const areAllClosed = Object.values(hours).every((day) => day.isClosed);
 
 	return (
-		<div className='flex gap-x-[1rem]'>
-			<div className=' mt-[5px]'>
-				<ClockIcon />
-			</div>
+		<>
+			{hours && (
+				<div className='flex gap-x-[1rem]'>
+					<div className=' mt-[5px]'>
+						<ClockIcon />
+					</div>
 
-			<div className='flex flex-col gap-x-2'>
-				<div className='text-xs flex gap-x-2 font-bold mb-2 text-typography-link'>
-					<p>Branch Hours:</p>
-				</div>
+					<div className='flex flex-col gap-x-2'>
+						<div className='text-xs flex gap-x-2 font-bold mb-2 text-typography-link'>
+							<p>Branch Hours:</p>
+						</div>
+						{!areAllClosed && (
+							<div className='lg:text-[22px] xl:text-[24px] text-lg font-medium mb-2 w-max text-typography-link'>
+								Open until 5:30 PM
+							</div>
+						)}
 
-				<div className='lg:text-[22px] xl:text-[24px] text-lg font-medium mb-2 w-max text-typography-link'>
-					Open until 5:30 PM
+						<div className='mb-4 text-xs font-normal  text-typography-time'>
+							Also by appointment.
+						</div>
+						<table className='leading-[17.79px]'>
+							<thead className='sr-only'>
+								<tr>
+									<th>Day of the Week</th>
+									<th>Hours</th>
+								</tr>
+							</thead>
+							{renderHours(hours)}
+						</table>
+					</div>
 				</div>
-				<div className='mb-4 text-xs font-normal  text-typography-time'>
-					Also by appointment.
-				</div>
-				<table className='leading-[17.79px]'>
-					<thead className='sr-only'>
-						<tr>
-							<th>Day of the Week</th>
-							<th>Hours</th>
-						</tr>
-					</thead>
-					{renderHours(hours)}
-				</table>
-			</div>
-		</div>
+			)}
+		</>
 	);
 };
 
