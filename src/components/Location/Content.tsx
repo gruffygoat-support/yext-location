@@ -9,21 +9,23 @@ import { FiPhone } from 'react-icons/fi';
 const Content = ({ document }) => {
 	return (
 		<div>
-			<div className='flex  gap-5 mb-4'>
-				<div className='mt-[5px]'>
-					<BranchIcon />
+			{document?.c_branchManager && (
+				<div className='flex  gap-4 mb-4'>
+					<div className='mt-[5px]'>
+						<BranchIcon />
+					</div>
+
+					<p className='text-xs font-bold text-typography-link'>
+						Branch Manager:
+						<br />
+						<span className=' text-s font-normal '>
+							{document?.c_branchManager}
+						</span>
+					</p>
 				</div>
+			)}
 
-				<p className='text-xs font-bold text-typography-link'>
-					Branch Manager:
-					<br />
-					<span className=' text-s font-normal '>
-						{document?.c_branchManager}
-					</span>
-				</p>
-			</div>
-
-			<div className='flex gap-5 mb-4'>
+			<div className='flex gap-4 mb-4'>
 				<div className='mt-[6px]'>
 					<LocationIcon />
 				</div>
@@ -40,7 +42,7 @@ const Content = ({ document }) => {
 					</p>
 				</div>
 			</div>
-			<div className='flex items-center gap-5 mb-4'>
+			<div className='flex items-center gap-4 mb-4'>
 				<FiPhone
 					fill='#EBF5FF'
 					stroke='#2E4369'
