@@ -47,34 +47,32 @@ const FourOhFour: Template<TemplateRenderProps> = () => {
 	return (
 		<>
 			<PageLayout>
-				<div>
-					<div className='bg-[#e3eaf3] h-[80vh] flex flex-col '>
-						<div className='max-w-[90rem] m-auto '>
-							<div className='flex flex-col justify-center items-center mb-6 text-center'>
-								<div className='mb-8'>
-									<BrokenIcon />
-								</div>
+				<div className='bg-[#e3eaf3] py-[4rem] '>
+					<div className='max-w-[90rem] m-auto flex flex-col  justify-center items-center  '>
+						<div className='flex flex-col justify-center items-center mb-6 text-center'>
+							<div className='mb-8'>
+								<BrokenIcon />
+							</div>
 
-								<p className=' text-[28px] lg:text-[48px] font-normal text-typography-link mb-8 '>
-									Oops! We're sorry.
-								</p>
-								<p className='text-[16px] font-normal text-[#757575] mb-1'>
-									Error: 404
-								</p>
-								<p className='text-[15px] font-normal text-[#757575] leading-[24.16px]'>
-									The page you requested cannot be found.
-								</p>
-								<p className='text-[15px] font-normal text-[#757575] leading-[24.16px]'>
-									Please click the button below to return to the home page.
-								</p>
-							</div>
-							<div className=''>
-								<Cta
-									buttonText='Return home'
-									url='index.html'
-									style='text-white px-[3.5rem] py-4 shadow-md bg-primary lg:font-normal lg:text-[16px] rounded-md '
-								/>
-							</div>
+							<p className=' text-[28px] lg:text-[48px] font-normal text-typography-link mb-8 '>
+								Oops! We're sorry.
+							</p>
+							<p className='text-[16px] font-normal text-[#757575] mb-1'>
+								Error: 404
+							</p>
+							<p className='text-[15px] font-normal text-[#757575] leading-[24.16px]'>
+								The page you requested cannot be found.
+							</p>
+							<p className='text-[15px] font-normal text-[#757575] leading-[24.16px]'>
+								Please click the button below to return to the home page.
+							</p>
+						</div>
+						<div className=''>
+							<Cta
+								buttonText='Return home'
+								url='index.html'
+								style='text-white px-[3.5rem] py-4 shadow-md bg-primary lg:font-normal lg:text-[16px] rounded-md '
+							/>
 						</div>
 					</div>
 				</div>
