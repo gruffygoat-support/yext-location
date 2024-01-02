@@ -55,9 +55,11 @@ const Content = ({ document }) => {
 					<p className='text-s text-typography-time font-normal w-max flex'>
 						Phone:
 						<div className='pl-4'>
-							<span className='text-typography-breadcrumb text-s font-medium  border-b border-typography-breadcrumb mb-2'>
+							<a
+								href={`tel:${document?.mainPhone}`}
+								className='text-typography-breadcrumb text-s font-medium  border-b border-typography-breadcrumb mb-2'>
 								{formatPhoneNumber(document?.mainPhone)}
-							</span>
+							</a>
 						</div>
 					</p>
 					{document?.fax && (
