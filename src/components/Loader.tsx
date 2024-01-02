@@ -9,7 +9,7 @@ const Loader = () => {
 				style={{
 					position: 'absolute',
 					top: '50%',
-					left: '40%',
+					left: '50%',
 				}}>
 				<TailSpin
 					height='100'
