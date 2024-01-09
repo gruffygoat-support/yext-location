@@ -1,18 +1,21 @@
 import * as React from 'react';
 interface Document {
 	c_cTATrustPilot: {
-		cTAPhoto: { url: string }; // Assuming that cTAPhoto is a string representing the image URL
+		cTAPhoto: { url: string };
+		cTAURL: string;
 	};
 	c_cTACreditKarma: {
 		cTAPhoto: { url: string };
+		cTAURL: string;
 	};
 	c_cTALendingTree: {
 		cTAPhoto: { url: string };
+		cTAURL: string;
 	};
 	c_cTABestCompany: {
 		cTAPhoto: { url: string };
+		cTAURL: string;
 	};
-	// Add more properties if necessary
 }
 
 interface ImageComponentProps {
@@ -29,8 +32,9 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 				Trusted reviews from real customers *
 			</p>
 			<div className=' grid grid-cols-1 lg:grid-cols-2 xl:gap-x-24 xl:grid-cols-4 2xl:grid-cols-4 lg:grid-x-4  large:gap-x-0 md:grid-cols-2 md:grid-x-10   gap-y-10 xl:my-[3rem] place-items-center '>
-				<div
+				<a
 					className=' opacity-3 p-2 rounded-lg '
+					href={document?.c_cTATrustPilot?.cTAURL}
 					style={{
 						width: '288px',
 						height: '90px',
@@ -45,9 +49,10 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						className='object-cover'
 						style={{ width: '45%', height: '100%' }}
 					/>
-				</div>
-				<div
+				</a>
+				<a
 					className=' p-2 rounded-lg '
+					href={document?.c_cTACreditKarma?.cTAURL}
 					style={{
 						width: '288px',
 						height: '90px',
@@ -62,9 +67,10 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						className='object-cover'
 						style={{ width: '60%', height: '100%' }}
 					/>
-				</div>
-				<div
+				</a>
+				<a
 					className=' p-2 rounded-lg '
+					href={document?.c_cTALendingTree?.cTAURL}
 					style={{
 						width: '288px',
 						height: '90px',
@@ -79,9 +85,10 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						className='object-cover'
 						style={{ width: '60%', height: '100%' }}
 					/>
-				</div>
-				<div
+				</a>
+				<a
 					className=' p-2 rounded-lg '
+					href={document?.c_cTABestCompany?.cTAURL}
 					style={{
 						width: '288px',
 						height: '90px',
@@ -96,7 +103,7 @@ const ImageCard: React.FC<ImageComponentProps> = ({ document }) => {
 						className='object-cover'
 						style={{ width: '35%', height: '100%' }}
 					/>
-				</div>
+				</a>
 			</div>
 			<p className='text-typography-breadcrumb text-center underline underline-offset-1 cursor-pointer mt-5 '>
 				<a
