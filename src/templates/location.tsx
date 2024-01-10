@@ -85,6 +85,10 @@ export const config: TemplateConfig = {
 			'c_fAQAnswer5',
 			'c_alertBannerText',
 			'c_startLoanProcessURL',
+			'c_concernsAndComplaintsURL',
+			'c_consumerInformationBrochureURL',
+			'c_ratesAndFeesDisclosureURL',
+			'c_viewLicenseURL',
 		],
 		filter: {
 			entityTypes: ['location'],
@@ -222,7 +226,10 @@ const Location: Template<TemplateRenderProps> = ({
 		siteDomain,
 		_site,
 		dm_directoryParents,
-
+		c_concernsAndComplaintsURL,
+		c_consumerInformationBrochureURL,
+		c_ratesAndFeesDisclosureURL,
+		c_viewLicenseURL,
 		faqs,
 	} = document;
 	return (
@@ -310,39 +317,62 @@ const Location: Template<TemplateRenderProps> = ({
 							{document.c_pagesAboutDescription}
 						</p>
 						<div className=' flex gap-2 flex-wrap mb-5 '>
-							<span
-								className='text-typography-breadcrumb   underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								Consumer Information Brochure
-							</span>
+							{c_consumerInformationBrochureURL && (
+								<span
+									className='text-typography-breadcrumb   underline underline-offset-1 cursor-pointer '
+									style={{
+										fontSize: 14,
+									}}
+									onClick={() =>
+										window.open(c_consumerInformationBrochureURL, '_blank')
+									}>
+									Consumer Information Brochure
+								</span>
+							)}
+
+							{c_concernsAndComplaintsURL && (
+								<span
+									className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
+									style={{
+										fontSize: 14,
+									}}
+									onClick={() =>
+										window.open(c_concernsAndComplaintsURL, '_blank')
+									}>
+									Concerns & Complaints
+								</span>
+							)}
+							{c_ratesAndFeesDisclosureURL && (
+								<span
+									className='text-typography-breadcrumb  text-md underline underline-offset-1 cursor-pointer '
+									style={{
+										fontSize: 14,
+									}}
+									onClick={() =>
+										window.open(c_ratesAndFeesDisclosureURL, '_blank')
+									}>
+									Rates & Fees
+								</span>
+							)}
+							{c_viewLicenseURL && (
+								<span
+									className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
+									style={{
+										fontSize: 14,
+									}}
+									onClick={() => window.open(c_viewLicenseURL, '_blank')}>
+									View License
+								</span>
+							)}
+
 							<span
 								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
 								style={{
 									fontSize: 14,
-								}}>
-								Concerns & Complaints
-							</span>
-							<span
-								className='text-typography-breadcrumb  text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								Rates & Fees
-							</span>
-							<span
-								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
-								View License
-							</span>
-							<span
-								className='text-typography-breadcrumb text-md underline underline-offset-1 cursor-pointer '
-								style={{
-									fontSize: 14,
-								}}>
+								}}
+								onClick={() =>
+									window.open('https://regionalfinance.com/', '_blank')
+								}>
 								RegionalFinance.com
 							</span>
 						</div>
