@@ -35,8 +35,9 @@ const DirectoryCityGrid = ({
 				<a
 					key='uRL'
 					href={relativePrefixToRoot + child.slug}
-					className='font-semibold text-[18px]  md:text-s lg:text-[18px] text-typography-link hover:underline  '>
-					{child.name}
+					className='font-semibold text-[18px]  md:text-s capitalize lg:text-[18px] text-typography-link hover:underline mr-2 '>
+					{child.slug.split('-').join(' ')}
+					{child.name.split('-').at(1)}
 				</a>
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 1})
@@ -48,7 +49,7 @@ const DirectoryCityGrid = ({
 		<>
 			<div className='space-y-10 mt-6 '>
 				{directoryChildren && (
-					<div className='grid  grid-cols-1 gap-8 w-max  max-w-[25rem] md:gap-x-2 lg:grid-cols-2  lg:gap-4 xl:gap-x-3 gap-y-[1.5rem]'>
+					<div className='grid  grid-cols-1 gap-8 max-w-[25rem] md:gap-x-2 lg:grid-cols-2  lg:gap-4 xl:gap-x-3 gap-y-[1.5rem]'>
 						{childrenDivs}
 					</div>
 				)}
