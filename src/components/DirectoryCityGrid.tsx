@@ -22,7 +22,7 @@ const transformedName = (child) => {
 	const name = child.name;
 	let updatedName;
 	if (name.includes('CLOSED')) {
-		updatedName = child.address.line1 + '-' + name.split('-').at(1);
+		updatedName = child.address.line1.concat('-CLOSED').split(' ').join(' ');
 		return updatedName;
 	} else {
 		return child.address.line1;
