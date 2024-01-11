@@ -232,6 +232,7 @@ const Location: Template<TemplateRenderProps> = ({
 		c_viewLicenseURL,
 		faqs,
 	} = document;
+
 	return (
 		<>
 			<PageLayout content={document?.c_alertBannerText}>

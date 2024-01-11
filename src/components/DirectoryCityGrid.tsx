@@ -18,6 +18,16 @@ const sortByCity = (a: DirectoryChild, b: DirectoryChild) => {
 	const second = b.address.city;
 	return first < second ? -1 : first > second ? 1 : 0;
 };
+const transformedName = (child) => {
+	const name = child.name;
+	let updatedName;
+	if (name.includes('CLOSED')) {
+		updatedName = child.address.line1 + '-' + name.split('-').at(1);
+		return updatedName;
+	} else {
+		return child.address.line1;
+	}
+};
 
 const DirectoryCityGrid = ({
 	name,
@@ -36,8 +46,9 @@ const DirectoryCityGrid = ({
 					key='uRL'
 					href={relativePrefixToRoot + child.slug}
 					className='font-semibold text-[18px]  md:text-s capitalize lg:text-[18px] text-typography-link hover:underline mr-2 '>
-					{child.slug.split('-').join(' ')}
-					{child.name.split('-').at(1)}
+					{/* {child.slug.split('-').join(' ')}
+					{child.name.split('-').at(1)} */}
+					{transformedName(child)}
 				</a>
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 1})
