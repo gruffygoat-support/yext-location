@@ -29,10 +29,11 @@ const DirectoryStateGrid = ({
 		sortedChildren = directoryChildren?.sort(sortByName) || [];
 		childrenDivs = sortedChildren.map((child: DirectoryChild) => (
 	         const shouldDisplay = child.name && !child.name.includes('closed');
-		 if(shouldDisplay){
+		  
 			<div
 				key={child.slug}
 				className='w-max'>
+				    {child.name && !child.name.includes('closed') ? (
 				<a
 					key='uRL'
 					href={
@@ -46,8 +47,9 @@ const DirectoryStateGrid = ({
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 0})
 				</span>
+					     ) : null}
 			</div>
-		 }
+		 
 		));
 	}
 	return (
