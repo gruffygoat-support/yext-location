@@ -103,6 +103,8 @@ const City: Template<TemplateRenderProps> = ({
 		dm_directoryParents,
 		dm_directoryChildren,
 	} = document;
+	    console.log(dm_directoryParents);
+	   console.log(dm_directoryChildren);
 	return (
 		<>
 			<PageLayout>
@@ -128,6 +130,7 @@ const City: Template<TemplateRenderProps> = ({
 							<br />
 							{name + ' ' + 'Area'}
 						</h1>
+						
 						{name && (
 							<div>
 								<DirectoryCityGrid
