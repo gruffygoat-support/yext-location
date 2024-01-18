@@ -33,9 +33,7 @@ const DirectoryStateGrid = ({
 			<div
 				key={child.slug}
 				className='w-max'>
-				    {child.name && !child.name.includes('closed') ? (
-				<a
-					key='uRL'
+ 				<a					key='uRL'
 					href={
 						child.dm_childEntityIds?.length > 1
 							? relativePrefixToRoot + child.slug
@@ -47,7 +45,7 @@ const DirectoryStateGrid = ({
 				<span className='text-typography-lightGray text-xs font-normal'>
 					({child.dm_childEntityIds?.length || 0})
 				</span>
-					     ) : null}
+					    
 			</div>
 		 
 		));
