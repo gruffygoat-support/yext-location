@@ -183,7 +183,7 @@ const State: Template<TemplateRenderProps> = ({
 										  ' ' +
 										  c_addressRegionDisplayName}
 								</h1>
-{/* 								{name && (
+								{name && (
 									<div>
 										<DirectoryStateGrid
 											name={
@@ -200,7 +200,7 @@ const State: Template<TemplateRenderProps> = ({
 											relativePrefixToRoot={relativePrefixToRoot}
 										/>
 									</div>
-								)} */}
+								)}
 								{c_addressRegionDisplayName == 'Idaho' && (
 									<div className='mt-[3rem]'>
 										<h1 className='text-[18px] lg:text-[32px] text-typography-link font-bold mt-8 mb-3 leading-none'>
