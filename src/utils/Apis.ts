@@ -5,7 +5,8 @@ import { fetch } from '@yext/pages/util';
 export default class Apis {
 	static async getCoordinates(slug: MapProps): Promise<any> {
 		const url = `https://cdn.yextapis.com/v2/accounts/1499906/entities?v=20161012&entityType=location&limit=50`;
-		const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
+		//const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
+		const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}, "closed":{"$eq":true}}`;
 		const { data } = await axios.get(url, {
 			headers: {
 				'Content-Type': 'application/json',
@@ -20,7 +21,8 @@ export default class Apis {
 	static async getStatesInfo(slug: MapProps, offset = 0): Promise<any> {
 		const url = `https://cdn.yextapis.com/v2/accounts/1499906/entities?v=20161012&entityType=location&limit=50&offset=${offset}`;
 
-		const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
+		//const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
+		const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}, "closed":{"$eq":true}}`;
 		const { data } = await axios.get(url, {
 			headers: {
 				'Content-Type': 'application/json',
