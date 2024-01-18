@@ -28,9 +28,7 @@ const DirectoryStateGrid = ({
 	if (directoryChildren) {
 		sortedChildren = directoryChildren?.sort(sortByName) || [];
 		childrenDivs = sortedChildren.map((child: DirectoryChild) => (
-	         const shouldDisplay = child.name && !child.name.includes('closed');
-		  
-			<div
+ 		  			<div
 				key={child.slug}
 				className='w-max'>
  				<a					key='uRL'
