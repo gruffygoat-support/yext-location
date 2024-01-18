@@ -130,7 +130,7 @@ const City: Template<TemplateRenderProps> = ({
 							{name + ' ' + 'Area'}
 						</h1>
 						
-{/* 						{name && (
+						{name && (
 							<div>
 								<DirectoryCityGrid
 									name={
@@ -143,7 +143,7 @@ const City: Template<TemplateRenderProps> = ({
 									relativePrefixToRoot={relativePrefixToRoot}
 								/>
 							</div>
-						)} */}
+						)}
 					</div>
 
 					{document && (
