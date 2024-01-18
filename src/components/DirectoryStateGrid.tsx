@@ -27,7 +27,7 @@ const DirectoryStateGrid = ({
 	let childrenDivs;
 	if (directoryChildren) {
 		sortedChildren = directoryChildren?.sort(sortByName) || [];
-		childrenDivs = sortedChildren.map((child: DirectoryChild) => (
+		childrenDivs = sortedChildren.filter((child: DirectoryChild) => !child.name.includes("CLOSED")).map((child: DirectoryChild) => (
  		  			<div
 				key={child.slug}
 				className='w-max'>
