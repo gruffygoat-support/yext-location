@@ -40,7 +40,7 @@ const DirectoryCityGrid = ({
 
 	if (directoryChildren) {
 		const sortedChildren = directoryChildren?.sort(sortByCity) || [];
-		consol.log(sortedChildren);
+		console.log(sortedChildren);
 		childrenDivs = sortedChildren.map((child: any) => (
 			 
 			<div key={child.slug}>
