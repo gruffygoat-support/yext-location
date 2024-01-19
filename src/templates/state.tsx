@@ -28,7 +28,7 @@ export const config: TemplateConfig = {
 	stream: {
 		$id: 'state-stream',
 		filter: {
-			savedFilterIds: ['dm_directory_address_region'],
+			savedFilterIds: ['dm_directory_address_region','1354808863'],
 		},
 		fields: [
 			'id',
