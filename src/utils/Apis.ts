@@ -7,7 +7,7 @@ export default class Apis {
 		const url = `https://cdn.yextapis.com/v2/accounts/1499906/entities?v=20161012&entityType=location&limit=50`;
 		//const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
 		const isoRegionCodeFilter = `{"$and":[{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}},{"c_pages":{"!$eq":false}}]}`;
-		console.log('Get cordinates: '+isoRegionCodeFilter);
+		 
 		const { data } = await axios.get(url, {
 			headers: {
 				'Content-Type': 'application/json',
@@ -25,9 +25,7 @@ export default class Apis {
 
 		//const isoRegionCodeFilter = `{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}}`;
 		const isoRegionCodeFilter = `{"$and":[{"isoRegionCode":{"$eq":"${slug.toUpperCase()}"}},{"c_pages":{"!$eq":false}}]}`;
-		console.log('Get State Info: '+isoRegionCodeFilter);
-		const { data } = await axios.get(url, {
-			headers: {
+ 		const { data } = await axios.get(url, {			headers: {
 				'Content-Type': 'application/json',
 				'Api-Key': 'ef8da365f161cd1eae34f56b93f13441',
 			},
