@@ -44,7 +44,9 @@ export const config: TemplateConfig = {
 		$id: 'location-stream',
 		// Defines the scope of entities that qualify for this stream.
 		// You can use entityTypes, savedFilterIds, and/or entityIds
-
+		filter: {
+			savedFilterIds: ['1354814262'],
+		},
 		// Specifies the exact data that each generated document will contain.
 		// This data is passed in directly as props to the default exported function.
 		fields: [
