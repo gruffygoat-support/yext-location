@@ -129,6 +129,7 @@ const State: Template<TemplateRenderProps> = ({
 
 	const transformData = () => {
 		const newArray = dm_directoryChildren.map((obj) => {
+			console.log(data);
 			const matchingName = data.find((res) => res.address.city === obj.name);
 			return {
 				...obj,
