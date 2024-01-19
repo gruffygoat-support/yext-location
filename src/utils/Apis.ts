@@ -17,7 +17,7 @@ export default class Apis {
 				filter: isoRegionCodeFilter,
 			},
 		});
-		console.log(data.response);
+		console.log('Inside API'+data.response);
 		return data.response.entities.map((entity: any) => entity.cityCoordinate);
 	}
 	static async getStatesInfo(slug: MapProps, offset = 0): Promise<any> {
@@ -33,7 +33,7 @@ export default class Apis {
 				filter: isoRegionCodeFilter,
 			},
 		});
-		console.log(data.response);
+		console.log('Inside API'+data.response);
 		return data.response;
 	}
 
