@@ -149,9 +149,9 @@ const State: Template<TemplateRenderProps> = ({
 		}
 	}, [name]);
 
-	React.useEffect(() => {
-		transformData();
-	}, [data]);
+	// React.useEffect(() => {
+	// 	transformData();
+	// }, [data]);
 	return (
 		<>
 			<PageLayout>
