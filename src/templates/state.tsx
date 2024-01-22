@@ -148,9 +148,10 @@ const State: Template<TemplateRenderProps> = ({
 		}
 	}, [name]);
 
-	// React.useEffect(() => {
-	// 	transformData();
-	// }, [data]);
+	React.useEffect(() => {
+		console.log(dm_directoryChildren); 
+		transformData();
+	}, [data]);
 	return (
 		<>
 			<PageLayout>
