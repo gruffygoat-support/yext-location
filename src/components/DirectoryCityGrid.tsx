@@ -39,6 +39,8 @@ const DirectoryCityGrid = ({
 	let childrenDivs;
 
 	if (directoryChildren) {
+		console.log('Directory children');
+		console.log(directoryChildren);
 		const sortedChildren = directoryChildren?.sort(sortByCity) || [];
 		childrenDivs = sortedChildren.map((child: any) => (
 			console.log(child);
