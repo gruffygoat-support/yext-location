@@ -114,7 +114,8 @@ const State: Template<TemplateRenderProps> = ({
 	const getStatesInfo = async () => {
 		try {
 			const response = await Apis.getStatesInfo(name.toLowerCase());
-			console.log('Inside Response - '+response);
+			console.log('Inside Response - ');
+			console.log(response);
 			setData(response.entities);
 
 			if (response.pageToken) {
