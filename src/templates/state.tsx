@@ -120,6 +120,8 @@ const State: Template<TemplateRenderProps> = ({
 
 			if (response.pageToken) {
 				const response1 = await Apis.getStatesInfo(name.toLowerCase(), 50);
+				console.log('Data from page token');
+				console.log(response1);
 
 				setData((prevData) => [...prevData, ...response1.entities]);
 			}
