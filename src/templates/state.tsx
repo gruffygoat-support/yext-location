@@ -130,13 +130,27 @@ const State: Template<TemplateRenderProps> = ({
 	};
 
 	const transformData = () => {
-		const newArray = dm_directoryChildren.map((obj) => {
-			const matchingName = data.find((res) => res.address.city === obj.name);
-			return {
-				...obj,
-				designation: matchingName ? matchingName.slug : '',
-			};
-		});
+		// const newArray = dm_directoryChildren.map((obj) => {
+		// 	const matchingName = data.find((res) => res.address.city === obj.name);
+		// 	return {
+		// 		...obj,
+		// 		designation: matchingName ? matchingName.slug : '',
+		// 	};
+		// });
+
+
+		const newArray = dm_directoryChildren
+		    .filter((obj) => {
+		      const matchingName = data.find((res) => res.address.city === obj.name);
+		      return matchingName; // Only include if a match is found
+		    })
+		    .map((obj) => {
+		      const matchingName = data.find((res) => res.address.city === obj.name);
+		      return {
+		        ...obj,
+		        designation: matchingName ? matchingName.slug : '',
+		      };
+		    });
 
 		setChildren(newArray);
 		setLoading(false);
