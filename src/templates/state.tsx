@@ -137,7 +137,7 @@ const State: Template<TemplateRenderProps> = ({
 			};
 		});
 
-		setChildren(newArray);
+		setChildren(data);
 		setLoading(false);
 	};
 
